@@ -1,0 +1,181 @@
+# LABORATÓRIO — exploração TOTALMENTE livre, 500 mil simulações
+# Inclui o CORPO como geometria livre: o vaso de pressão deixa de ser a
+# garrafa PET de catálogo e o motor é gerado proporcionalmente a ele.
+# Objetivo: MAPEAR o espaço de projeto e gerar informação, não só achar o ótimo.
+# Liberdade máxima: faixas bem mais largas que as usadas nos projetos reais,
+# incluindo geometrias exóticas. O CORPO é livre — o .ork base serve só de
+# ponto de partida; diâmetro, comprimento, parede e material são redefinidos.
+
+base_ork: D:\OBAFOG\_laboratorio testes livres\garrafa2L_base.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42
+
+parameters:
+  # ---------- ogiva: faixas MUITO largas ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 3.0
+    high: 45.0
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK, PARABOLIC, POWER]
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.0
+    high: 1.0
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.4
+    high: 5.0
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pla, poliestireno, papel_cartao, pet_garrafa, balsa]
+
+  # ---------- lastro: do zero ao extremo ----------
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 40.0
+    options:
+      density_g_cm3: 1.7
+
+  # ---------- aletas: contagem, planform e materiais bem livres ----------
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 2
+    high: 8
+    integer: true
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 1.0
+    high: 20.0
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 22.0
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 22.0
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 1.0
+    high: 20.0
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.4
+    high: 5.0
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [poliestireno, pla, pet_garrafa, papel_cartao, balsa]
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: -5.0
+    high: 5.0
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -6.0
+    high: 0.0
+
+  # ---------- CORPO = VASO DE PRESSÃO (livre; o motor sai proporcional) ----------
+  # O corpo de um foguete de vinagre É o vaso de pressão. Mudando a geometria,
+  # muda o volume interno, a pressão que aguenta (sigma = P*r/t) e portanto a
+  # curva de empuxo — tudo recalculado pela física a cada avaliação.
+  - name: body_diameter
+    component: Ogiva
+    attribute: architecture_noop
+    unit: cm
+    low: 5.0
+    high: 25.0
+  - name: body_length
+    component: Ogiva
+    attribute: architecture_noop
+    unit: cm
+    low: 10.0
+    high: 80.0
+  - name: body_wall
+    component: Ogiva
+    attribute: architecture_noop
+    unit: mm
+    low: 0.3
+    high: 4.0
+  - name: body_material
+    component: Ogiva
+    attribute: architecture_noop
+    choices: [pet_garrafa, pla, poliestireno]
+  - name: vinegar_fill
+    component: Ogiva
+    attribute: architecture_noop
+    unit: ""
+    low: 0.30
+    high: 0.92
+  - name: nozzle_diameter
+    component: Ogiva
+    attribute: architecture_noop
+    unit: mm
+    low: 6.0
+    high: 40.0
+
+  # ---------- ângulo: bem além do usual ----------
+  - name: launch_angle
+    component: Ogiva
+    attribute: sim_launch_rod_angle_deg
+    unit: ""
+    low: 15.0
+    high: 75.0
+
+objective:
+  metric: horizontal_distance
+  direction: maximize
+
+# restrições só de validade física (deixa o espaço bem aberto para mapear)
+constraints:
+  - metric: stability_max
+    min: 1.0
+    max: 5.0
+  - metric: apogee
+    min: 5.0
+
+optimizer:
+  algorithm: random
+  max_evaluations: 1000
+  seed: 42
+  profile: balanced
+
+batch:
+  workers: 4
+
+db_path: D:\OBAFOG\_laboratorio testes livres\simulacoes\orx.sqlite
+output_dir: D:\OBAFOG\_laboratorio testes livres\simulacoes

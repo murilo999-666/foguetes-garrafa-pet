@@ -1,0 +1,115 @@
+PLAYBOOK DE LANÇAMENTO — bit07 (garrafa PET 2L retornável)
+projeto vigente: bit07_MODELO_FINAL.ork  |  nota 66,2/100 pelo modelo multicritério (8 pressões, 130–200 psi)
+espessuras já arredondadas para o construível (PLA 1,2 mm / poliestireno 1,0 mm)
+
+==================================================================
+0. O QUE MUDA EM RELAÇÃO AO bit04/bit05
+==================================================================
+  bit04:  2,46 kg na decolagem, 416 g de lastro, 1,8 L de vinagre,
+          estabilidade mínima 0,46 cal   -> bateu na cerca
+  bit05:  1,95 kg, 115 g de lastro, 1,55 L,
+          estabilidade mínima 0,24 cal   -> bateu na cerca
+  bit07:  1,34 kg, 180 g de lastro, 0,9 L,
+          estabilidade mínima 1,25 cal   <- margem de verdade
+
+  A troca: ~30 m a menos de alcance simulado, em troca de sair do tubo-guia
+  com o DOBRO da margem de estabilidade e 1,1 kg a menos.
+  Validado nas 8 pressões de 130 a 200 psi — nenhuma reprova.
+
+==================================================================
+1. CONSTRUÇÃO
+==================================================================
+  CORPO ......... garrafa PET 2L retornável (a de sempre), sem alteração
+  OGIVA ......... parabólica, parâmetro 0,71
+                  comprimento 24,8 cm | parede 1,2 mm | PLA impresso
+  LASTRO ........ Durepoxi preenchendo 11,0 cm do bico da ogiva = 180 g
+                  (pese: 180 g é o alvo; ver tolerância no item 3)
+  ALETAS ........ 3 aletas de poliestireno 1,0 mm
+                  raiz 7,1 cm | ponta 2,6 cm | enflechamento 11,4 cm
+                  altura 14,6 cm | cant 0,1° (praticamente reto)
+                  posição: 0,7 cm à frente da base do ombro da garrafa
+  COMPRIMENTO TOTAL ... 58,4 cm
+  MASSA SECA .......... 376 g (estrutura 196 g + lastro 180 g)
+
+  Aleta grande e fina: é ela que dá a margem de estabilidade. Corte com
+  gabarito e cole alinhada — desalinhamento de aleta é candidato número 1
+  para explicar por que bit04 e bit05 não subiram.
+
+==================================================================
+2. MOTOR: 0,9 L DE VINAGRE (sim, menos que antes)
+==================================================================
+  Alcance simulado, por carga e por pressão realmente atingida:
+
+     carga    130psi 140psi 150psi 160psi 170psi 180psi 190psi 200psi  estab.mín
+     0,90 L      272    283    291    301    308    317    322    329   1,24 cal <== USE
+     1,10 L      278    286    297    303    313    318    327    333   1,14 cal
+     1,30 L      279    287    295    304    313    320    326    332   1,08 cal
+     1,45 L      276    288    295    303    309    318    324    331   1,03 cal
+     1,55 L      275    284    292    300    308    315    322    327   1,00 cal
+     1,70 L      272    278    289    297    304    312    319    323   0,97 cal  REPROVA
+
+  Leitura: dobrar a carga de vinagre rende no máximo ~5 m e come TODA a
+  margem de estabilidade — a 1,70 L o foguete REPROVA (0,97 cal). 0,9 L é a
+  escolha certa neste corpo, em qualquer pressão de 130 a 200 psi.
+
+  Bicarbonato: em excesso, como você já faz.
+  MEÇA A PRESSÃO e anote — o motor da simulação correspondente está em
+  motores/Bit07-L0_90-P<pressão>.eng
+
+==================================================================
+3. TOLERÂNCIA DO LASTRO (quão preciso pesar o Durepoxi)
+==================================================================
+  bico preenchido    massa     alcance(140psi)   estab.mín
+      9,0 cm         107 g         268 m          1,05 cal   <- no limite
+     10,0 cm         141 g         277 m          1,15 cal
+     11,0 cm         180 g         284 m          1,25 cal   <== ALVO
+     12,0 cm         230 g         289 m          1,36 cal
+     13,0 cm         285 g         291 m          1,46 cal
+
+  Faixa segura: 10 a 12 cm (141–230 g). Abaixo de 9 cm a margem some.
+  Se sobrar Durepoxi, sobre para CIMA (12 cm): custa 50 g e devolve margem.
+
+==================================================================
+4. ÂNGULO DE LANÇAMENTO
+==================================================================
+     45° -> 273 m (apogeu 111 m)
+     50° -> 281 m (apogeu  95 m)
+     55° -> 284 m (apogeu  80 m)   <== ALVO (o topo é plano)
+     57° -> 284 m (apogeu  73 m)
+     60° -> 281 m (apogeu  64 m)
+
+  Entre 50° e 60° a diferença é de 4 m. Não perca tempo afinando o ângulo;
+  perca tempo conferindo a firmeza da base e o alinhamento do tubo-guia.
+
+==================================================================
+5. NÚMEROS ESPERADOS NO DIA (140 psi, vento 2 m/s)
+==================================================================
+  saída do tubo-guia .... 47 m/s
+  velocidade máxima ..... 101 m/s
+  apogeu ................ 73 m
+  alcance ............... 284 m   (272 m a 130 psi · 329 m a 200 psi)
+  estabilidade .......... 1,25 cal no lançamento, 1,93 cal após a queima
+
+==================================================================
+5b. SE VOCÊ QUISER MAIS MARGEM: bit07_E_margem_extra.ork
+==================================================================
+  Mesmo corpo e mesma carga, ogiva ogival de 29,4 cm, 4 aletas maiores,
+  lastro preenchendo 14,3 cm do bico, cant -1,3°.
+
+     estabilidade mínima .. 1,51 cal  (contra 1,24 cal do FINAL)
+     massa seca ........... 413 g     (+37 g)
+     alcance médio ........ 287 m     (-16 m)
+     faixa ................ 257 m a 130 psi · 313 m a 200 psi
+
+  Custa 16 m e 37 g, devolve +0,27 cal. Depois de dois foguetes na cerca,
+  pode ser a troca certa — a decisão é sua.
+
+==================================================================
+6. ANTES DE SOLTAR
+==================================================================
+  [ ] pressão medida e anotada
+  [ ] lastro pesado (alvo 180 g, faixa 141–230 g)
+  [ ] aletas alinhadas no gabarito, cola curada
+  [ ] base firme, tubo-guia sem folga e sem tocar as aletas
+  [ ] ninguém e nada (cerca!) no primeiro terço da trajetória
+  [ ] anotar o que aconteceu — o modelo só melhora com dado real

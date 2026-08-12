@@ -1,0 +1,10 @@
+info.openrocket.core.rocketcomponent.Transition$Shape -> ['CONICAL', 'OGIVE', 'ELLIPSOID', 'POWER', 'PARABOLIC', 'HAACK']
+info.openrocket.core.rocketcomponent.position.AxialMethod -> ['ABSOLUTE', 'AFTER', 'TOP', 'MIDDLE', 'BOTTOM']
+info.openrocket.core.simulation.FlightEvent$Type -> ['LAUNCH', 'IGNITION', 'LIFTOFF', 'LAUNCHROD', 'BURNOUT', 'EJECTION_CHARGE', 'STAGE_SEPARATION', 'APOGEE', 'RECOVERY_DEVICE_DEPLOYMENT', 'GROUND_HIT', 'SIMULATION_END', 'ALTITUDE', 'TUMBLE', 'SIM_WARN', 'SIM_ABORT', 'EXCEPTION']
+info.openrocket.core.rocketcomponent.DeploymentConfiguration$DeployEvent -> ['LAUNCH', 'EJECTION', 'APOGEE', 'ALTITUDE', 'LOWER_STAGE_SEPARATION', 'NEVER']
+Traceback (most recent call last):
+  File "<stdin>", line 10, in <module>
+  File "C:\Users\muril\openrocket-optimizer\.venv\Lib\site-packages\jpype\_jclass.py", line 99, in __new__
+    return _jpype._getClass(jc)
+           ^^^^^^^^^^^^^^^^^^^^
+TypeError: Class info.openrocket.core.simulation.WindModelType is not found

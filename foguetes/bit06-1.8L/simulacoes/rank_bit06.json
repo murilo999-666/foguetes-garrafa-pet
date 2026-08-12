@@ -1,0 +1,2942 @@
+[
+ {
+  "design": {
+   "nose_length": 27.700348596922247,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6056103307963974,
+   "nose_thickness": 1.5580189250835816,
+   "nose_material": "poliestireno",
+   "ballast_fill": 11.877938000715618,
+   "fin_count": 3,
+   "fin_root": 6.5596065502655865,
+   "fin_tip": 0.0,
+   "fin_sweep": 12.581730357931097,
+   "fin_height": 13.690415831516983,
+   "fin_thickness": 0.8,
+   "fin_material": "poliestireno",
+   "fin_cant": -0.09486260829405993,
+   "fin_position": -0.3797846256792317,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.30158717317902
+  },
+  "nota": 74.5506101272344,
+  "alcance_medio": 288.74021993187404,
+  "alcance_pior": 266.40780601200896,
+  "alcance_por_eta": {
+   "0.7": 266.40780601200896,
+   "0.8": 282.0945286930336,
+   "0.9": 297.2734727143343,
+   "1.0": 309.18507230811935
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33068814940753277,
+  "estab_min": 1.3139408900911669,
+  "estab_max": 2.2771493775122074,
+  "trilho_min": 30.547136887133078,
+  "apogeu_medio": 81.31919845462039,
+  "partes": {
+   "alcance": 30.680039987613462,
+   "consistencia": 22.265568709085905,
+   "leveza": 13.465592529623363,
+   "estabilidade": 3.139408900911669,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.900116284651128,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7654667888102853,
+   "nose_thickness": 0.8498908435439596,
+   "nose_material": "poliestireno",
+   "ballast_fill": 6.500671883647459,
+   "fin_count": 4,
+   "fin_root": 7.763385541281602,
+   "fin_tip": 1.4228541382090265,
+   "fin_sweep": 13.995957107692242,
+   "fin_height": 9.603961196851458,
+   "fin_thickness": 0.8132584305184533,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.354441161664975,
+   "fin_position": -0.03697676574023371,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.489181307392144
+  },
+  "nota": 74.54573332793878,
+  "alcance_medio": 290.5052365959361,
+  "alcance_pior": 269.04590659727984,
+  "alcance_por_eta": {
+   "0.7": 269.04590659727984,
+   "0.8": 284.43171676805196,
+   "0.9": 298.4769426530704,
+   "1.0": 310.0663803653422
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.2982885624800549,
+  "estab_min": 1.084610888802148,
+  "estab_max": 1.640014096042888,
+  "trilho_min": 31.272358416676337,
+  "apogeu_medio": 82.81857310156853,
+  "partes": {
+   "alcance": 31.000952108352013,
+   "consistencia": 22.613100455568024,
+   "leveza": 15.085571875997255,
+   "estabilidade": 0.8461088880214795,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 28.145703140345137,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6430570705699991,
+   "nose_thickness": 1.510835129724889,
+   "nose_material": "pla",
+   "ballast_fill": 11.32769339175218,
+   "fin_count": 3,
+   "fin_root": 6.820618390121346,
+   "fin_tip": 0.0,
+   "fin_sweep": 12.829364167486391,
+   "fin_height": 14.043112826142526,
+   "fin_thickness": 0.807180574703054,
+   "fin_material": "poliestireno",
+   "fin_cant": -0.1548241921764635,
+   "fin_position": -0.18891413787200492,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.98242333840089
+  },
+  "nota": 74.54484068377052,
+  "alcance_medio": 286.90241720246144,
+  "alcance_pior": 264.62644330913554,
+  "alcance_por_eta": {
+   "0.7": 264.62644330913554,
+   "0.8": 280.9354281097936,
+   "0.9": 295.05615785401324,
+   "1.0": 306.99163953690345
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3326629815109645,
+  "estab_min": 1.3596399038783278,
+  "estab_max": 2.3038874419431976,
+  "trilho_min": 30.50968851572728,
+  "apogeu_medio": 78.58536814658258,
+  "partes": {
+   "alcance": 30.34589403681117,
+   "consistencia": 22.235696683724292,
+   "leveza": 13.366850924451775,
+   "estabilidade": 3.596399038783278,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.540045572101626,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8202831518604743,
+   "nose_thickness": 2.4879316523557606,
+   "nose_material": "pla",
+   "ballast_fill": 3.9889939293905035,
+   "fin_count": 4,
+   "fin_root": 6.672698623641291,
+   "fin_tip": 2.121517225407059,
+   "fin_sweep": 11.205881786157216,
+   "fin_height": 9.462540460674449,
+   "fin_thickness": 0.8243428717394001,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.06278293921012496,
+   "fin_position": -0.014505341942159043,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.59319189215326
+  },
+  "nota": 74.48118285400328,
+  "alcance_medio": 293.2590358194974,
+  "alcance_pior": 271.00823752179804,
+  "alcance_por_eta": {
+   "0.7": 271.00823752179804,
+   "0.8": 287.1544710391876,
+   "0.9": 301.4428483392524,
+   "1.0": 313.4305863777516
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3102096617788993,
+  "estab_min": 1.1077444281343982,
+  "estab_max": 1.5703383946223388,
+  "trilho_min": 31.01234788055783,
+  "apogeu_medio": 78.93406529925575,
+  "partes": {
+   "alcance": 31.501642876272253,
+   "consistencia": 22.412578785332006,
+   "leveza": 14.489516911055036,
+   "estabilidade": 1.0774442813439822,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.168844191475556,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8463008135171487,
+   "nose_thickness": 2.4533583247857136,
+   "nose_material": "pla",
+   "ballast_fill": 3.882099429891018,
+   "fin_count": 4,
+   "fin_root": 6.8051203286494255,
+   "fin_tip": 2.343946194078332,
+   "fin_sweep": 11.250592730426531,
+   "fin_height": 9.591753734474967,
+   "fin_thickness": 0.8000319657871044,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.15023634138265202,
+   "fin_position": -0.010574149628097926,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 56.33533231598364
+  },
+  "nota": 74.46835066076574,
+  "alcance_medio": 292.45841926387686,
+  "alcance_pior": 269.98937733613747,
+  "alcance_por_eta": {
+   "0.7": 269.98937733613747,
+   "0.8": 286.1280002243728,
+   "0.9": 301.4182141663919,
+   "1.0": 312.29808532860534
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3095831159671771,
+  "estab_min": 1.1274246126472187,
+  "estab_max": 1.5762484808631125,
+  "trilho_min": 31.0320945447192,
+  "apogeu_medio": 76.31593071012159,
+  "partes": {
+   "alcance": 31.356076229795793,
+   "consistencia": 22.317184102856615,
+   "leveza": 14.520844201641145,
+   "estabilidade": 1.2742461264721872,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.626139985416971,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7717234423132919,
+   "nose_thickness": 2.422991246323233,
+   "nose_material": "poliestireno",
+   "ballast_fill": 6.247656188522214,
+   "fin_count": 4,
+   "fin_root": 7.772710115771361,
+   "fin_tip": 1.3820144870582574,
+   "fin_sweep": 13.985953126496451,
+   "fin_height": 9.637614880798681,
+   "fin_thickness": 0.8135138607147591,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.3913001552082713,
+   "fin_position": -0.03559627684726573,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.65615010725358
+  },
+  "nota": 74.43123251935954,
+  "alcance_medio": 291.669676448818,
+  "alcance_pior": 269.88557212306034,
+  "alcance_por_eta": {
+   "0.7": 269.88557212306034,
+   "0.8": 285.5595516550974,
+   "0.9": 299.66488965164575,
+   "1.0": 311.56869236546845
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.30265292466894145,
+  "estab_min": 1.0819969004386902,
+  "estab_max": 1.6212590331869958,
+  "trilho_min": 31.174289919468606,
+  "apogeu_medio": 82.20147018227495,
+  "partes": {
+   "alcance": 31.212668445239636,
+   "consistencia": 22.53124130318007,
+   "leveza": 14.86735376655293,
+   "estabilidade": 0.8199690043869023,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.54567591664991,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6700203079376328,
+   "nose_thickness": 2.8926955364681795,
+   "nose_material": "petg",
+   "ballast_fill": 5.180665645224072,
+   "fin_count": 4,
+   "fin_root": 7.329163217269041,
+   "fin_tip": 1.5007277339686826,
+   "fin_sweep": 13.091415611784733,
+   "fin_height": 10.966453225729198,
+   "fin_thickness": 0.8246523087389812,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.401682913863098,
+   "fin_position": -0.1576439434031139,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 51.89902526043639
+  },
+  "nota": 74.42478823765792,
+  "alcance_medio": 294.1331125142394,
+  "alcance_pior": 271.69573439237513,
+  "alcance_por_eta": {
+   "0.7": 271.69573439237513,
+   "0.8": 288.1057030692436,
+   "0.9": 302.3291485282248,
+   "1.0": 314.401864067114
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3251335907227085,
+  "estab_min": 1.1649209307701722,
+  "estab_max": 1.594770616746876,
+  "trilho_min": 30.649094471000694,
+  "apogeu_medio": 90.15903495772437,
+  "partes": {
+   "alcance": 31.660565911679885,
+   "consistencia": 22.371692554411737,
+   "leveza": 13.743320463864578,
+   "estabilidade": 1.6492093077017222,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.576062061543645,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6247510710602638,
+   "nose_thickness": 1.0540877083309532,
+   "nose_material": "petg",
+   "ballast_fill": 6.970954882752265,
+   "fin_count": 4,
+   "fin_root": 7.678203898823975,
+   "fin_tip": 1.808309885639537,
+   "fin_sweep": 13.354755109926582,
+   "fin_height": 9.688467036460441,
+   "fin_thickness": 0.8203330354273731,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.8430987885798715,
+   "fin_position": -0.0011358262761750892,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 50.320254557980896
+  },
+  "nota": 74.3563602793025,
+  "alcance_medio": 292.90722281399593,
+  "alcance_pior": 270.8424805461734,
+  "alcance_por_eta": {
+   "0.7": 270.8424805461734,
+   "0.8": 286.9448889698257,
+   "0.9": 300.97044146715234,
+   "1.0": 312.87108027283233
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3185747887420459,
+  "estab_min": 1.1380436897885593,
+  "estab_max": 1.6849826007067186,
+  "trilho_min": 30.780368301506808,
+  "apogeu_medio": 96.15823457589835,
+  "partes": {
+   "alcance": 31.437676875271986,
+   "consistencia": 22.46698594324722,
+   "leveza": 14.071260562897706,
+   "estabilidade": 1.380436897885593,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.814920418439455,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7708958640734918,
+   "nose_thickness": 2.4270132943901634,
+   "nose_material": "poliestireno",
+   "ballast_fill": 6.716583861982453,
+   "fin_count": 4,
+   "fin_root": 7.758489580153377,
+   "fin_tip": 1.3542060544656604,
+   "fin_sweep": 13.980044201108765,
+   "fin_height": 9.40149144073408,
+   "fin_thickness": 0.8129077302075811,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.3255542567153444,
+   "fin_position": -0.03645076642039366,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.902717777668485
+  },
+  "nota": 74.3413475380163,
+  "alcance_medio": 299.2275930604874,
+  "alcance_pior": 275.8274714922361,
+  "alcance_por_eta": {
+   "0.7": 275.8274714922361,
+   "0.8": 292.6878833877492,
+   "0.9": 307.9411812771052,
+   "1.0": 320.4538360848589
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32706592981621685,
+  "estab_min": 1.0927983974587498,
+  "estab_max": 1.6649889833692486,
+  "trilho_min": 30.633305928751607,
+  "apogeu_medio": 81.39205351058509,
+  "partes": {
+   "alcance": 32.58683510190679,
+   "consistencia": 22.179824952332837,
+   "leveza": 13.646703509189157,
+   "estabilidade": 0.9279839745874985,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.916713212743831,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7694865046993692,
+   "nose_thickness": 1.3207795011121217,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.182561047153544,
+   "fin_count": 4,
+   "fin_root": 7.8073067070205315,
+   "fin_tip": 1.5735105532511813,
+   "fin_sweep": 13.993317030916627,
+   "fin_height": 9.581468598905543,
+   "fin_thickness": 0.815785981355384,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.1638010877136786,
+   "fin_position": -0.06344560973174693,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.3248995725859
+  },
+  "nota": 74.33898341992075,
+  "alcance_medio": 296.87374597514673,
+  "alcance_pior": 273.9296250822668,
+  "alcance_por_eta": {
+   "0.7": 273.9296250822668,
+   "0.8": 290.53247253044884,
+   "0.9": 305.5563382828952,
+   "1.0": 317.4765480049762
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.324767085456264,
+  "estab_min": 1.1147053419295054,
+  "estab_max": 1.7244350862267661,
+  "trilho_min": 30.67827321117947,
+  "apogeu_medio": 83.00533879130212,
+  "partes": {
+   "alcance": 32.15886290457213,
+   "consistencia": 22.271421368866772,
+   "leveza": 13.761645727186803,
+   "estabilidade": 1.1470534192950543,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.012752533319514,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.602357652445856,
+   "nose_thickness": 1.0702455557892332,
+   "nose_material": "petg",
+   "ballast_fill": 7.082334336883399,
+   "fin_count": 4,
+   "fin_root": 7.539931052702524,
+   "fin_tip": 1.6473124270187314,
+   "fin_sweep": 13.234002064788871,
+   "fin_height": 9.825332452583796,
+   "fin_thickness": 0.816832383522249,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.815805736362508,
+   "fin_position": -0.03953318762006144,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 50.976288583581024
+  },
+  "nota": 74.33412667648955,
+  "alcance_medio": 298.7706930005178,
+  "alcance_pior": 275.6310649303757,
+  "alcance_por_eta": {
+   "0.7": 275.6310649303757,
+   "0.8": 292.08466682380026,
+   "0.9": 307.7655455441806,
+   "1.0": 319.60149470371454
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3381929072546799,
+  "estab_min": 1.1484955418917056,
+  "estab_max": 1.6943020408058291,
+  "trilho_min": 30.357809943252086,
+  "apogeu_medio": 93.79331637097026,
+  "partes": {
+   "alcance": 32.50376236373051,
+   "consistencia": 22.255054256575978,
+   "leveza": 13.090354637266007,
+   "estabilidade": 1.4849554189170555,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.969660876589435,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6564197284566062,
+   "nose_thickness": 2.8211922896212345,
+   "nose_material": "petg",
+   "ballast_fill": 5.597695740722588,
+   "fin_count": 4,
+   "fin_root": 7.372253081681733,
+   "fin_tip": 1.1179602023367534,
+   "fin_sweep": 13.622356399624284,
+   "fin_height": 11.11719533948634,
+   "fin_thickness": 0.8298195066242708,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.0984598798230796,
+   "fin_position": -0.17183305804423576,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.10768188643142
+  },
+  "nota": 74.31622119217639,
+  "alcance_medio": 298.77730885601045,
+  "alcance_pior": 275.5047261088584,
+  "alcance_por_eta": {
+   "0.7": 275.5047261088584,
+   "0.8": 292.0998182341498,
+   "0.9": 307.49464450218494,
+   "1.0": 320.01004657884874
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.341714508487599,
+  "estab_min": 1.1686255206185003,
+  "estab_max": 1.6232338885811781,
+  "trilho_min": 30.74623667534183,
+  "apogeu_medio": 89.37772314589616,
+  "partes": {
+   "alcance": 32.50496524654735,
+   "consistencia": 22.210726163823978,
+   "leveza": 12.91427457562005,
+   "estabilidade": 1.6862552061850034,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.57380550167864,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8144000148990669,
+   "nose_thickness": 2.6039210564137347,
+   "nose_material": "pla",
+   "ballast_fill": 4.126937507677318,
+   "fin_count": 4,
+   "fin_root": 6.829606260747578,
+   "fin_tip": 2.070967001594994,
+   "fin_sweep": 11.369300975355282,
+   "fin_height": 9.389149365458184,
+   "fin_thickness": 0.8221568944788538,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.17080964638718307,
+   "fin_position": -0.04184938224516639,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.32860778553568
+  },
+  "nota": 74.27508840053392,
+  "alcance_medio": 296.53029574291713,
+  "alcance_pior": 273.54435140278355,
+  "alcance_por_eta": {
+   "0.7": 273.54435140278355,
+   "0.8": 290.0956483865161,
+   "0.9": 305.16940428150525,
+   "1.0": 317.31177890086366
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32143116077366785,
+  "estab_min": 1.1001863407438182,
+  "estab_max": 1.5752915456466003,
+  "trilho_min": 30.760717751743897,
+  "apogeu_medio": 79.82626335602446,
+  "partes": {
+   "alcance": 32.096417407803116,
+   "consistencia": 22.248365623976007,
+   "leveza": 13.928441961316608,
+   "estabilidade": 1.0018634074381816,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.310814040388156,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6635601481806059,
+   "nose_thickness": 2.3905745198716644,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.737297024664776,
+   "fin_count": 4,
+   "fin_root": 7.992573321867688,
+   "fin_tip": 1.936005768866309,
+   "fin_sweep": 13.810213516116647,
+   "fin_height": 9.648105484946933,
+   "fin_thickness": 0.8236669082327518,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.6715572059059727,
+   "fin_position": -0.03307762719661769,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.15322183538209
+  },
+  "nota": 74.26963055746545,
+  "alcance_medio": 294.0245140155069,
+  "alcance_pior": 271.60167300242875,
+  "alcance_por_eta": {
+   "0.7": 271.60167300242875,
+   "0.8": 287.819285505803,
+   "0.9": 302.5300659087273,
+   "1.0": 314.1470316450686
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32177444131895405,
+  "estab_min": 1.1343712685816258,
+  "estab_max": 1.7513485165331077,
+  "trilho_min": 30.73318797465921,
+  "apogeu_medio": 86.46207325692257,
+  "partes": {
+   "alcance": 31.64082073009216,
+   "consistencia": 22.37381920750474,
+   "leveza": 13.911277934052297,
+   "estabilidade": 1.3437126858162585,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 26.622109844925184,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5731658285109626,
+   "nose_thickness": 1.7017750354639063,
+   "nose_material": "pla",
+   "ballast_fill": 11.755098091699345,
+   "fin_count": 3,
+   "fin_root": 7.219838101592457,
+   "fin_tip": 0.0,
+   "fin_sweep": 14.0,
+   "fin_height": 13.44771047245934,
+   "fin_thickness": 0.8870468450825055,
+   "fin_material": "poliestireno",
+   "fin_cant": 0.3132666793294142,
+   "fin_position": -0.37541109124868677,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.79633352293088
+  },
+  "nota": 74.2591141718237,
+  "alcance_medio": 292.66294224205734,
+  "alcance_pior": 269.6489163378,
+  "alcance_por_eta": {
+   "0.7": 269.6489163378,
+   "0.8": 285.61063610820133,
+   "0.9": 301.6313891343412,
+   "1.0": 313.76082738788676
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.35151965031480353,
+  "estab_min": 1.3305496915187522,
+  "estab_max": 2.239438312790047,
+  "trilho_min": 30.54655814201995,
+  "apogeu_medio": 82.43441891021183,
+  "partes": {
+   "alcance": 31.393262225828607,
+   "consistencia": 22.136337546547747,
+   "leveza": 12.424017484259824,
+   "estabilidade": 3.3054969151875224,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 27.271701130424784,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5798545716478888,
+   "nose_thickness": 1.6772177142819857,
+   "nose_material": "pla",
+   "ballast_fill": 12.071983924180701,
+   "fin_count": 3,
+   "fin_root": 6.4652188986859995,
+   "fin_tip": 0.0,
+   "fin_sweep": 12.809236281478274,
+   "fin_height": 13.583235648151344,
+   "fin_thickness": 0.8107041053111919,
+   "fin_material": "poliestireno",
+   "fin_cant": 0.22536105769237688,
+   "fin_position": -0.39650579914946427,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.6535154009824
+  },
+  "nota": 74.2532593922847,
+  "alcance_medio": 294.5268370961838,
+  "alcance_pior": 270.0699817850256,
+  "alcance_por_eta": {
+   "0.7": 270.0699817850256,
+   "0.8": 287.59828302117165,
+   "0.9": 303.70186408182684,
+   "1.0": 316.737219496711
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3542552195738872,
+  "estab_min": 1.35376463781972,
+  "estab_max": 2.3170363229904205,
+  "trilho_min": 30.50450527257512,
+  "apogeu_medio": 76.66408838771203,
+  "partes": {
+   "alcance": 31.732152199306142,
+   "consistencia": 21.696221793475733,
+   "leveza": 12.287239021305638,
+   "estabilidade": 3.537646378197199,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.57518014679814,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5081961164061934,
+   "nose_thickness": 0.9182813146439032,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.855212480090003,
+   "fin_count": 3,
+   "fin_root": 8.430651885940659,
+   "fin_tip": 2.7002527111795085,
+   "fin_sweep": 13.925933110929417,
+   "fin_height": 12.003150417401281,
+   "fin_thickness": 0.8061593058287977,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.5463944246255822,
+   "fin_position": -0.028572015189895057,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.11586463928015
+  },
+  "nota": 74.25282930296049,
+  "alcance_medio": 295.92261504491654,
+  "alcance_pior": 272.8111495591493,
+  "alcance_por_eta": {
+   "0.7": 272.8111495591493,
+   "0.8": 289.73753717157496,
+   "0.9": 304.30871892052386,
+   "1.0": 316.833054528418
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33677794159373936,
+  "estab_min": 1.191576570793619,
+  "estab_max": 2.196125409720075,
+  "trilho_min": 30.40608302225537,
+  "apogeu_medio": 86.47975741771891,
+  "partes": {
+   "alcance": 31.985930008166644,
+   "consistencia": 22.190030666544626,
+   "leveza": 13.161102920313033,
+   "estabilidade": 1.91576570793619,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.992368223975472,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7440833177025132,
+   "nose_thickness": 2.491712826302714,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.215391253552507,
+   "fin_count": 4,
+   "fin_root": 7.819056607034668,
+   "fin_tip": 1.4837233691242924,
+   "fin_sweep": 13.900415582432174,
+   "fin_height": 9.470713934789979,
+   "fin_thickness": 0.8142441159124196,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.4593368708700318,
+   "fin_position": -0.05350103331689676,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.86300733548094
+  },
+  "nota": 74.24732910136899,
+  "alcance_medio": 298.7834543826569,
+  "alcance_pior": 275.53498848644386,
+  "alcance_por_eta": {
+   "0.7": 275.53498848644386,
+   "0.8": 291.92967683021556,
+   "0.9": 307.7427715757652,
+   "1.0": 319.92638063820294
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32996578027738704,
+  "estab_min": 1.1020577440516954,
+  "estab_max": 1.7054508636412162,
+  "trilho_min": 30.56931242369285,
+  "apogeu_medio": 81.22505595032634,
+  "partes": {
+   "alcance": 32.506082615028525,
+   "consistencia": 22.218958059692852,
+   "leveza": 13.501710986130648,
+   "estabilidade": 1.0205774405169543,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.001552995066534,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8731712599760719,
+   "nose_thickness": 2.656268839831547,
+   "nose_material": "pla",
+   "ballast_fill": 4.053801053162442,
+   "fin_count": 4,
+   "fin_root": 6.992750132392702,
+   "fin_tip": 2.020898486548227,
+   "fin_sweep": 11.850550534452784,
+   "fin_height": 9.942769318719746,
+   "fin_thickness": 0.8337186738282001,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.3178394445321872,
+   "fin_position": -0.09139338389330817,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.84455645209423
+  },
+  "nota": 74.24274397151771,
+  "alcance_medio": 297.0657196643978,
+  "alcance_pior": 273.89352695637916,
+  "alcance_por_eta": {
+   "0.7": 273.89352695637916,
+   "0.8": 290.652051641598,
+   "0.9": 305.7854905920232,
+   "1.0": 317.9318094675909
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33015204478300725,
+  "estab_min": 1.135693803540317,
+  "estab_max": 1.5954468118005036,
+  "trilho_min": 30.555965021836244,
+  "apogeu_medio": 83.99116837127097,
+  "partes": {
+   "alcance": 32.19376721170869,
+   "consistencia": 22.19964096355621,
+   "leveza": 13.492397760849638,
+   "estabilidade": 1.3569380354031702,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.291851332089943,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.677544069993536,
+   "nose_thickness": 2.433083737289905,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.812580379077752,
+   "fin_count": 4,
+   "fin_root": 7.93373262627185,
+   "fin_tip": 1.9125710783701337,
+   "fin_sweep": 13.808977588621103,
+   "fin_height": 9.738817769585502,
+   "fin_thickness": 0.8263595940130125,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.4410066298927007,
+   "fin_position": -0.048874123690199604,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.34719873062103
+  },
+  "nota": 74.23075051553673,
+  "alcance_medio": 295.60531166200576,
+  "alcance_pior": 272.8256403467148,
+  "alcance_por_eta": {
+   "0.7": 272.8256403467148,
+   "0.8": 289.21392571229757,
+   "0.9": 303.82717003086674,
+   "1.0": 316.55451055814393
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32901423480390646,
+  "estab_min": 1.14593340534492,
+  "estab_max": 1.7705036435842068,
+  "trilho_min": 30.576570054898845,
+  "apogeu_medio": 85.80686170638332,
+  "partes": {
+   "alcance": 31.928238484001046,
+   "consistencia": 22.2938897182818,
+   "leveza": 13.549288259804676,
+   "estabilidade": 1.4593340534491994,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.4903648535861596,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8295944344414529,
+   "nose_thickness": 2.627290622814216,
+   "nose_material": "pla",
+   "ballast_fill": 4.176707423868166,
+   "fin_count": 4,
+   "fin_root": 6.800402806737533,
+   "fin_tip": 2.0839785320901347,
+   "fin_sweep": 11.379624302573296,
+   "fin_height": 9.13419566285204,
+   "fin_thickness": 0.8195828014008996,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.06561685809834046,
+   "fin_position": -0.018650531529063766,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.64812916133419
+  },
+  "nota": 74.2230640292356,
+  "alcance_medio": 298.7443159332734,
+  "alcance_pior": 275.2850988314367,
+  "alcance_por_eta": {
+   "0.7": 275.2850988314367,
+   "0.8": 291.9715956468037,
+   "0.9": 307.55003107431384,
+   "1.0": 320.1705381805394
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32735184050847865,
+  "estab_min": 1.0944296533641376,
+  "estab_max": 1.5745396441950699,
+  "trilho_min": 30.63385794860383,
+  "apogeu_medio": 78.79834322062959,
+  "partes": {
+   "alcance": 32.49896653332244,
+   "consistencia": 22.147392987695714,
+   "leveza": 13.632407974576068,
+   "estabilidade": 0.9442965336413756,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.57169854345564,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7558803727431361,
+   "nose_thickness": 1.4991747867142942,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.207186722958369,
+   "fin_count": 4,
+   "fin_root": 7.754728629411665,
+   "fin_tip": 1.3948691314749118,
+   "fin_sweep": 13.831970350119157,
+   "fin_height": 9.637664273120931,
+   "fin_thickness": 0.8145091051792513,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.3562191375405088,
+   "fin_position": -0.03736141531643593,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.87468636386898
+  },
+  "nota": 74.22003082718835,
+  "alcance_medio": 299.0226789110048,
+  "alcance_pior": 275.4610993574967,
+  "alcance_por_eta": {
+   "0.7": 275.4610993574967,
+   "0.8": 292.36742895614833,
+   "0.9": 307.79631279935785,
+   "1.0": 320.46587453101614
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33247474253511694,
+  "estab_min": 1.1173719255099712,
+  "estab_max": 1.7201737054193853,
+  "trilho_min": 30.514552832791974,
+  "apogeu_medio": 81.15923939490519,
+  "partes": {
+   "alcance": 32.54957798381905,
+   "consistencia": 22.12047071502544,
+   "leveza": 13.376262873244153,
+   "estabilidade": 1.1737192550997122,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.951648985677633,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5882778687093139,
+   "nose_thickness": 2.8252900254577593,
+   "nose_material": "petg",
+   "ballast_fill": 5.7661131370633845,
+   "fin_count": 4,
+   "fin_root": 7.228262778033117,
+   "fin_tip": 1.3971465617451448,
+   "fin_sweep": 12.902841483618161,
+   "fin_height": 9.369000483493489,
+   "fin_thickness": 0.8127368210324397,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.7130032123608058,
+   "fin_position": -0.028499344505746663,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 49.67127828746914
+  },
+  "nota": 74.21240667034654,
+  "alcance_medio": 303.1597995086874,
+  "alcance_pior": 279.1440633752163,
+  "alcance_por_eta": {
+   "0.7": 279.1440633752163,
+   "0.8": 296.6486287608006,
+   "0.9": 312.2296084755557,
+   "1.0": 324.6168974231769
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.34466698663049733,
+  "estab_min": 1.1065781904635184,
+  "estab_max": 1.571500466890872,
+  "trilho_min": 30.660963429106644,
+  "apogeu_medio": 98.83451093568276,
+  "partes": {
+   "alcance": 33.301781728852255,
+   "consistencia": 22.078192368383963,
+   "leveza": 12.766650668475133,
+   "estabilidade": 1.0657819046351835,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.44643352208842,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5124171950626238,
+   "nose_thickness": 2.3325211766442364,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 8.777472245787408,
+   "fin_count": 3,
+   "fin_root": 8.293756275961773,
+   "fin_tip": 4.79639841735463,
+   "fin_sweep": 11.691474421051351,
+   "fin_height": 12.288953100000784,
+   "fin_thickness": 0.8044010892086207,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.9052979638960096,
+   "fin_position": -0.00040657513784628685,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.23539537450198
+  },
+  "nota": 74.20570728001591,
+  "alcance_medio": 293.0599795573055,
+  "alcance_pior": 270.145140097,
+  "alcance_por_eta": {
+   "0.7": 270.145140097,
+   "0.8": 286.99003060823776,
+   "0.9": 301.56299404699985,
+   "1.0": 313.5417534769844
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3317155386564578,
+  "estab_min": 1.2145197056780364,
+  "estab_max": 1.8167567838553382,
+  "trilho_min": 30.516331111399186,
+  "apogeu_medio": 85.09436830491224,
+  "partes": {
+   "alcance": 31.465450828601,
+   "consistencia": 22.180836327457452,
+   "leveza": 13.414223067177108,
+   "estabilidade": 2.1451970567803635,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 8.133517382290492,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5906490775125017,
+   "nose_thickness": 2.658252560103939,
+   "nose_material": "petg",
+   "ballast_fill": 6.283326783033453,
+   "fin_count": 4,
+   "fin_root": 7.318045316372633,
+   "fin_tip": 1.440488147061188,
+   "fin_sweep": 13.036544434328334,
+   "fin_height": 9.309362644217728,
+   "fin_thickness": 0.8125590255163472,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.7276689932292678,
+   "fin_position": -0.009148164027396934,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 49.606361020425815
+  },
+  "nota": 74.20513988585262,
+  "alcance_medio": 302.6160160813451,
+  "alcance_pior": 278.73717707249176,
+  "alcance_por_eta": {
+   "0.7": 278.73717707249176,
+   "0.8": 296.24561646129126,
+   "0.9": 311.6127502151762,
+   "1.0": 323.8685205764212
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3438574003939163,
+  "estab_min": 1.1085902653198527,
+  "estab_max": 1.6081130271834754,
+  "trilho_min": 30.679038875411717,
+  "apogeu_medio": 98.97181164404977,
+  "partes": {
+   "alcance": 33.202912014790016,
+   "consistencia": 22.109195237559888,
+   "leveza": 12.807129980304184,
+   "estabilidade": 1.0859026531985272,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.061484727698625,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6552445151230258,
+   "nose_thickness": 0.9174668618353815,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 7.548718990973498,
+   "fin_count": 4,
+   "fin_root": 7.650484445324854,
+   "fin_tip": 1.8842193217895113,
+   "fin_sweep": 13.402677410859498,
+   "fin_height": 10.201487084113403,
+   "fin_thickness": 0.8338410590022975,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.0358900376731695,
+   "fin_position": -0.1084407082078617,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 51.704364333943325
+  },
+  "nota": 74.15067783541582,
+  "alcance_medio": 297.34597558409786,
+  "alcance_pior": 273.94658892040553,
+  "alcance_por_eta": {
+   "0.7": 273.94658892040553,
+   "0.8": 291.3081718185736,
+   "0.9": 306.1987447099938,
+   "1.0": 317.93039688741857
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.339758386346877,
+  "estab_min": 1.176328859931155,
+  "estab_max": 1.7542171107734863,
+  "trilho_min": 30.32965586286452,
+  "apogeu_medio": 90.71112417899052,
+  "partes": {
+   "alcance": 32.24472283347234,
+   "consistencia": 22.13058571997578,
+   "leveza": 13.012080682656151,
+   "estabilidade": 1.76328859931155,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 12.267056252239003,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7262017480473995,
+   "nose_thickness": 2.4140547511852213,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.513339604260788,
+   "fin_count": 4,
+   "fin_root": 8.058366126974759,
+   "fin_tip": 1.6710848464702042,
+   "fin_sweep": 13.993831471928615,
+   "fin_height": 9.821188402523699,
+   "fin_thickness": 0.8185880272731466,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.342260064796504,
+   "fin_position": -0.04847752342039782,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.89423794606308
+  },
+  "nota": 74.14528448704704,
+  "alcance_medio": 298.91196449002695,
+  "alcance_pior": 275.52473961812115,
+  "alcance_por_eta": {
+   "0.7": 275.52473961812115,
+   "0.8": 292.1387943045823,
+   "0.9": 307.574946636354,
+   "1.0": 320.40937740105034
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3391184975844719,
+  "estab_min": 1.1395879295269777,
+  "estab_max": 1.7515537197419122,
+  "trilho_min": 30.362654737489873,
+  "apogeu_medio": 83.83132681375515,
+  "partes": {
+   "alcance": 32.52944808909581,
+   "consistencia": 22.175881981905043,
+   "leveza": 13.044075120776405,
+   "estabilidade": 1.3958792952697774,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.609419968704208,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8261226399930208,
+   "nose_thickness": 2.4922610123898625,
+   "nose_material": "pla",
+   "ballast_fill": 4.047187146208085,
+   "fin_count": 4,
+   "fin_root": 6.683726932389193,
+   "fin_tip": 2.113798283312747,
+   "fin_sweep": 10.947627878300981,
+   "fin_height": 9.633267022219647,
+   "fin_thickness": 0.8120601867918006,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.12193288480061944,
+   "fin_position": -0.009261656956588073,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.49468446196763
+  },
+  "nota": 74.11920842026939,
+  "alcance_medio": 293.0312329870122,
+  "alcance_pior": 270.2403458432121,
+  "alcance_por_eta": {
+   "0.7": 270.2403458432121,
+   "0.8": 286.50447819344384,
+   "0.9": 301.5558539865248,
+   "1.0": 313.82425392486795
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3132977414707104,
+  "estab_min": 1.1101502016536884,
+  "estab_max": 1.5797770952427366,
+  "trilho_min": 30.941554257309637,
+  "apogeu_medio": 78.98050801564536,
+  "partes": {
+   "alcance": 31.46022417945676,
+   "consistencia": 22.222369297811262,
+   "leveza": 14.335112926464483,
+   "estabilidade": 1.1015020165368838,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.815113432310434,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.7796505045645802,
+   "nose_thickness": 2.6163957172658856,
+   "nose_material": "pla",
+   "ballast_fill": 4.127808623461415,
+   "fin_count": 4,
+   "fin_root": 6.712423659669259,
+   "fin_tip": 2.170965764494947,
+   "fin_sweep": 11.018569039827502,
+   "fin_height": 9.536229939783844,
+   "fin_thickness": 0.8237913700022002,
+   "fin_material": "papel_cartao",
+   "fin_cant": -0.10726829952827957,
+   "fin_position": -0.03055610854887917,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.78040467074643
+  },
+  "nota": 74.11730368741193,
+  "alcance_medio": 294.30246216467043,
+  "alcance_pior": 271.3206687215571,
+  "alcance_por_eta": {
+   "0.7": 271.3206687215571,
+   "0.8": 287.8357503215751,
+   "0.9": 303.04514975476303,
+   "1.0": 315.0082798607864
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3166041723654015,
+  "estab_min": 1.1065058428206018,
+  "estab_max": 1.5851761486687699,
+  "trilho_min": 30.870557992603043,
+  "apogeu_medio": 78.02328441226527,
+  "partes": {
+   "alcance": 31.691356757212805,
+   "consistencia": 22.191097120263194,
+   "leveza": 14.169791381729926,
+   "estabilidade": 1.0650584282060183,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.236064186024489,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7326109891490594,
+   "nose_thickness": 2.522739641204177,
+   "nose_material": "poliestireno",
+   "ballast_fill": 7.146291370073232,
+   "fin_count": 4,
+   "fin_root": 7.8072007799729635,
+   "fin_tip": 1.5476909660569462,
+   "fin_sweep": 13.9789062311874,
+   "fin_height": 9.389547507839026,
+   "fin_thickness": 0.8141852428618105,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.4029080858878755,
+   "fin_position": -0.06023145966653444,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.35303080719406
+  },
+  "nota": 74.10570210259966,
+  "alcance_medio": 301.41287661142684,
+  "alcance_pior": 277.05972463335087,
+  "alcance_por_eta": {
+   "0.7": 277.05972463335087,
+   "0.8": 294.3550907825215,
+   "0.9": 310.43647822751694,
+   "1.0": 323.8002128023182
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33859803793926874,
+  "estab_min": 1.1131110040668846,
+  "estab_max": 1.7003963948577838,
+  "trilho_min": 30.378454674342656,
+  "apogeu_medio": 82.88433067641955,
+  "partes": {
+   "alcance": 32.984159383895786,
+   "consistencia": 21.920334574998478,
+   "leveza": 13.070098103036562,
+   "estabilidade": 1.1311100406688457,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 7.031294718315135,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6796309441554408,
+   "nose_thickness": 2.8850850908592798,
+   "nose_material": "petg",
+   "ballast_fill": 5.533648268810806,
+   "fin_count": 4,
+   "fin_root": 7.347409212551488,
+   "fin_tip": 1.4128398235620896,
+   "fin_sweep": 13.126761813996175,
+   "fin_height": 10.716544605418951,
+   "fin_thickness": 0.8253538745595491,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.1893534580044682,
+   "fin_position": -0.27147529935628484,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.59000464429662
+  },
+  "nota": 74.10054331488408,
+  "alcance_medio": 299.0520118946365,
+  "alcance_pior": 275.48015992230586,
+  "alcance_por_eta": {
+   "0.7": 275.48015992230586,
+   "0.8": 292.27938014495595,
+   "0.9": 307.7709610029108,
+   "1.0": 320.6775465083733
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3377906686018633,
+  "estab_min": 1.131735689449827,
+  "estab_max": 1.5907608064344616,
+  "trilho_min": 30.380084484441102,
+  "apogeu_medio": 88.09284076711475,
+  "partes": {
+   "alcance": 32.554911253570275,
+   "consistencia": 22.117808596908695,
+   "leveza": 13.110466569906835,
+   "estabilidade": 1.3173568944982694,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 6.575291414311515,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.8055171705112716,
+   "nose_thickness": 2.3842253678750125,
+   "nose_material": "pla",
+   "ballast_fill": 4.154020065174129,
+   "fin_count": 4,
+   "fin_root": 6.824579645382307,
+   "fin_tip": 2.5817148402142416,
+   "fin_sweep": 11.003185051843133,
+   "fin_height": 9.01254474883947,
+   "fin_thickness": 0.8133524836218061,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.07974312453231573,
+   "fin_position": -0.013612432028428961,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 56.36614046150298
+  },
+  "nota": 74.09901093227131,
+  "alcance_medio": 296.400660647309,
+  "alcance_pior": 272.93451258632155,
+  "alcance_por_eta": {
+   "0.7": 272.93451258632155,
+   "0.8": 290.01413281055574,
+   "0.9": 305.12572679111514,
+   "1.0": 317.52827040124373
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.32210331278320403,
+  "estab_min": 1.104836553637601,
+  "estab_max": 1.580461762988395,
+  "trilho_min": 30.754926421922743,
+  "apogeu_medio": 76.25710010575584,
+  "partes": {
+   "alcance": 32.07284739041982,
+   "consistencia": 22.08296364463569,
+   "leveza": 13.894834360839798,
+   "estabilidade": 1.0483655363760103,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 25.053687436458798,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5249383598018719,
+   "nose_thickness": 0.9061168442643689,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.911122353102419,
+   "fin_count": 3,
+   "fin_root": 8.418366898302713,
+   "fin_tip": 2.823979236067474,
+   "fin_sweep": 13.92275334464171,
+   "fin_height": 12.185681535277174,
+   "fin_thickness": 0.8082131971478461,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.447746651732506,
+   "fin_position": -0.028602618164380634,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.199775945082784
+  },
+  "nota": 74.09716017338638,
+  "alcance_medio": 294.73495010715374,
+  "alcance_pior": 271.17182082697263,
+  "alcance_por_eta": {
+   "0.7": 271.17182082697263,
+   "0.8": 288.33807116792127,
+   "0.9": 303.3339799964711,
+   "1.0": 316.09592843724994
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33623276456590373,
+  "estab_min": 1.2133491941853543,
+  "estab_max": 2.2318388140623893,
+  "trilho_min": 30.42621860337276,
+  "apogeu_medio": 82.58890314429793,
+  "partes": {
+   "alcance": 31.769990928573407,
+   "consistencia": 22.00531553125461,
+   "leveza": 13.188361771704812,
+   "estabilidade": 2.1334919418535425,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.4517483370124,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5052896804093528,
+   "nose_thickness": 0.9672850284748569,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.767313643685135,
+   "fin_count": 4,
+   "fin_root": 8.242309396012725,
+   "fin_tip": 2.6670559213042995,
+   "fin_sweep": 13.788982681686004,
+   "fin_height": 11.75028066764058,
+   "fin_thickness": 0.8072948462813384,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.56819475784047,
+   "fin_position": -0.038853585251335906,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.22853727363949
+  },
+  "nota": 74.09282276728476,
+  "alcance_medio": 285.7063250788069,
+  "alcance_pior": 263.3349392580639,
+  "alcance_por_eta": {
+   "0.7": 263.3349392580639,
+   "0.8": 279.4081732174105,
+   "0.9": 294.483623898351,
+   "1.0": 305.5985639414023
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33875525490709607,
+  "estab_min": 1.3732365975175365,
+  "estab_max": 2.329115175152804,
+  "trilho_min": 30.36269645623817,
+  "apogeu_medio": 83.36730540623601,
+  "partes": {
+   "alcance": 30.128422741601256,
+   "consistencia": 22.16979679586294,
+   "leveza": 13.062237254645197,
+   "estabilidade": 3.7323659751753646,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 7.796442770996333,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.9637820313582641,
+   "nose_thickness": 2.236181459744678,
+   "nose_material": "pla",
+   "ballast_fill": 4.264727708764208,
+   "fin_count": 3,
+   "fin_root": 7.198532473788013,
+   "fin_tip": 3.385361425115663,
+   "fin_sweep": 10.834936411499429,
+   "fin_height": 11.777375534106026,
+   "fin_thickness": 0.8001845244730781,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.8653363552229199,
+   "fin_position": -0.07085571702179164,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 56.473313840088295
+  },
+  "nota": 74.08749679922957,
+  "alcance_medio": 291.76354627309735,
+  "alcance_pior": 269.1474024968099,
+  "alcance_por_eta": {
+   "0.7": 269.1474024968099,
+   "0.8": 285.92231574669444,
+   "0.9": 300.0944700587752,
+   "1.0": 311.88999679010993
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3048415386500034,
+  "estab_min": 1.0851369744986834,
+  "estab_max": 1.5836492980020613,
+  "trilho_min": 31.140133317805205,
+  "apogeu_medio": 76.23207000128728,
+  "partes": {
+   "alcance": 31.2297356860177,
+   "consistencia": 22.2484683007252,
+   "leveza": 14.75792306749983,
+   "estabilidade": 0.851369744986834,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.569372327337598,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6571743294261158,
+   "nose_thickness": 2.363090847860142,
+   "nose_material": "poliestireno",
+   "ballast_fill": 8.040561862666744,
+   "fin_count": 4,
+   "fin_root": 8.006695046385346,
+   "fin_tip": 1.6885738170956244,
+   "fin_sweep": 13.957913836775836,
+   "fin_height": 9.83523994307421,
+   "fin_thickness": 0.8267364049077888,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.398420197214643,
+   "fin_position": -0.0640925313542219,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.86166933057415
+  },
+  "nota": 74.07406895270498,
+  "alcance_medio": 296.54970309398215,
+  "alcance_pior": 273.4785263707112,
+  "alcance_por_eta": {
+   "0.7": 273.4785263707112,
+   "0.8": 290.6211074857565,
+   "0.9": 305.0606723549067,
+   "1.0": 317.0385061645541
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.33210604118347364,
+  "estab_min": 1.1359293422431682,
+  "estab_max": 1.7722360533776957,
+  "trilho_min": 30.505921672429313,
+  "apogeu_medio": 87.35685147085435,
+  "partes": {
+   "alcance": 32.09994601708766,
+   "consistencia": 22.220131572359314,
+   "leveza": 13.394697940826319,
+   "estabilidade": 1.3592934224316822,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 7.362698873909871,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.597043792640104,
+   "nose_thickness": 2.6254673085938913,
+   "nose_material": "petg",
+   "ballast_fill": 5.924105322097919,
+   "fin_count": 4,
+   "fin_root": 7.242846820902917,
+   "fin_tip": 1.5303210772630051,
+   "fin_sweep": 12.908998947886813,
+   "fin_height": 9.256601410460085,
+   "fin_thickness": 0.8120290946775979,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.750020277450173,
+   "fin_position": -0.0017052474394325633,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 49.12090261155182
+  },
+  "nota": 74.06617953461922,
+  "alcance_medio": 301.5463648524425,
+  "alcance_pior": 277.6672467742272,
+  "alcance_por_eta": {
+   "0.7": 277.6672467742272,
+   "0.8": 295.3377802130198,
+   "0.9": 310.1669772722483,
+   "1.0": 323.0134551502747
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3430275274442062,
+  "estab_min": 1.1128013660890497,
+  "estab_max": 1.5890897210546533,
+  "trilho_min": 30.692571245702077,
+  "apogeu_medio": 100.56508940983669,
+  "partes": {
+   "alcance": 33.00842997317136,
+   "consistencia": 22.081112272767665,
+   "leveza": 12.848623627789689,
+   "estabilidade": 1.1280136608904967,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.187206731958515,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5280337020820246,
+   "nose_thickness": 0.9467586740662447,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.063749067287159,
+   "fin_count": 3,
+   "fin_root": 8.371273334988059,
+   "fin_tip": 3.067790247141394,
+   "fin_sweep": 13.644022016191554,
+   "fin_height": 12.066451147503175,
+   "fin_thickness": 0.820630051357309,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6103645614950072,
+   "fin_position": -0.023499918400777902,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.6141962525455
+  },
+  "nota": 74.0620768620544,
+  "alcance_medio": 298.7534603926212,
+  "alcance_pior": 274.5365657074787,
+  "alcance_por_eta": {
+   "0.7": 274.5365657074787,
+   "0.8": 291.14566455310387,
+   "0.9": 308.17092394828074,
+   "1.0": 321.1606873616215
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.35620000964000936,
+  "estab_min": 1.24774278257504,
+  "estab_max": 2.2451431335868053,
+  "trilho_min": 30.45409708670547,
+  "apogeu_medio": 80.68062404859029,
+  "partes": {
+   "alcance": 32.500629162294764,
+   "consistencia": 21.8940203560097,
+   "leveza": 12.189999517999532,
+   "estabilidade": 2.4774278257504,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.487406475030536,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.503810945642518,
+   "nose_thickness": 0.8322466631148406,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.002746107220455,
+   "fin_count": 3,
+   "fin_root": 8.342221761616045,
+   "fin_tip": 2.7507343345027127,
+   "fin_sweep": 13.903961431462388,
+   "fin_height": 12.15235716498393,
+   "fin_thickness": 0.8125048997392563,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.56752500805188,
+   "fin_position": -0.03505944065069208,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.993986211673075
+  },
+  "nota": 74.04864142037303,
+  "alcance_medio": 296.41099570550193,
+  "alcance_pior": 272.6157812492661,
+  "alcance_por_eta": {
+   "0.7": 272.6157812492661,
+   "0.8": 289.8455377148387,
+   "0.9": 305.1277224587811,
+   "1.0": 318.0549413991218
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.34310508374703585,
+  "estab_min": 1.2156946357884182,
+  "estab_max": 2.22515143127967,
+  "trilho_min": 30.722504943446452,
+  "apogeu_medio": 86.45104938253856,
+  "partes": {
+   "alcance": 32.074726491909445,
+   "consistencia": 21.972222757931192,
+   "leveza": 12.844745812648206,
+   "estabilidade": 2.156946357884182,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.3744396805609,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5032751914505852,
+   "nose_thickness": 2.4308971015719734,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 9.023444069618389,
+   "fin_count": 3,
+   "fin_root": 8.037175577920262,
+   "fin_tip": 4.810320330444713,
+   "fin_sweep": 11.201478319337847,
+   "fin_height": 12.434057494330881,
+   "fin_thickness": 0.800074231670148,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.8194394382661392,
+   "fin_position": -0.00011357120407645748,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.50863724032842
+  },
+  "nota": 74.04131832776847,
+  "alcance_medio": 295.76700655983274,
+  "alcance_pior": 272.1894916136923,
+  "alcance_por_eta": {
+   "0.7": 272.1894916136923,
+   "0.8": 289.1442643526685,
+   "0.9": 304.65714096914013,
+   "1.0": 317.0771293038302
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3458360465092405,
+  "estab_min": 1.2347134573638554,
+  "estab_max": 1.8467457798408629,
+  "trilho_min": 30.668064461011788,
+  "apogeu_medio": 83.92518927707242,
+  "partes": {
+   "alcance": 31.957637556333225,
+   "consistencia": 22.02834852325871,
+   "leveza": 12.708197674537976,
+   "estabilidade": 2.347134573638554,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 23.742000482729935,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.499938728360561,
+   "nose_thickness": 0.9627501159823018,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.897396240357502,
+   "fin_count": 3,
+   "fin_root": 8.304818184887765,
+   "fin_tip": 2.92476626033825,
+   "fin_sweep": 13.600800877806872,
+   "fin_height": 11.829887163467621,
+   "fin_thickness": 0.8257915389478458,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.5265975568339344,
+   "fin_position": -0.00016873006385392797,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.945671577836414
+  },
+  "nota": 74.02787657557154,
+  "alcance_medio": 298.61053178462276,
+  "alcance_pior": 274.2509367651849,
+  "alcance_por_eta": {
+   "0.7": 274.2509367651849,
+   "0.8": 291.6416295420433,
+   "0.9": 307.731128183207,
+   "1.0": 320.81843264805593
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3494381065642096,
+  "estab_min": 1.2182787407994524,
+  "estab_max": 2.196322915319262,
+  "trilho_min": 30.61231010594909,
+  "apogeu_medio": 76.90762780915136,
+  "partes": {
+   "alcance": 32.47464214265869,
+   "consistencia": 21.842352353128803,
+   "leveza": 12.528094671789521,
+   "estabilidade": 2.182787407994524,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 9.461480328831062,
+   "nose_shape": "HAACK",
+   "nose_shape_param": 0.05272073041531401,
+   "nose_thickness": 2.1218472734234757,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 5.899203402511298,
+   "fin_count": 3,
+   "fin_root": 7.617572135815772,
+   "fin_tip": 2.253949173858499,
+   "fin_sweep": 12.733933732959477,
+   "fin_height": 13.325743950098374,
+   "fin_thickness": 0.8296610947141054,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.1099729928808602,
+   "fin_position": -0.00023957193220103536,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.170443376566084
+  },
+  "nota": 74.02627377316772,
+  "alcance_medio": 295.24822326986384,
+  "alcance_pior": 271.64488570307,
+  "alcance_por_eta": {
+   "0.7": 271.64488570307,
+   "0.8": 288.63466033985816,
+   "0.9": 303.8331098413347,
+   "1.0": 316.8802371951924
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3323615773043384,
+  "estab_min": 1.1775443924818048,
+  "estab_max": 1.7330977125530485,
+  "trilho_min": 30.519258295496034,
+  "apogeu_medio": 79.31144991138973,
+  "partes": {
+   "alcance": 31.863313321793427,
+   "consistencia": 22.00559539177316,
+   "leveza": 13.381921134783079,
+   "estabilidade": 1.7754439248180476,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.770919727420022,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5098909856869994,
+   "nose_thickness": 0.9373727438864176,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.098636322369849,
+   "fin_count": 3,
+   "fin_root": 8.416926931020617,
+   "fin_tip": 2.738702309287222,
+   "fin_sweep": 13.988053927738221,
+   "fin_height": 11.907727602510729,
+   "fin_thickness": 0.8154716956046426,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.4962381395598208,
+   "fin_position": -0.0142493802713599,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.33231695231454
+  },
+  "nota": 74.01905335550504,
+  "alcance_medio": 297.4831457103622,
+  "alcance_pior": 273.4529414165991,
+  "alcance_por_eta": {
+   "0.7": 273.4529414165991,
+   "0.8": 290.6668288424003,
+   "0.9": 306.4381240174575,
+   "1.0": 319.3746885649919
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3451603924375983,
+  "estab_min": 1.2085247349811272,
+  "estab_max": 2.2239152944555642,
+  "trilho_min": 30.68127305753257,
+  "apogeu_medio": 85.5022023619314,
+  "partes": {
+   "alcance": 32.26966285642949,
+   "consistencia": 21.922162771144183,
+   "leveza": 12.741980378120086,
+   "estabilidade": 2.0852473498112722,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.787693449531513,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5021862972173834,
+   "nose_thickness": 0.8474924083946653,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.248848932404073,
+   "fin_count": 3,
+   "fin_root": 8.572364017612845,
+   "fin_tip": 2.9797255481648044,
+   "fin_sweep": 13.90558276551368,
+   "fin_height": 11.568145372961018,
+   "fin_thickness": 0.8045012928173544,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.38248041306445557,
+   "fin_position": -0.026468762579724525,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.955572796895694
+  },
+  "nota": 74.00937164039858,
+  "alcance_medio": 298.9372411079314,
+  "alcance_pior": 274.8940010860197,
+  "alcance_por_eta": {
+   "0.7": 274.8940010860197,
+   "0.8": 292.07753851234384,
+   "0.9": 308.1813484852433,
+   "1.0": 320.59607634811897
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3491842252260326,
+  "estab_min": 1.1977444635914165,
+  "estab_max": 2.220000433198266,
+  "trilho_min": 30.590595077989825,
+  "apogeu_medio": 86.78506131219672,
+  "partes": {
+   "alcance": 32.53404383780571,
+   "consistencia": 21.95709442798034,
+   "leveza": 12.54078873869837,
+   "estabilidade": 1.977444635914165,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 10.498424347486603,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.7752955304704521,
+   "nose_thickness": 2.429037177323309,
+   "nose_material": "poliestireno",
+   "ballast_fill": 6.789204422964807,
+   "fin_count": 4,
+   "fin_root": 7.765320561957055,
+   "fin_tip": 1.3322579789608064,
+   "fin_sweep": 13.98259995038262,
+   "fin_height": 9.627267817809862,
+   "fin_thickness": 0.8136367006742173,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.3654813183990224,
+   "fin_position": -0.036506933431919054,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.880895094306865
+  },
+  "nota": 73.93878658789339,
+  "alcance_medio": 301.35084687786315,
+  "alcance_pior": 276.51156989142015,
+  "alcance_por_eta": {
+   "0.7": 276.51156989142015,
+   "0.8": 294.1697072943037,
+   "0.9": 310.78172798797726,
+   "1.0": 323.94038233775154
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3398480926794744,
+  "estab_min": 1.120095380121779,
+  "estab_max": 1.6905628999202362,
+  "trilho_min": 30.356390496522703,
+  "apogeu_medio": 81.07667103866021,
+  "partes": {
+   "alcance": 32.97288125052057,
+   "consistencia": 21.757356170128737,
+   "leveza": 13.00759536602628,
+   "estabilidade": 1.20095380121779,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.02278990131347,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5132922855055416,
+   "nose_thickness": 0.9329213996679421,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.258049192564782,
+   "fin_count": 3,
+   "fin_root": 8.468542590955842,
+   "fin_tip": 3.2951782407663557,
+   "fin_sweep": 13.550290424887043,
+   "fin_height": 11.968602955304524,
+   "fin_thickness": 0.8141923117349666,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6327913114284643,
+   "fin_position": -0.036771111930540036,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.48512414181917
+  },
+  "nota": 73.91041550723544,
+  "alcance_medio": 300.52753695277744,
+  "alcance_pior": 275.6875560925992,
+  "alcance_por_eta": {
+   "0.7": 275.6875560925992,
+   "0.8": 293.43502363736275,
+   "0.9": 309.84939178446183,
+   "1.0": 323.1381762966859
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.36462652468757545,
+  "estab_min": 1.2584012374326239,
+  "estab_max": 2.251172068607713,
+  "trilho_min": 30.27484166836702,
+  "apogeu_medio": 81.00947021513899,
+  "partes": {
+   "alcance": 32.82318853686863,
+   "consistencia": 21.73454083041935,
+   "leveza": 11.768673765621227,
+   "estabilidade": 2.584012374326239,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.44190278884465,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5311795290689986,
+   "nose_thickness": 0.8686266677648129,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.295276581439497,
+   "fin_count": 3,
+   "fin_root": 8.64599219816894,
+   "fin_tip": 3.331076422597752,
+   "fin_sweep": 13.638520118709451,
+   "fin_height": 11.85611409566318,
+   "fin_thickness": 0.8150914804132343,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6324627780338892,
+   "fin_position": -0.03328650788360906,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.48774207957278
+  },
+  "nota": 73.90615727504176,
+  "alcance_medio": 299.9845937068359,
+  "alcance_pior": 275.5779285034822,
+  "alcance_por_eta": {
+   "0.7": 275.5779285034822,
+   "0.8": 292.7083589263209,
+   "0.9": 309.09314633356627,
+   "1.0": 322.55894106397403
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.36336259009138144,
+  "estab_min": 1.2485788081612472,
+  "estab_max": 2.2575039418373413,
+  "trilho_min": 30.29312063845799,
+  "apogeu_medio": 84.4342221213838,
+  "partes": {
+   "alcance": 32.72447158306107,
+   "consistencia": 21.8640271149373,
+   "leveza": 11.831870495430927,
+   "estabilidade": 2.4857880816124722,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 26.76923123672011,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5236725447847546,
+   "nose_thickness": 1.1385636903155407,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.728315685590957,
+   "fin_count": 3,
+   "fin_root": 7.999973486171879,
+   "fin_tip": 2.9792827870721186,
+   "fin_sweep": 12.787058190779328,
+   "fin_height": 13.21176791308192,
+   "fin_thickness": 0.800252796083559,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.833551201400417,
+   "fin_position": -0.0389068929368237,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.49124218535617
+  },
+  "nota": 73.87860884077656,
+  "alcance_medio": 293.7029422148972,
+  "alcance_pior": 269.7868376229212,
+  "alcance_por_eta": {
+   "0.7": 269.7868376229212,
+   "0.8": 287.3550546895262,
+   "0.9": 302.6697569585637,
+   "1.0": 315.00011958857743
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3503256583039688,
+  "estab_min": 1.2955495728029462,
+  "estab_max": 2.3684532217482683,
+  "trilho_min": 30.578787822204188,
+  "apogeu_medio": 80.62731032166464,
+  "partes": {
+   "alcance": 31.582353129981303,
+   "consistencia": 21.85704289796424,
+   "leveza": 12.48371708480156,
+   "estabilidade": 2.9554957280294625,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 13.053962664176193,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6517703743411438,
+   "nose_thickness": 2.568924489012839,
+   "nose_material": "poliestireno",
+   "ballast_fill": 8.094536726445606,
+   "fin_count": 4,
+   "fin_root": 7.853416357855492,
+   "fin_tip": 2.4139635192014968,
+   "fin_sweep": 13.286786077994522,
+   "fin_height": 9.520594779166181,
+   "fin_thickness": 0.8287824932836736,
+   "fin_material": "papel_cartao",
+   "fin_cant": -1.6026468382932952,
+   "fin_position": -0.08253160324297051,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 52.73031937550024
+  },
+  "nota": 73.86699149626172,
+  "alcance_medio": 299.60743205821194,
+  "alcance_pior": 275.1323580787652,
+  "alcance_por_eta": {
+   "0.7": 275.1323580787652,
+   "0.8": 293.20363437202906,
+   "0.9": 308.6213966878206,
+   "1.0": 321.47233909423295
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3453244089540196,
+  "estab_min": 1.1646362886702695,
+  "estab_max": 1.7916790614821312,
+  "trilho_min": 30.673356132280585,
+  "apogeu_medio": 87.44044441355595,
+  "partes": {
+   "alcance": 32.655896737856715,
+   "consistencia": 21.830952319403295,
+   "leveza": 12.73377955229902,
+   "estabilidade": 1.6463628867026947,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 11.125252495246759,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.6720503769680538,
+   "nose_thickness": 0.9585705573258847,
+   "nose_material": "petg",
+   "ballast_fill": 7.557723908718271,
+   "fin_count": 4,
+   "fin_root": 7.783301829346946,
+   "fin_tip": 1.9452030311196802,
+   "fin_sweep": 13.460519309051167,
+   "fin_height": 10.273691536379289,
+   "fin_thickness": 0.8309558709090927,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.0266255183687072,
+   "fin_position": -0.09344195064775083,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 50.99041834211136
+  },
+  "nota": 73.86385496488617,
+  "alcance_medio": 299.2161012027354,
+  "alcance_pior": 275.21146876871325,
+  "alcance_por_eta": {
+   "0.7": 275.21146876871325,
+   "0.8": 292.2089325726535,
+   "0.9": 308.0210587084112,
+   "1.0": 321.4229447611636
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.35318971091725515,
+  "estab_min": 1.1961101760625243,
+  "estab_max": 1.7842640429334962,
+  "trilho_min": 30.487418876650864,
+  "apogeu_medio": 92.6818938235137,
+  "partes": {
+   "alcance": 32.58474567322462,
+   "consistencia": 21.97749307689907,
+   "leveza": 12.340514454137242,
+   "estabilidade": 1.9611017606252434,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.654380561518092,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5316959187871622,
+   "nose_thickness": 0.9039563563749736,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.280493437650131,
+   "fin_count": 3,
+   "fin_root": 8.569812905925302,
+   "fin_tip": 3.4961904207296324,
+   "fin_sweep": 13.624705904123328,
+   "fin_height": 11.870044465814662,
+   "fin_thickness": 0.8064212670658367,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.7699162094558699,
+   "fin_position": -0.055130606599789966,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.42116564997237
+  },
+  "nota": 73.83694834018723,
+  "alcance_medio": 299.44116992542973,
+  "alcance_pior": 274.54605872035535,
+  "alcance_por_eta": {
+   "0.7": 274.54605872035535,
+   "0.8": 292.2665850344908,
+   "0.9": 308.9772596701694,
+   "1.0": 321.97477627670327
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.35976893313447583,
+  "estab_min": 1.2513584917525935,
+  "estab_max": 2.2686014192059503,
+  "trilho_min": 30.367981877236073,
+  "apogeu_medio": 84.62523428673713,
+  "partes": {
+   "alcance": 32.62566725916904,
+   "consistencia": 21.68614282021606,
+   "leveza": 12.011553343276208,
+   "estabilidade": 2.513584917525935,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.188367769886725,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5236436273726784,
+   "nose_thickness": 0.9485596462701806,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.0058111860623,
+   "fin_count": 3,
+   "fin_root": 8.567996975858343,
+   "fin_tip": 3.1035160270755675,
+   "fin_sweep": 13.639105960598854,
+   "fin_height": 12.073634509019083,
+   "fin_thickness": 0.8205347025822307,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6034959613004759,
+   "fin_position": -0.02538366552578746,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.86295800653085
+  },
+  "nota": 73.80342669047405,
+  "alcance_medio": 297.9017304366996,
+  "alcance_pior": 273.48145618579844,
+  "alcance_por_eta": {
+   "0.7": 273.48145618579844,
+   "0.8": 291.03121518412166,
+   "0.9": 307.1979221709798,
+   "1.0": 319.89632820589856
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3528700639026823,
+  "estab_min": 1.2298586831321712,
+  "estab_max": 2.225543354533645,
+  "trilho_min": 30.51945510823381,
+  "apogeu_medio": 83.16919916002293,
+  "partes": {
+   "alcance": 32.34576917030902,
+   "consistencia": 21.802573883977438,
+   "leveza": 12.356496804865886,
+   "estabilidade": 2.2985868313217117,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 23.58551200450457,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5011881825437197,
+   "nose_thickness": 0.9951955132755257,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.851421069966555,
+   "fin_count": 3,
+   "fin_root": 8.468588358749821,
+   "fin_tip": 3.41881593520621,
+   "fin_sweep": 13.42062743118672,
+   "fin_height": 11.963068920885215,
+   "fin_thickness": 0.8241224293667907,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.48787248143042566,
+   "fin_position": -0.00035774773663181094,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 56.50275997632904
+  },
+  "nota": 73.78148185962797,
+  "alcance_medio": 296.8454903942402,
+  "alcance_pior": 272.2493765982711,
+  "alcance_por_eta": {
+   "0.7": 272.2493765982711,
+   "0.8": 289.88790098120836,
+   "0.9": 305.86836488337923,
+   "1.0": 319.376319114102
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3509309420293523,
+  "estab_min": 1.2460133805175877,
+  "estab_max": 2.210525545502877,
+  "trilho_min": 30.584187100140927,
+  "apogeu_medio": 74.7412117739889,
+  "partes": {
+   "alcance": 32.153725526225486,
+   "consistencia": 21.714169629694226,
+   "leveza": 12.453452898532385,
+   "estabilidade": 2.460133805175877,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.637187398794605,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5248778011144186,
+   "nose_thickness": 0.9443616642161121,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.342508920257993,
+   "fin_count": 3,
+   "fin_root": 8.509503468126088,
+   "fin_tip": 3.301103530040057,
+   "fin_sweep": 13.483178660761839,
+   "fin_height": 12.024866244865034,
+   "fin_thickness": 0.817600792033913,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6327846312786124,
+   "fin_position": -0.04617310060924169,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.918104453830566
+  },
+  "nota": 73.67186354316742,
+  "alcance_medio": 299.2487945117304,
+  "alcance_pior": 274.2000410607618,
+  "alcance_por_eta": {
+   "0.7": 274.2000410607618,
+   "0.8": 292.17303815705645,
+   "0.9": 309.03587103883626,
+   "1.0": 321.5862277902672
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3617208055603048,
+  "estab_min": 1.2537758390126155,
+  "estab_max": 2.2652811343767634,
+  "trilho_min": 30.339605477132032,
+  "apogeu_medio": 79.50554650351977,
+  "partes": {
+   "alcance": 32.590689911223706,
+   "consistencia": 21.629455519832785,
+   "leveza": 11.913959721984762,
+   "estabilidade": 2.5377583901261547,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 22.845417710515267,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5087272780191389,
+   "nose_thickness": 1.0067078456305993,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 12.918908162634677,
+   "fin_count": 3,
+   "fin_root": 8.372887820838566,
+   "fin_tip": 2.879892789566538,
+   "fin_sweep": 13.592757041535295,
+   "fin_height": 12.072920017686679,
+   "fin_thickness": 0.8059208325545921,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.5351855173913236,
+   "fin_position": -0.03829722523910653,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.500751229949934
+  },
+  "nota": 73.66599451139246,
+  "alcance_medio": 302.0783663371436,
+  "alcance_pior": 276.364664464233,
+  "alcance_por_eta": {
+   "0.7": 276.364664464233,
+   "0.8": 294.629949604704,
+   "0.9": 311.91103049635916,
+   "1.0": 325.4078207832784
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.36628305602817746,
+  "estab_min": 1.2387251758878568,
+  "estab_max": 2.195430894649473,
+  "trilho_min": 30.239487608051643,
+  "apogeu_medio": 81.19107164550141,
+  "partes": {
+   "alcance": 33.1051575158443,
+   "consistencia": 21.487738038078476,
+   "leveza": 11.685847198591127,
+   "estabilidade": 2.387251758878568,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 25.23690165821123,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5596699410764159,
+   "nose_thickness": 1.121594581738209,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.089007873483425,
+   "fin_count": 3,
+   "fin_root": 8.53864148335804,
+   "fin_tip": 3.95756545898552,
+   "fin_sweep": 13.005448366986768,
+   "fin_height": 12.469362514925841,
+   "fin_thickness": 0.8001165214668425,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.2070080004703452,
+   "fin_position": -0.11659223137032708,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.94608516240863
+  },
+  "nota": 73.65917733651708,
+  "alcance_medio": 294.6599337154988,
+  "alcance_pior": 270.26419156033324,
+  "alcance_por_eta": {
+   "0.7": 270.26419156033324,
+   "0.8": 287.97206317046715,
+   "0.9": 304.04785908545944,
+   "1.0": 316.3556210457356
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.35134037200401064,
+  "estab_min": 1.2749131545134387,
+  "estab_max": 2.293377316535691,
+  "trilho_min": 30.560922028390372,
+  "apogeu_medio": 79.23687515462949,
+  "partes": {
+   "alcance": 31.75635158463615,
+   "consistencia": 21.720712806947063,
+   "leveza": 12.432981399799468,
+   "estabilidade": 2.7491315451343867,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.414789017970445,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5297894890592373,
+   "nose_thickness": 0.9232871763827895,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.145424747597467,
+   "fin_count": 3,
+   "fin_root": 8.554885122752722,
+   "fin_tip": 3.234092554628157,
+   "fin_sweep": 13.528716768013556,
+   "fin_height": 11.926266664679666,
+   "fin_thickness": 0.8295775510345258,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6865942735827251,
+   "fin_position": -0.02169920366676125,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 55.529423455441076
+  },
+  "nota": 73.61689813925501,
+  "alcance_medio": 298.3177715222704,
+  "alcance_pior": 273.5064344155447,
+  "alcance_por_eta": {
+   "0.7": 273.5064344155447,
+   "0.8": 291.09960052680543,
+   "0.9": 307.9424263471977,
+   "1.0": 320.7226247995337
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3570895774938621,
+  "estab_min": 1.2367047159225664,
+  "estab_max": 2.2410577527139823,
+  "trilho_min": 30.44408172720489,
+  "apogeu_medio": 77.7963471396565,
+  "partes": {
+   "alcance": 32.421413004049164,
+   "consistencia": 21.682916850673294,
+   "leveza": 12.145521125306896,
+   "estabilidade": 2.3670471592256637,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 27.224829439264745,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5512637775236997,
+   "nose_thickness": 1.1470919032514422,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 14.09456397820915,
+   "fin_count": 3,
+   "fin_root": 7.989297385476413,
+   "fin_tip": 3.482072201258079,
+   "fin_sweep": 12.283215564617533,
+   "fin_height": 11.98358040854923,
+   "fin_thickness": 0.8002919872205575,
+   "fin_material": "papel_cartao",
+   "fin_cant": 1.970649238842536,
+   "fin_position": -0.031538877217929154,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.69881734199631
+  },
+  "nota": 73.57551739403489,
+  "alcance_medio": 298.6223085271505,
+  "alcance_pior": 273.61296197323463,
+  "alcance_por_eta": {
+   "0.7": 273.61296197323463,
+   "0.8": 291.33023422363857,
+   "0.9": 307.911719195866,
+   "1.0": 321.6343187158628
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.365042088195637,
+  "estab_min": 1.2725747422206628,
+  "estab_max": 2.3718980351908674,
+  "trilho_min": 30.26707178291607,
+  "apogeu_medio": 80.18609445273252,
+  "partes": {
+   "alcance": 32.47678336857282,
+   "consistencia": 21.62509101303729,
+   "leveza": 11.74789559021815,
+   "estabilidade": 2.725747422206628,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.813573509652983,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5566994212250256,
+   "nose_thickness": 0.931286832984565,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.404705024316284,
+   "fin_count": 3,
+   "fin_root": 8.775738957555426,
+   "fin_tip": 3.4953320845414013,
+   "fin_sweep": 13.78272308588642,
+   "fin_height": 12.074697643807193,
+   "fin_thickness": 0.8046260777263367,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6249256084409701,
+   "fin_position": -0.05088361473761566,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 54.309922034524966
+  },
+  "nota": 73.5362387676813,
+  "alcance_medio": 299.95843979113477,
+  "alcance_pior": 274.526405762307,
+  "alcance_por_eta": {
+   "0.7": 274.526405762307,
+   "0.8": 292.9493118176226,
+   "0.9": 309.33270937249296,
+   "1.0": 323.02533221211655
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.36903369184107393,
+  "estab_min": 1.2746726273784947,
+  "estab_max": 2.2976498223145922,
+  "trilho_min": 30.18053366082119,
+  "apogeu_medio": 81.33585266375245,
+  "partes": {
+   "alcance": 32.71971632566087,
+   "consistencia": 21.52148076028918,
+   "leveza": 11.548315407946303,
+   "estabilidade": 2.7467262737849474,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ },
+ {
+  "design": {
+   "nose_length": 24.893442614174525,
+   "nose_shape": "PARABOLIC",
+   "nose_shape_param": 0.5393563167946396,
+   "nose_thickness": 0.8522948410033933,
+   "nose_material": "papel_cartao",
+   "ballast_fill": 13.784235387624122,
+   "fin_count": 3,
+   "fin_root": 8.758373543407885,
+   "fin_tip": 3.5682869590577906,
+   "fin_sweep": 13.82368477083175,
+   "fin_height": 11.65428358290368,
+   "fin_thickness": 0.8109807529549813,
+   "fin_material": "papel_cartao",
+   "fin_cant": 0.6856544966429237,
+   "fin_position": -0.04768059972553905,
+   "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+   "launch_angle": 53.513766793693435
+  },
+  "nota": 73.41395563407113,
+  "alcance_medio": 302.92799086641367,
+  "alcance_pior": 277.00161632950017,
+  "alcance_por_eta": {
+   "0.7": 277.00161632950017,
+   "0.8": 295.55678829109024,
+   "0.9": 312.6219715260784,
+   "1.0": 326.5315873189859
+  },
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "massa_seca": 0.3811583618968801,
+  "estab_min": 1.2770832262151965,
+  "estab_max": 2.3085497005149938,
+  "trilho_min": 29.920829099879402,
+  "apogeu_medio": 83.78487619199159,
+  "partes": {
+   "alcance": 33.2596347029843,
+   "consistencia": 21.441406763778858,
+   "leveza": 10.942081905155995,
+   "estabilidade": 2.7708322621519654,
+   "saida_trilho": 5.0
+  },
+  "motivo_descarte": null
+ }
+]

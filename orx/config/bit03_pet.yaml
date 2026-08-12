@@ -1,0 +1,186 @@
+# Otimização com arquitetura do corpo (bit03) — melhor foguete possível
+# construído com a garrafa PET 2L retornável (fixa, é o vaso de pressão/motor
+# real da equipe), com liberdade para ADICIONAR um segmento de garrafa novo à
+# frente — nunca alterar o corpo/bico existente. Alcance em lançamento 45°.
+#
+# "Reprodutível" definido por domínio:
+# - corpo ("Tubo do corpo" + "Transição"/bico): FIXO, é a garrafa PET 2L real
+#   já usada como motor — não é alterado em NADA (nem material, nem
+#   dimensão), só lido para casar o acoplador do segmento extra.
+# - segmento extra (opcional): 1 garrafa PET real adicional (catálogo de
+#   tamanhos comerciais), unida por acoplador impresso.
+# - ogiva: impressa em 3D, dimensão/forma/parede livres (contínuo).
+# - lastro: Durepoxi no bico, sem metal, massa derivada do volume real
+#   (modelo de 8 discos, CG fisicamente correto).
+# - aletas: planform livre, material livre, quantidade livre.
+# - motor: só a família VinagreCO2 (regulamento).
+
+base_ork: D:\OBAFOG\bit03 2L real\foguete_novo.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42
+
+parameters:
+  # ---------- segmento extra de garrafa (opcional), à frente do corpo fixo ----------
+  - name: extra_bottle
+    component: Ogiva
+    attribute: architecture_noop
+    choices: [0, 1]                              # 0 = só o corpo fixo (2L); 1 = + 1 garrafa
+
+  - name: bottle_fwd
+    component: Ogiva
+    attribute: architecture_noop
+    choices: ["500ml", "600ml", "1.5L", "2L"]     # tamanho do segmento extra (só se extra_bottle=1)
+
+  - name: coupler_length
+    component: Ogiva
+    attribute: architecture_noop
+    unit: cm
+    low: 1.5
+    high: 6.0                # acoplador impresso entre as duas garrafas
+
+  - name: coupler_material
+    component: Ogiva
+    attribute: architecture_noop
+    choices: [pla, poliestireno]
+
+  # ---------- ogiva (impressa em 3D) ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 8.0
+    high: 35.0
+
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK, PARABOLIC, POWER]
+
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.0
+    high: 1.0
+
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.6
+    high: 3.0
+
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pla, poliestireno, papel_cartao]
+
+  # ---------- lastro reprodutível (sem metal) ----------
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 33.0
+    options:
+      density_g_cm3: 1.7
+
+  # ---------- aletas ----------
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 3
+    high: 6
+    integer: true
+
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 2.0
+    high: 12.0
+
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 16.0
+
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0
+
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 2.0
+    high: 14.0
+
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.6
+    high: 3.0
+
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [poliestireno, pla, pet_garrafa, papel_cartao]
+
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: -2.0
+    high: 2.0
+
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -3.0
+    high: 0.0
+
+  # ---------- motor (regulamento: apenas vinagre + CO2) ----------
+  - name: motor
+    component: Tubo do corpo
+    attribute: motor
+    choices: [VinagreCO2-1L, VinagreCO2-1_2L, VinagreCO2-1_4L, VinagreCO2-1_5L,
+              VinagreCO2-1_6L, VinagreCO2-1_8L, VinagreCO2-2L, VinagreCO2-1_5L-calib]
+
+objective:
+  metric: horizontal_distance
+  direction: maximize
+
+constraints:
+  - metric: stability_static
+    min: 0.15
+  - metric: stability_max
+    min: 1.0
+    max: 3.5
+  - metric: apogee
+    min: 10.0
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 10000
+  seed: 42
+  profile: balanced
+
+batch:
+  workers: 6
+
+db_path: D:\OBAFOG\bit03 2L real\otimizacao_pet\orx.sqlite
+output_dir: D:\OBAFOG\bit03 2L real\otimizacao_pet

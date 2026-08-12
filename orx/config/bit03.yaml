@@ -1,0 +1,152 @@
+# Otimização LIVRE do foguete_novo (bit03) — OBAFOG, alcance em lançamento 45°
+# Fixo (o "corpo"): Tubo do corpo (22,5 cm, PETG) e Transição (8 cm, PETG).
+# Livre (com limites construíveis): ogiva (tamanho/formato/parede/material),
+# lastro em Durepoxi (sem metal, massa derivada do volume), aletas (planform,
+# quantidade, espessura, material, cant, posição) e motor (família VinagreCO2).
+
+base_ork: D:\OBAFOG\bit03 2L real\foguete_novo.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42          # 45°, trilho 1 m, vento 2 m/s contra — do próprio .ork
+
+parameters:
+  # ---------- ogiva (impressa em 3D) ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 8.0
+    high: 35.0               # imprimível em partes; atual: 26
+
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK, PARABOLIC, POWER]
+
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.0
+    high: 1.0                # afeta HAACK/POWER/PARABOLIC; ignorado nos demais
+
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.6                 # mínimo imprimível estrutural
+    high: 3.0
+
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pla, poliestireno, papel_cartao]
+
+  # ---------- lastro reprodutível (sem metal) ----------
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 33.0               # limitado a 95% da ogiva em runtime
+    options:
+      density_g_cm3: 1.7
+
+  # ---------- aletas (1 conjunto, hoje 4 aletas) ----------
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 3
+    high: 6
+    integer: true
+
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 2.0
+    high: 12.0               # transição tem 8 cm; sobra vira overhang traseiro
+
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 16.0
+
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0
+
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 2.0
+    high: 14.0
+
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.6
+    high: 3.0
+
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [poliestireno, pla, pet_garrafa, papel_cartao]
+
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: -2.0
+    high: 2.0                # leve spin estabilizador vs. arrasto
+
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -3.0                # deslocamento a partir da âncora atual (fundo da transição)
+    high: 0.0
+
+  # ---------- motor (regulamento: apenas vinagre + CO2) ----------
+  - name: motor
+    component: Tubo do corpo
+    attribute: motor
+    choices: [VinagreCO2-1L, VinagreCO2-1_2L, VinagreCO2-1_4L, VinagreCO2-1_5L,
+              VinagreCO2-1_6L, VinagreCO2-1_8L, VinagreCO2-2L, VinagreCO2-1_5L-calib]
+
+objective:
+  metric: horizontal_distance
+  direction: maximize
+
+constraints:
+  - metric: stability_static # início do voo (tanque cheio)
+    min: 0.15
+  - metric: stability_max    # pós-queima — métrica de calibres da equipe
+    min: 1.0
+    max: 3.5
+  - metric: apogee
+    min: 10.0
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 10000
+  seed: 42
+  profile: balanced
+
+batch:
+  workers: 6
+
+db_path: D:\OBAFOG\bit03 2L real\otimizacao\orx.sqlite
+output_dir: D:\OBAFOG\bit03 2L real\otimizacao

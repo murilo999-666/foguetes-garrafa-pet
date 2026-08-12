@@ -1,0 +1,4 @@
+Motores da garrafa reduzida bit05 (~1,8 L internos).
+Quimica calibrada em 170 psi/1,55 L (2L); fator de voo k=2.172 (275 m reais).
+Volume menor -> mesma carga gera mais pressao que na 2L.
+Raio menor (4,79 cm) -> aguenta mais pressao para a mesma parede.

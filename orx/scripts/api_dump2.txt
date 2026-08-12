@@ -1,0 +1,96 @@
+
+=== info.openrocket.core.document.Simulation ===
+  CTOR: public info.openrocket.core.document.Simulation(info.openrocket.core.document.OpenRocketDocument,info.openrocket.core.rocketcomponent.Rocket,info.openrocket.core.document.Simulation$Status,java.lang.String,info.openrocket.core.simulation.SimulationOptions,java.util.List,info.openrocket.core.simulation.FlightData)
+  CTOR: public info.openrocket.core.document.Simulation(info.openrocket.core.rocketcomponent.Rocket)
+  CTOR: public info.openrocket.core.document.Simulation(info.openrocket.core.document.OpenRocketDocument,info.openrocket.core.rocketcomponent.Rocket)
+   clone()
+   copy()
+   getActiveConfiguration()
+   getFlightConfigurationId()
+   getId()
+   getName()
+   getOptions()
+   getRocket()
+   getSimulatedConditions()
+   getSimulatedConfigurationDescription()
+   getSimulatedData()
+   getSimulatedWarnings()
+   getSimulationExtensions()
+   getStatus()
+   getStatusDescription()
+   setFlightConfigurationId(FlightConfigurationId)
+   setName(String)
+   simulate(SimulationListener[])
+
+=== info.openrocket.core.simulation.FlightData ===
+   clone()
+   getBranch(int)
+   getBranchCount()
+   getBranches()
+   getDeploymentVelocity()
+   getFlightTime()
+   getGroundHitVelocity()
+   getLaunchRodVelocity()
+   getMaxAcceleration()
+   getMaxAltitude()
+   getMaxMachNumber()
+   getMaxVelocity()
+   getOptimumDelay()
+   getStageNr(FlightDataBranch)
+   getTimeToApogee()
+   getWarningSet()
+
+=== info.openrocket.core.simulation.FlightDataBranch ===
+   clone()
+   get(DataType)
+   getByIndex(DataType,int)
+   getDataIndexOfTime(double)
+   getEvents()
+   getFirstEvent(Type)
+   getLast(DataType)
+   getLastEvent(Type)
+   getLength()
+   getMaximum(DataType)
+   getMinimum(DataType)
+   getModID()
+   getName()
+   getOptimumAltitude()
+   getOptimumDelay()
+   getSeparationTime()
+   getTimeToOptimumAltitude()
+   getTypes()
+   setOptimumAltitude(double)
+   setTimeToOptimumAltitude(double)
+   setValue(DataType,double)
+
+=== info.openrocket.core.rocketcomponent.DeploymentConfiguration ===
+  CTOR: public info.openrocket.core.rocketcomponent.DeploymentConfiguration()
+   clone()
+   copy(FlightConfigurationId)
+   getConfigListeners()
+   getDeployAltitude()
+   getDeployDelay()
+   getDeployEvent()
+   setDeployAltitude(double)
+   setDeployDelay(double)
+   setDeployEvent(DeployEvent)
+Traceback (most recent call last):
+  File "FlightConfiguration.java", line 37, in info.openrocket.core.rocketcomponent.FlightConfiguration.<clinit>
+java.lang.java.lang.NullPointerException: java.lang.NullPointerException: Cannot invoke "com.google.inject.Injector.getInstance(java.lang.Class)" because "info.openrocket.core.startup.Application.injector" is null
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "org.jpype.manager.TypeManager.java", line 0, in org.jpype.manager.TypeManager.findClassByName
+Exception: Java Exception
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\muril\openrocket-optimizer\scripts\dump_api.py", line 28, in <module>
+    cls = jpype.JClass(cname)
+          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\muril\openrocket-optimizer\.venv\Lib\site-packages\jpype\_jclass.py", line 99, in __new__
+    return _jpype._getClass(jc)
+           ^^^^^^^^^^^^^^^^^^^^
+java.lang.java.lang.ExceptionInInitializerError: java.lang.ExceptionInInitializerError

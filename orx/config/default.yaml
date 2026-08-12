@@ -1,0 +1,101 @@
+# Configuração da plataforma de otimização OpenRocket
+# Caminhos relativos são resolvidos a partir da pasta deste arquivo.
+
+base_ork: ../data/designs/A simple model rocket.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  # simulation_name: Simulation 1     # (opcional) qual simulação do .ork usar
+  overrides:
+    wind_speed_average: 2.0           # m/s
+    wind_turbulence_intensity: 0.1
+    launch_rod_length: 1.0            # m
+    launch_rod_angle_deg: 0.0
+    random_seed: 42                   # reprodutibilidade
+
+# Parâmetros otimizáveis. attribute vira setter Java (root_chord -> setRootChord);
+# especiais: shape, position, cd, deploy_*, override_mass, motor, ejection_delay.
+parameters:
+  - name: nose_length
+    component: Nose cone
+    attribute: length
+    unit: cm
+    low: 5
+    high: 20
+    step: 2.5
+
+  - name: nose_shape
+    component: Nose cone
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK]
+
+  - name: fin_root_chord
+    component: Trapezoidal fin set
+    attribute: root_chord
+    unit: cm
+    low: 3
+    high: 12
+    step: 1.5
+
+  - name: fin_tip_chord
+    component: Trapezoidal fin set
+    attribute: tip_chord
+    unit: cm
+    low: 0
+    high: 10
+    step: 2
+
+  - name: fin_height
+    component: Trapezoidal fin set
+    attribute: height
+    unit: cm
+    low: 2
+    high: 8
+    step: 1
+
+  - name: fin_sweep
+    component: Trapezoidal fin set
+    attribute: sweep
+    unit: cm
+    low: 0
+    high: 8
+    step: 2
+
+  - name: ballast_mass
+    component: Wadding
+    attribute: override_mass
+    unit: g
+    low: 1
+    high: 60
+    step: 5
+
+objective:
+  metric: horizontal_distance         # métrica ou expressão (ex.: "apogee - 2*ground_hit_velocity")
+  direction: maximize
+
+constraints:
+  - metric: stability_static
+    min: 1.0
+    max: 3.5
+  - metric: apogee
+    min: 15.0                          # m — precisa realmente voar
+
+optimizer:
+  algorithm: random                    # grid|random|hill_climbing|annealing|genetic|optuna|adaptive|nevergrad
+  max_evaluations: 60
+  seed: 7
+  profile: balanced                    # wide | balanced | local (adaptive)
+  options: {}
+  # exemplos:
+  #   optuna:   {sampler: tpe}         # tpe | cmaes | random
+  #   genetic:  {population: 16, elite: 2, mutation_rate: 0.25}
+  #   annealing: {initial_temp: 1.0, cooling: 0.95}
+
+batch:
+  workers: 1                           # >1 = simulações paralelas (1 JVM por processo)
+  save_timeseries: false
+
+db_path: ../results/orx.sqlite
+output_dir: ../results

@@ -1,0 +1,3 @@
+k central = 2.1719 (alvo 285 m: voo real 275 m + correcao da coifa torta)
+banda: k(275m)=2.0400  k(300m)=2.3672
+replica: garrafa fiel + ogiva 26cm PLA + 113g lastro + aletas ~bit03, 45 graus

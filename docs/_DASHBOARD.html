@@ -1,0 +1,757 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OBAFOG · Painel da frota bit</title>
+<style>
+  :root{
+    --ground:#e9edf1; --surface:#ffffff; --surface-2:#f3f6f9;
+    --ink:#15222c; --ink-2:#4a5d6b; --muted:#7d8f9c;
+    --line:#d7dee5; --line-2:#e6ebf0;
+    --accent:#c9821f; --accent-soft:#f3e2c4;
+    --good:#2f9268; --good-soft:#d6ecdf;
+    --warn:#c74e2c; --warn-soft:#f6ddd2;
+    --grid:#e2e8ee;
+    --shadow:0 1px 2px rgba(20,34,44,.06),0 6px 20px rgba(20,34,44,.06);
+  }
+  @media (prefers-color-scheme:dark){
+    :root{
+      --ground:#0d151d; --surface:#141f29; --surface-2:#18242f;
+      --ink:#e8f0f6; --ink-2:#a9bccb; --muted:#6f8394;
+      --line:#243441; --line-2:#1d2b36;
+      --accent:#e8a83f; --accent-soft:#3a2c14;
+      --good:#49b487; --good-soft:#153025;
+      --warn:#e56a44; --warn-soft:#3a1d14;
+      --grid:#1e2c37;
+      --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="light"]{
+    --ground:#e9edf1; --surface:#ffffff; --surface-2:#f3f6f9;
+    --ink:#15222c; --ink-2:#4a5d6b; --muted:#7d8f9c;
+    --line:#d7dee5; --line-2:#e6ebf0; --accent:#c9821f; --accent-soft:#f3e2c4;
+    --good:#2f9268; --good-soft:#d6ecdf; --warn:#c74e2c; --warn-soft:#f6ddd2;
+    --grid:#e2e8ee; --shadow:0 1px 2px rgba(20,34,44,.06),0 6px 20px rgba(20,34,44,.06);
+  }
+  :root[data-theme="dark"]{
+    --ground:#0d151d; --surface:#141f29; --surface-2:#18242f;
+    --ink:#e8f0f6; --ink-2:#a9bccb; --muted:#6f8394;
+    --line:#243441; --line-2:#1d2b36; --accent:#e8a83f; --accent-soft:#3a2c14;
+    --good:#49b487; --good-soft:#153025; --warn:#e56a44; --warn-soft:#3a1d14;
+    --grid:#1e2c37; --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 26px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--ground); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.55; letter-spacing:.005em;
+  }
+  .mono{font-family:ui-monospace,"Cascadia Code","Consolas","SF Mono",monospace;
+    font-variant-numeric:tabular-nums;}
+  .wrap{max-width:1060px; margin:0 auto; padding:0 20px}
+  a{color:var(--accent)}
+
+  /* ---- top bar ---- */
+  header.top{border-bottom:1px solid var(--line); background:var(--surface)}
+  .top .wrap{display:flex; align-items:center; justify-content:space-between;
+    gap:16px; padding-top:18px; padding-bottom:18px}
+  .brand{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+  .brand h1{font-size:1.35rem; margin:0; letter-spacing:-.01em}
+  .brand .eyebrow{font-size:.68rem; letter-spacing:.22em; text-transform:uppercase;
+    color:var(--accent); font-weight:700}
+  .brand .sub{color:var(--muted); font-size:.9rem}
+  .toggle{border:1px solid var(--line); background:var(--surface-2); color:var(--ink-2);
+    border-radius:999px; padding:7px 14px; font-size:.8rem; cursor:pointer}
+  .toggle:hover{border-color:var(--accent); color:var(--accent)}
+  .toggle:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  /* ---- hero ---- */
+  .hero{padding:34px 0 8px}
+  .hero .lead{font-size:.72rem; letter-spacing:.2em; text-transform:uppercase;
+    color:var(--muted); font-weight:700; margin:0 0 6px}
+  .hero h2{font-size:clamp(1.5rem,3.4vw,2.15rem); margin:0 0 6px; text-wrap:balance;
+    letter-spacing:-.02em; max-width:20ch}
+  .hero p{color:var(--ink-2); margin:.2rem 0 0; max-width:62ch}
+  .headline{display:flex; gap:26px; flex-wrap:wrap; margin-top:22px}
+  .bignum{background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:18px 22px; box-shadow:var(--shadow); min-width:180px}
+  .bignum .k{font-size:.68rem; letter-spacing:.15em; text-transform:uppercase; color:var(--muted)}
+  .bignum .v{font-size:2rem; font-weight:700; letter-spacing:-.02em; margin-top:2px}
+  .bignum .v small{font-size:.9rem; color:var(--ink-2); font-weight:600}
+  .bignum .note{font-size:.78rem; color:var(--ink-2); margin-top:3px}
+
+  section{padding:30px 0}
+  .sec-head{display:flex; align-items:baseline; gap:12px; margin:0 0 18px}
+  .sec-head h3{font-size:1.05rem; margin:0; letter-spacing:-.01em}
+  .sec-head .tag{font-size:.66rem; letter-spacing:.18em; text-transform:uppercase;
+    color:var(--accent); font-weight:700}
+  .sec-head .rule{flex:1; height:1px; background:var(--line)}
+
+  /* ---- fleet cards ---- */
+  .fleet{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:18px}
+  .card{background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:18px 18px 16px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:12px}
+  .card.rec{border-color:var(--accent)}
+  .card .chip-row{display:flex; gap:6px; flex-wrap:wrap; align-items:center}
+  .card h4{margin:0; font-size:1.05rem; letter-spacing:-.01em}
+  .card .role{color:var(--muted); font-size:.82rem; margin-top:-6px}
+  .chip{font-size:.68rem; padding:3px 9px; border-radius:999px; font-weight:700;
+    letter-spacing:.02em; border:1px solid transparent; white-space:nowrap}
+  .chip.rec{background:var(--accent-soft); color:var(--accent); border-color:var(--accent)}
+  .chip.good{background:var(--good-soft); color:var(--good)}
+  .chip.warn{background:var(--warn-soft); color:var(--warn)}
+  .chip.ghost{background:var(--surface-2); color:var(--ink-2); border-color:var(--line)}
+  .arc{width:100%; height:74px; display:block}
+  .stat{display:flex; justify-content:space-between; align-items:baseline; gap:10px;
+    padding:6px 0; border-top:1px solid var(--line-2); font-size:.86rem}
+  .stat:first-of-type{border-top:none}
+  .stat .lab{color:var(--ink-2)}
+  .stat .val{font-weight:600; text-align:right}
+  .range-v{font-size:1.5rem; font-weight:700; letter-spacing:-.02em}
+
+  /* ---- callout ---- */
+  .callout{background:var(--warn-soft); border:1px solid var(--warn);
+    border-radius:16px; padding:18px 20px; display:flex; gap:16px; align-items:flex-start}
+  .callout .icon{font-size:1.5rem; line-height:1}
+  .callout h3{margin:0 0 6px; font-size:1.05rem; color:var(--warn)}
+  .callout p{margin:.2rem 0; color:var(--ink); font-size:.92rem}
+  .callout strong{color:var(--warn)}
+
+  /* ---- tables ---- */
+  .tbl-wrap{overflow-x:auto; border:1px solid var(--line); border-radius:14px; background:var(--surface)}
+  table{border-collapse:collapse; width:100%; font-size:.88rem; min-width:420px}
+  th,td{padding:10px 14px; text-align:left; border-bottom:1px solid var(--line-2)}
+  thead th{font-size:.68rem; letter-spacing:.12em; text-transform:uppercase;
+    color:var(--muted); font-weight:700; background:var(--surface-2)}
+  tbody tr:last-child td{border-bottom:none}
+  td.num,th.num{text-align:right}
+  tr.hi td{background:var(--accent-soft)}
+  .cols2{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:18px}
+  .panel{background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:18px 20px; box-shadow:var(--shadow)}
+  .panel h4{margin:0 0 10px; font-size:.95rem}
+  .panel ul{margin:.3rem 0; padding-left:1.1rem} .panel li{margin:.3rem 0; color:var(--ink-2); font-size:.9rem}
+  .panel li b{color:var(--ink)}
+  .total{display:flex; justify-content:space-between; margin-top:12px; padding-top:12px;
+    border-top:2px solid var(--line); font-weight:700}
+  .prov{color:var(--ink-2); font-size:.9rem; max-width:64ch}
+  .prov b{color:var(--ink)}
+  footer{border-top:1px solid var(--line); color:var(--muted); font-size:.8rem;
+    padding:22px 0 40px}
+  footer code{background:var(--surface-2); padding:1px 6px; border-radius:5px; color:var(--ink-2)}
+  /* ---- diário de lançamentos (interativo) ---- */
+  .diary-stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+    gap:12px; margin-bottom:18px}
+  .dstat{background:var(--surface); border:1px solid var(--line); border-radius:14px;
+    padding:14px 16px; box-shadow:var(--shadow)}
+  .dstat .k{font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:var(--muted)}
+  .dstat .v{font-size:1.5rem; font-weight:700; letter-spacing:-.02em; margin-top:2px}
+  .dstat .v small{font-size:.82rem; color:var(--ink-2); font-weight:600}
+  .dstat .note{font-size:.74rem; color:var(--ink-2); margin-top:2px}
+  .dstat .v.up{color:var(--good)} .dstat .v.down{color:var(--warn)}
+
+  form.log-form{background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:18px 20px; box-shadow:var(--shadow); margin-bottom:18px}
+  .field-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px 14px}
+  .field{display:flex; flex-direction:column; gap:4px}
+  .field.wide{grid-column:1/-1}
+  .field label{font-size:.68rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--muted); font-weight:700}
+  .field label .req{color:var(--warn)}
+  .field input,.field select,.field textarea{
+    font:inherit; font-size:.9rem; color:var(--ink); background:var(--surface-2);
+    border:1px solid var(--line); border-radius:9px; padding:8px 10px; width:100%}
+  .field textarea{resize:vertical; min-height:44px}
+  .field input:focus,.field select:focus,.field textarea:focus{
+    outline:none; border-color:var(--accent); box-shadow:0 0 0 2px var(--accent-soft)}
+  .field input.mono{font-variant-numeric:tabular-nums}
+  .form-actions{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px; align-items:center}
+  .btn{font:inherit; font-size:.85rem; font-weight:600; cursor:pointer; border-radius:10px;
+    padding:9px 16px; border:1px solid var(--line); background:var(--surface-2); color:var(--ink)}
+  .btn:hover{border-color:var(--accent); color:var(--accent)}
+  .btn:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+  .btn.primary{background:var(--accent); border-color:var(--accent); color:#fff}
+  .btn.primary:hover{filter:brightness(1.06); color:#fff}
+  .btn.danger:hover{border-color:var(--warn); color:var(--warn)}
+  .form-actions .spacer{flex:1}
+  .form-actions .hint{font-size:.76rem; color:var(--muted)}
+
+  .diary-chart{background:var(--surface); border:1px solid var(--line); border-radius:16px;
+    padding:16px 18px 10px; box-shadow:var(--shadow); margin-bottom:18px}
+  .diary-chart h4{margin:0 0 4px; font-size:.9rem}
+  .diary-chart .legend{display:flex; gap:14px; flex-wrap:wrap; font-size:.74rem;
+    color:var(--ink-2); margin-bottom:8px}
+  .diary-chart .legend i{display:inline-block; width:10px; height:10px; border-radius:3px;
+    margin-right:5px; vertical-align:middle}
+  .diary-chart svg{width:100%; height:190px; display:block}
+  td .del{border:none; background:none; color:var(--muted); cursor:pointer; font-size:1rem;
+    line-height:1; padding:2px 6px; border-radius:6px}
+  td .del:hover{color:var(--warn); background:var(--warn-soft)}
+  .res-pill{font-size:.68rem; padding:2px 8px; border-radius:999px; font-weight:700}
+  .res-ok{background:var(--good-soft); color:var(--good)}
+  .res-part{background:var(--accent-soft); color:var(--accent)}
+  .res-fail{background:var(--warn-soft); color:var(--warn)}
+  .empty{color:var(--muted); font-size:.9rem; text-align:center; padding:26px 14px}
+
+  @media (prefers-reduced-motion:no-preference){
+    .arc path.trace{stroke-dasharray:1; stroke-dashoffset:1; animation:draw 1.1s ease forwards}
+    @keyframes draw{to{stroke-dashoffset:0}}
+  }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <div>
+      <div class="eyebrow">OBAFOG · Nível 4 · 2026</div>
+      <h1>Painel da frota <span class="mono">bit</span></h1>
+    </div>
+    <span class="sub">foguetes de vinagre + bicarbonato · garrafa PET</span>
+  </div>
+  <button class="toggle" id="tt" aria-label="Alternar tema">tema</button>
+</div></header>
+
+<div class="wrap">
+
+  <section class="hero">
+    <p class="lead">Modelo calibrado em dados reais de voo</p>
+    <h2>Do foguete que voou 275 m aos projetos que devem passar de 370 m.</h2>
+    <p>Tudo aqui saiu de simulações no OpenRocket calibradas em dois dados seus:
+       <b>170 psi com 1,55 L</b> (estático) e o <b>voo real de 275 m</b> a 45°.
+       Os números de alcance são a expectativa honesta de campo, já com vento e
+       erros de montagem — não o pico ideal de laboratório.</p>
+    <div class="headline">
+      <div class="bignum">
+        <div class="k">bit04 · alcance esperado</div>
+        <div class="v mono">379 <small>m</small></div>
+        <div class="note">faixa provável 370–389 m · pior caso ~356 m</div>
+      </div>
+      <div class="bignum">
+        <div class="k">Simulações rodadas</div>
+        <div class="v mono">~900 <small>mil</small></div>
+        <div class="note">6 foguetes · 8 estratégias de busca</div>
+      </div>
+      <div class="bignum">
+        <div class="k">Recorde a superar (MOBFOG)</div>
+        <div class="v mono">488 <small>m</small></div>
+        <div class="note">equipe Red Bears · referência do esporte</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="tag">frota</span><h3>Os três projetos prontos</h3><div class="rule"></div></div>
+    <div class="fleet">
+
+      <!-- bit04 -->
+      <article class="card rec">
+        <div class="chip-row">
+          <span class="chip rec">recomendado p/ competir</span>
+          <span class="chip warn">estab. no limite</span>
+        </div>
+        <h4>bit04 · 2L otimizado</h4>
+        <div class="role">busca de ~110 mil simulações · 3 aletas, sem cant</div>
+        <svg class="arc" viewBox="0 0 300 74" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="72" x2="300" y2="72" stroke="var(--grid)"/>
+          <path class="trace" d="M2,72 Q150,-14 288,72" fill="none" stroke="var(--accent)" stroke-width="2.5" pathLength="1"/>
+          <circle cx="288" cy="72" r="3.5" fill="var(--accent)"/>
+        </svg>
+        <div><span class="range-v mono">379 m</span> <span class="mono" style="color:var(--ink-2)">esperado</span></div>
+        <div>
+          <div class="stat"><span class="lab">Coifa (impressa)</span><span class="val">parabólica 8 cm · PLA</span></div>
+          <div class="stat"><span class="lab">Aletas</span><span class="val">3× poliestireno 1 mm</span></div>
+          <div class="stat"><span class="lab">Lastro Durepoxi</span><span class="val mono">mire 425–435 g</span></div>
+          <div class="stat"><span class="lab">Motor / ângulo</span><span class="val mono">1,8 L · 52°</span></div>
+          <div class="stat"><span class="lab">Estabilidade</span><span class="val mono">1,00 cal</span></div>
+        </div>
+      </article>
+
+      <!-- bit05 -->
+      <article class="card">
+        <div class="chip-row">
+          <span class="chip ghost">projeto por pesquisa</span>
+          <span class="chip good">estável</span>
+        </div>
+        <h4>bit05 · 2L humano</h4>
+        <div class="role">projetado só por física e pesquisa, sem otimizador</div>
+        <svg class="arc" viewBox="0 0 300 74" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="72" x2="300" y2="72" stroke="var(--grid)"/>
+          <path class="trace" d="M2,72 Q120,4 218,72" fill="none" stroke="var(--ink-2)" stroke-width="2.5" pathLength="1"/>
+          <circle cx="218" cy="72" r="3.5" fill="var(--ink-2)"/>
+        </svg>
+        <div><span class="range-v mono">276 m</span> <span class="mono" style="color:var(--ink-2)">esperado</span></div>
+        <div>
+          <div class="stat"><span class="lab">Coifa</span><span class="val">ogival 22 cm · PLA</span></div>
+          <div class="stat"><span class="lab">Aletas</span><span class="val">3× poliestireno 1 mm</span></div>
+          <div class="stat"><span class="lab">Lastro Durepoxi</span><span class="val mono">105 g</span></div>
+          <div class="stat"><span class="lab">Motor / ângulo</span><span class="val mono">1,55 L · 46°</span></div>
+          <div class="stat"><span class="lab">Bate o voo real</span><span class="val">275 m ✓</span></div>
+        </div>
+      </article>
+
+      <!-- bit06 -->
+      <article class="card">
+        <div class="chip-row">
+          <span class="chip ghost">garrafa reduzida</span>
+          <span class="chip good">estável</span>
+        </div>
+        <h4>bit06 · 1,8L reduzida</h4>
+        <div class="role">garrafa encolhida Ø9,6 cm · mais pressão, menos arrasto</div>
+        <svg class="arc" viewBox="0 0 300 74" preserveAspectRatio="none" aria-hidden="true">
+          <line x1="0" y1="72" x2="300" y2="72" stroke="var(--grid)"/>
+          <path class="trace" d="M2,72 Q145,-9 276,72" fill="none" stroke="var(--good)" stroke-width="2.5" pathLength="1"/>
+          <circle cx="276" cy="72" r="3.5" fill="var(--good)"/>
+        </svg>
+        <div><span class="range-v mono">363 m</span> <span class="mono" style="color:var(--ink-2)">esperado</span></div>
+        <div>
+          <div class="stat"><span class="lab">Coifa</span><span class="val">parabólica · PLA</span></div>
+          <div class="stat"><span class="lab">Aletas</span><span class="val">3× poliestireno</span></div>
+          <div class="stat"><span class="lab">Lastro Durepoxi</span><span class="val mono">~325 g</span></div>
+          <div class="stat"><span class="lab">Motor / ângulo</span><span class="val mono">1,35 L · 50°</span></div>
+          <div class="stat"><span class="lab">Pressão</span><span class="val mono">170 psi (validada)</span></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <div class="callout">
+      <div class="icon">⚠️</div>
+      <div>
+        <h3>Antes de pesar o Durepoxi do bit04: erre para MAIS</h3>
+        <p>O lastro de 416 g deixa a estabilidade <strong>exatamente em 1,00 cal</strong> — no fio.
+           Se faltar 10 g, o foguete fica <strong>instável</strong> (0,99 cal) e o voo se perde.
+           Se sobrar 20–30 g, ele fica <strong>mais seguro e até voa 1 m a mais</strong>.</p>
+        <p><strong>Mire em 425–435 g</strong>, nunca abaixo de 416. Peso extra na ponta é de graça aqui.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="tag">playbook</span><h3>No dia do lançamento (bit04)</h3><div class="rule"></div></div>
+    <div class="cols2">
+      <div>
+        <div class="tbl-wrap"><table>
+          <thead><tr><th>Vento</th><th>Vinagre</th><th class="num">Ângulo</th><th class="num">Alcance</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">0 m/s</td><td class="mono">1,8 L</td><td class="num mono">52°</td><td class="num mono">393 m</td></tr>
+            <tr><td class="mono">2 m/s</td><td class="mono">1,8 L</td><td class="num mono">52°</td><td class="num mono">380 m</td></tr>
+            <tr><td class="mono">4 m/s</td><td class="mono">1,8 L</td><td class="num mono">52°</td><td class="num mono">367 m</td></tr>
+            <tr><td class="mono">6 m/s</td><td class="mono">1,8 L</td><td class="num mono">52°</td><td class="num mono">355 m</td></tr>
+          </tbody>
+        </table></div>
+        <p class="prov" style="margin-top:10px">O ângulo ótimo é <b>52°</b> em qualquer vento (não 45°). Aponte
+           levemente <b>contra o vento</b> para reduzir o arqueamento.</p>
+      </div>
+      <div class="panel">
+        <h4>Escolha do motor</h4>
+        <ul>
+          <li><b>1,8 L → 196 psi</b>: alcance máximo (~380 m), mas acima dos 170 psi que você testou.
+              Só com garrafa nova e teste de pressão antes.</li>
+          <li><b>1,55 L → 170 psi</b>: pressão que você já validou. Custa ~15 m (~365 m), mas é o seguro.</li>
+        </ul>
+        <h4 style="margin-top:14px">Faltam só 3 passos</h4>
+        <ul>
+          <li>Pesar e fixar o Durepoxi na ponta da coifa (ver aviso acima)</li>
+          <li>Colar as 3 aletas (molde <code>bit04_aleta_molde.svg</code>)</li>
+          <li>Colar a coifa no corpo</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="tag">diário</span><h3>Testes de lançamento</h3><div class="rule"></div></div>
+    <p class="prov" style="margin:-6px 0 18px">Registre cada voo aqui. Os dados ficam salvos neste
+      computador e viram uma <b>planilha</b> (<code>.csv</code>, abre no Excel). O painel abaixo
+      compara o <b>alcance real medido</b> com o que a simulação previa para cada foguete.</p>
+
+    <div class="diary-stats" id="dstats"></div>
+
+    <form class="log-form" id="logForm" autocomplete="off">
+      <div class="field-grid">
+        <div class="field">
+          <label for="f_data">Data <span class="req">*</span></label>
+          <input type="date" id="f_data" name="data" required>
+        </div>
+        <div class="field">
+          <label for="f_foguete">Foguete <span class="req">*</span></label>
+          <select id="f_foguete" name="foguete" required>
+            <option value="bit04">bit04 · 2L otimizado</option>
+            <option value="bit05">bit05 · 2L humano</option>
+            <option value="bit06">bit06 · 1,8L reduzida</option>
+            <option value="outro">outro / protótipo</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f_alcance">Alcance medido (m) <span class="req">*</span></label>
+          <input class="mono" type="number" step="0.1" min="0" id="f_alcance" name="alcance" placeholder="ex.: 372" required>
+        </div>
+        <div class="field">
+          <label for="f_vinagre">Vinagre (L)</label>
+          <input class="mono" type="number" step="0.05" min="0" id="f_vinagre" name="vinagre" placeholder="1,8">
+        </div>
+        <div class="field">
+          <label for="f_lastro">Lastro (g)</label>
+          <input class="mono" type="number" step="1" min="0" id="f_lastro" name="lastro" placeholder="430">
+        </div>
+        <div class="field">
+          <label for="f_angulo">Ângulo (°)</label>
+          <input class="mono" type="number" step="1" min="0" max="90" id="f_angulo" name="angulo" placeholder="52">
+        </div>
+        <div class="field">
+          <label for="f_vento">Vento (m/s)</label>
+          <input class="mono" type="number" step="0.5" min="0" id="f_vento" name="vento" placeholder="2">
+        </div>
+        <div class="field">
+          <label for="f_pressao">Pressão (psi)</label>
+          <input class="mono" type="number" step="1" min="0" id="f_pressao" name="pressao" placeholder="170">
+        </div>
+        <div class="field">
+          <label for="f_altura">Apogeu (m)</label>
+          <input class="mono" type="number" step="0.1" min="0" id="f_altura" name="altura" placeholder="opcional">
+        </div>
+        <div class="field">
+          <label for="f_resultado">Resultado</label>
+          <select id="f_resultado" name="resultado">
+            <option value="sucesso">sucesso</option>
+            <option value="parcial">parcial</option>
+            <option value="falha">falha</option>
+          </select>
+        </div>
+        <div class="field wide">
+          <label for="f_obs">Observações</label>
+          <textarea id="f_obs" name="obs" placeholder="clima, o que deu certo/errado, o que mudar no próximo…"></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn primary">+ Registrar lançamento</button>
+        <button type="button" class="btn" id="btnExport">↓ Baixar planilha (.csv)</button>
+        <button type="button" class="btn" id="btnImport">↑ Importar planilha</button>
+        <input type="file" id="fileInput" accept=".csv,text/csv" style="display:none">
+        <div class="spacer"></div>
+        <span class="hint" id="saveHint"></span>
+        <button type="button" class="btn danger" id="btnClear">Limpar tudo</button>
+      </div>
+    </form>
+
+    <div class="diary-chart" id="chartBox" style="display:none">
+      <h4>Alcance por lançamento — real vs. previsto</h4>
+      <div class="legend">
+        <span><i style="background:var(--accent)"></i>bit04</span>
+        <span><i style="background:var(--ink-2)"></i>bit05</span>
+        <span><i style="background:var(--good)"></i>bit06</span>
+        <span><i style="background:var(--muted)"></i>outro</span>
+        <span style="margin-left:auto">─ ─ linha tracejada = alcance previsto na simulação</span>
+      </div>
+      <svg id="chart" viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="Gráfico de alcance por lançamento"></svg>
+    </div>
+
+    <div class="tbl-wrap" id="tableBox">
+      <table>
+        <thead><tr>
+          <th>Data</th><th>Foguete</th><th class="num">Alcance</th><th class="num">Vinagre</th>
+          <th class="num">Lastro</th><th class="num">Ângulo</th><th class="num">Vento</th>
+          <th class="num">Pressão</th><th>Resultado</th><th>Obs.</th><th></th>
+        </tr></thead>
+        <tbody id="logBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="tag">compras</span><h3>Lista para construir bit04 + bit05</h3><div class="rule"></div></div>
+    <div class="cols2">
+      <div class="tbl-wrap"><table>
+        <thead><tr><th>Item</th><th>Especificação</th><th class="num">Custo</th></tr></thead>
+        <tbody>
+          <tr><td>Durepoxi</td><td>2×250 g + 1×100 g</td><td class="num mono">R$ 69</td></tr>
+          <tr><td>Chapa poliestireno</td><td>1 mm · 40×60 cm</td><td class="num mono">R$ 25–45</td></tr>
+          <tr><td>Corte a laser</td><td>aletas (orçar c/ DXF)</td><td class="num mono">R$ 30–80</td></tr>
+          <tr><td>Vinagre + bicarbonato</td><td>~10 lançamentos</td><td class="num mono">R$ 50–80</td></tr>
+          <tr class="hi"><td><b>Total</b></td><td></td><td class="num mono"><b>R$ 175–275</b></td></tr>
+        </tbody>
+      </table></div>
+      <div class="panel">
+        <h4>Não esquecer</h4>
+        <ul>
+          <li><b>Garrafas PET retornáveis de reserva</b> — fadigam com pressurizações repetidas</li>
+          <li><b>Balão / preservativo</b> para separar vinagre do bicarbonato até o lançamento</li>
+          <li><b>Balança de cozinha</b> — essencial: o lastro é o que segura a estabilidade</li>
+          <li><b>Lixa</b> para aderência do Durepoxi e da coifa</li>
+        </ul>
+        <p class="prov" style="margin-top:8px">PLA e garrafas você já tem. Detalhes em <code>_LISTA_DE_COMPRAS.md</code>.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="tag">bastidores</span><h3>Como os números foram construídos</h3><div class="rule"></div></div>
+    <div class="cols2">
+      <div class="panel">
+        <h4>O motor é físico, não chute</h4>
+        <p class="prov">O propelente vinagre 4% + bicarbonato em excesso é modelado pela química do
+          CO₂ (lei de Henry) e pela expulsão do líquido. Calibrado nos seus dois dados reais —
+          <b>170 psi @ 1,55 L</b> e o <b>voo de 275 m</b> (fator k = 2,17). Cada garrafa gera sua
+          própria família de motores <code>.eng</code>.</p>
+      </div>
+      <div class="panel">
+        <h4>Laboratório: o teto e a realidade</h4>
+        <p class="prov">500 mil simulações com corpo totalmente livre acharam foguetes de até
+          <b>955 m</b> — mas de <b>40 kg</b>, impraticáveis. A lição real: corpo maior rende mais.
+          Roda agora uma versão com <b>limites de construção</b> (≤4 kg) para achar o melhor
+          foguete que dá para montar de verdade além da garrafa.</p>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<footer><div class="wrap">
+  Arquivos em <code>D:\OBAFOG\</code> · projetos vigentes: <code>bitNN_MODELO_FINAL.ork</code> ·
+  índice em <code>_INDICE.md</code> · todos os testes em <code>_TODOS_OS_TESTES.xlsx</code>.
+  Gerado automaticamente pela plataforma orx.
+</div></footer>
+
+<script>
+  /* ---------- tema ---------- */
+  (function(){
+    var root=document.documentElement, btn=document.getElementById("tt");
+    function cur(){ return root.getAttribute("data-theme") ||
+      (matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light"); }
+    btn.addEventListener("click",function(){
+      root.setAttribute("data-theme", cur()==="dark"?"light":"dark");
+    });
+  })();
+
+  /* ---------- diário de lançamentos ---------- */
+  (function(){
+    var KEY="obafog_lancamentos_v1";
+    // alcance previsto pela simulação (m) por foguete — referência p/ comparar
+    var PREVISTO={bit04:379, bit05:276, bit06:363, outro:null};
+    var NOME={bit04:"bit04", bit05:"bit05", bit06:"bit06", outro:"outro"};
+    var COR={bit04:"var(--accent)", bit05:"var(--ink-2)", bit06:"var(--good)", outro:"var(--muted)"};
+    // ordem/cabeçalhos da planilha
+    var COLS=[["data","data"],["foguete","foguete"],["vinagre","vinagre_L"],
+      ["lastro","lastro_g"],["angulo","angulo_deg"],["vento","vento_ms"],
+      ["pressao","pressao_psi"],["alcance","alcance_m"],["altura","apogeu_m"],
+      ["resultado","resultado"],["obs","observacoes"]];
+
+    var form=document.getElementById("logForm"),
+        body=document.getElementById("logBody"),
+        stats=document.getElementById("dstats"),
+        hint=document.getElementById("saveHint"),
+        chartBox=document.getElementById("chartBox"),
+        chart=document.getElementById("chart"),
+        tableBox=document.getElementById("tableBox");
+
+    function load(){ try{ return JSON.parse(localStorage.getItem(KEY))||[]; }catch(e){ return []; } }
+    function save(rows){ localStorage.setItem(KEY, JSON.stringify(rows)); }
+    var rows=load();
+
+    function num(v){ if(v===""||v===null||v===undefined) return null;
+      var n=parseFloat(String(v).replace(",",".")); return isNaN(n)?null:n; }
+    function fmt(n,suf){ return (n===null||n===undefined)?"—":(""+n).replace(".",",")+(suf||""); }
+    function esc(s){ return String(s==null?"":s).replace(/[&<>"]/g,function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); }
+    function dataBR(iso){ if(!iso) return "—"; var p=String(iso).split("-");
+      return p.length===3? p[2]+"/"+p[1]+"/"+p[0] : iso; }
+
+    /* ----- estatísticas ao vivo ----- */
+    function renderStats(){
+      var suc=rows.filter(function(r){ return r.resultado!=="falha" && num(r.alcance)!==null; });
+      var n=rows.length;
+      var alc=suc.map(function(r){ return num(r.alcance); });
+      var best=alc.length? Math.max.apply(null,alc):null;
+      var media=alc.length? alc.reduce(function(a,b){return a+b;},0)/alc.length:null;
+      var bestRow=suc.filter(function(r){ return num(r.alcance)===best; })[0];
+
+      // real vs previsto: usa o melhor voo e compara com a previsão do foguete dele
+      var delta=null, deltaFog=null;
+      if(bestRow && PREVISTO[bestRow.foguete]!=null){
+        delta=best-PREVISTO[bestRow.foguete]; deltaFog=NOME[bestRow.foguete];
+      }
+      var cards=[
+        {k:"Lançamentos", v:n, note:n?(suc.length+" com voo válido"):"nenhum ainda"},
+        {k:"Melhor real", v:best!=null?fmt(Math.round(best),""):"—", s:best!=null?"m":"",
+         note:bestRow?("no "+NOME[bestRow.foguete]+" · "+dataBR(bestRow.data)):"registre um voo"},
+        {k:"Média (sucessos)", v:media!=null?fmt(Math.round(media),""):"—", s:media!=null?"m":"",
+         note:alc.length?(alc.length+" voo(s)"):"—"},
+      ];
+      if(delta!=null){
+        cards.push({k:"Real vs. previsto", v:(delta>=0?"+":"")+Math.round(delta), s:"m",
+          note:deltaFog+": prev. "+PREVISTO[bestRow.foguete]+" m", cls:delta>=0?"up":"down"});
+      }else{
+        cards.push({k:"Real vs. previsto", v:"—", note:"registre um bit04/05/06"});
+      }
+      stats.innerHTML=cards.map(function(c){
+        return '<div class="dstat"><div class="k">'+c.k+'</div>'+
+          '<div class="v '+(c.cls||"")+' mono">'+c.v+(c.s?' <small>'+c.s+'</small>':'')+'</div>'+
+          '<div class="note">'+c.note+'</div></div>';
+      }).join("");
+    }
+
+    /* ----- tabela ----- */
+    function renderTable(){
+      if(!rows.length){
+        body.innerHTML='<tr><td colspan="11" class="empty">Nenhum lançamento registrado ainda. '+
+          'Preencha o formulário acima e clique em <b>Registrar lançamento</b>.</td></tr>';
+        return;
+      }
+      var ord=rows.slice().sort(function(a,b){ return (b.data||"").localeCompare(a.data||""); });
+      body.innerHTML=ord.map(function(r){
+        var pill=r.resultado==="falha"?'<span class="res-pill res-fail">falha</span>':
+                 r.resultado==="parcial"?'<span class="res-pill res-part">parcial</span>':
+                 '<span class="res-pill res-ok">sucesso</span>';
+        return '<tr>'+
+          '<td class="mono">'+dataBR(r.data)+'</td>'+
+          '<td>'+esc(NOME[r.foguete]||r.foguete)+'</td>'+
+          '<td class="num mono">'+fmt(num(r.alcance)," m")+'</td>'+
+          '<td class="num mono">'+fmt(num(r.vinagre)," L")+'</td>'+
+          '<td class="num mono">'+fmt(num(r.lastro)," g")+'</td>'+
+          '<td class="num mono">'+fmt(num(r.angulo),"°")+'</td>'+
+          '<td class="num mono">'+fmt(num(r.vento))+'</td>'+
+          '<td class="num mono">'+fmt(num(r.pressao))+'</td>'+
+          '<td>'+pill+'</td>'+
+          '<td>'+esc(r.obs||"")+'</td>'+
+          '<td class="num"><button class="del" title="Excluir" data-id="'+esc(r.id)+'">✕</button></td>'+
+        '</tr>';
+      }).join("");
+      body.querySelectorAll(".del").forEach(function(b){
+        b.addEventListener("click",function(){
+          var id=this.getAttribute("data-id");
+          rows=rows.filter(function(r){ return String(r.id)!==id; });
+          save(rows); renderAll();
+        });
+      });
+    }
+
+    /* ----- gráfico de barras (real) + linha do previsto ----- */
+    function renderChart(){
+      var voos=rows.filter(function(r){ return num(r.alcance)!==null; })
+        .sort(function(a,b){ return (a.data||"").localeCompare(b.data||""); });
+      if(!voos.length){ chartBox.style.display="none"; return; }
+      chartBox.style.display="";
+      var W=600,H=190,padB=22,padT=10,padL=34,padR=8;
+      var vals=voos.map(function(r){ return num(r.alcance); })
+        .concat(voos.map(function(r){ return PREVISTO[r.foguete]||0; }));
+      var max=Math.max.apply(null,vals)*1.12 || 100;
+      var iw=W-padL-padR, ih=H-padB-padT;
+      var bw=iw/voos.length, bar=Math.min(bw*0.6,46);
+      function y(v){ return padT+ih-(v/max)*ih; }
+      var svg="";
+      // grade + rótulos do eixo Y
+      for(var g=0; g<=4; g++){
+        var gv=max*g/4, gy=y(gv);
+        svg+='<line x1="'+padL+'" y1="'+gy.toFixed(1)+'" x2="'+(W-padR)+'" y2="'+gy.toFixed(1)+
+          '" stroke="var(--grid)" stroke-width="1"/>';
+        svg+='<text x="'+(padL-5)+'" y="'+(gy+3).toFixed(1)+'" text-anchor="end" '+
+          'font-size="9" fill="var(--muted)">'+Math.round(gv)+'</text>';
+      }
+      voos.forEach(function(r,i){
+        var cx=padL+bw*i+bw/2, v=num(r.alcance), by=y(v), bx=cx-bar/2;
+        svg+='<rect x="'+bx.toFixed(1)+'" y="'+by.toFixed(1)+'" width="'+bar.toFixed(1)+
+          '" height="'+(padT+ih-by).toFixed(1)+'" rx="3" fill="'+(COR[r.foguete]||COR.outro)+'"/>';
+        svg+='<text x="'+cx.toFixed(1)+'" y="'+(by-3).toFixed(1)+'" text-anchor="middle" '+
+          'font-size="9" fill="var(--ink)">'+Math.round(v)+'</text>';
+        // marca do previsto (linha tracejada curta sobre a barra)
+        var p=PREVISTO[r.foguete];
+        if(p!=null){ var py=y(p);
+          svg+='<line x1="'+(bx-3).toFixed(1)+'" y1="'+py.toFixed(1)+'" x2="'+(bx+bar+3).toFixed(1)+
+            '" y2="'+py.toFixed(1)+'" stroke="var(--ink-2)" stroke-width="1.5" stroke-dasharray="4 3"/>';
+        }
+        svg+='<text x="'+cx.toFixed(1)+'" y="'+(H-7)+'" text-anchor="middle" '+
+          'font-size="8.5" fill="var(--muted)">'+dataBR(r.data).slice(0,5)+'</text>';
+      });
+      chart.innerHTML=svg;
+    }
+
+    function renderAll(){ renderStats(); renderTable(); renderChart(); }
+
+    /* ----- adicionar ----- */
+    form.addEventListener("submit",function(e){
+      e.preventDefault();
+      var fd=new FormData(form), rec={id:Date.now()+"-"+Math.random().toString(36).slice(2,7)};
+      ["data","foguete","vinagre","lastro","angulo","vento","pressao","alcance","altura","resultado","obs"]
+        .forEach(function(k){ rec[k]=(fd.get(k)||"").toString().trim(); });
+      rows.push(rec); save(rows); renderAll();
+      form.reset();
+      hint.textContent="✓ salvo neste computador"; setTimeout(function(){ hint.textContent=""; },2500);
+    });
+
+    /* ----- limpar ----- */
+    document.getElementById("btnClear").addEventListener("click",function(){
+      if(!rows.length) return;
+      if(confirm("Apagar TODOS os "+rows.length+" lançamentos registrados? Baixe a planilha antes se quiser guardar.")){
+        rows=[]; save(rows); renderAll();
+      }
+    });
+
+    /* ----- exportar planilha (CSV ; + BOM p/ Excel pt-BR) ----- */
+    function csvCell(v){ v=(v==null?"":String(v));
+      return /[";\n]/.test(v)? '"'+v.replace(/"/g,'""')+'"' : v; }
+    document.getElementById("btnExport").addEventListener("click",function(){
+      var head=COLS.map(function(c){ return c[1]; }).join(";");
+      var lines=rows.slice().sort(function(a,b){ return (a.data||"").localeCompare(b.data||""); })
+        .map(function(r){ return COLS.map(function(c){ return csvCell(r[c[0]]); }).join(";"); });
+      var csv="﻿"+head+"\n"+lines.join("\n");
+      var blob=new Blob([csv],{type:"text/csv;charset=utf-8"});
+      var a=document.createElement("a");
+      a.href=URL.createObjectURL(blob);
+      a.download="_TODOS_OS_TESTES.csv";
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      URL.revokeObjectURL(a.href);
+    });
+
+    /* ----- importar planilha ----- */
+    function parseCSV(text){
+      text=text.replace(/^﻿/,"");
+      var out=[],row=[],cur="",q=false,i,ch;
+      var sep=(text.split(";").length>=text.split(",").length)?";":",";
+      for(i=0;i<text.length;i++){ ch=text[i];
+        if(q){ if(ch==='"'){ if(text[i+1]==='"'){cur+='"';i++;} else q=false; } else cur+=ch; }
+        else if(ch==='"') q=true;
+        else if(ch===sep){ row.push(cur); cur=""; }
+        else if(ch==="\n"){ row.push(cur); out.push(row); row=[]; cur=""; }
+        else if(ch==="\r"){}
+        else cur+=ch;
+      }
+      if(cur!==""||row.length){ row.push(cur); out.push(row); }
+      return out;
+    }
+    document.getElementById("btnImport").addEventListener("click",function(){
+      document.getElementById("fileInput").click();
+    });
+    document.getElementById("fileInput").addEventListener("change",function(e){
+      var file=e.target.files[0]; if(!file) return;
+      var rd=new FileReader();
+      rd.onload=function(){
+        var grid=parseCSV(rd.result).filter(function(r){ return r.some(function(c){return c!=="";}); });
+        if(grid.length<2){ alert("Planilha vazia ou sem dados."); return; }
+        var head=grid[0].map(function(h){ return h.trim().toLowerCase(); });
+        // mapeia coluna_planilha -> chave interna (case-insensitive)
+        var map={}; COLS.forEach(function(c){ map[c[1].toLowerCase()]=c[0]; map[c[0].toLowerCase()]=c[0]; });
+        var idx={}; head.forEach(function(h,j){ if(map[h]) idx[map[h]]=j; });
+        var imported=grid.slice(1).map(function(r){
+          var rec={id:Date.now()+"-"+Math.random().toString(36).slice(2,7)};
+          ["data","foguete","vinagre","lastro","angulo","vento","pressao","alcance","altura","resultado","obs"]
+            .forEach(function(k){ rec[k]=(idx[k]!=null?(r[idx[k]]||""):"").trim(); });
+          return rec;
+        }).filter(function(r){ return r.alcance!==""||r.data!==""; });
+        if(!imported.length){ alert("Não encontrei linhas válidas."); return; }
+        var modo=confirm("Importar "+imported.length+" lançamento(s).\n\n"+
+          "OK = SUBSTITUIR os atuais\nCancelar = SOMAR aos atuais");
+        rows=modo? imported : rows.concat(imported);
+        save(rows); renderAll();
+      };
+      rd.readAsText(file,"utf-8");
+      e.target.value="";
+    });
+
+    renderAll();
+  })();
+</script>
+</body>
+</html>

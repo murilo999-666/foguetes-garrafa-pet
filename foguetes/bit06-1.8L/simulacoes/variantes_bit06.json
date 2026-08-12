@@ -1,0 +1,259 @@
+{
+ "gerado": "2026-08-11 07:48",
+ "variantes": [
+  {
+   "tag": "A_CAMPEAO",
+   "descricao": "Campeão da busca (referência de teto)",
+   "design": {
+    "nose_length": 27.700348596922247,
+    "nose_shape": "PARABOLIC",
+    "nose_shape_param": 0.6056103307963974,
+    "nose_thickness": 1.5580189250835816,
+    "nose_material": "poliestireno",
+    "ballast_fill": 11.877938000715618,
+    "fin_count": 3,
+    "fin_root": 6.5596065502655865,
+    "fin_tip": 0.0,
+    "fin_sweep": 12.581730357931097,
+    "fin_height": 13.690415831516983,
+    "fin_thickness": 0.8,
+    "fin_material": "poliestireno",
+    "fin_cant": -0.09486260829405993,
+    "fin_position": -0.3797846256792317,
+    "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+    "launch_angle": 54.30158717317902
+   },
+   "avaliacao": {
+    "design": {
+     "nose_length": 27.700348596922247,
+     "nose_shape": "PARABOLIC",
+     "nose_shape_param": 0.6056103307963974,
+     "nose_thickness": 1.5580189250835816,
+     "nose_material": "poliestireno",
+     "ballast_fill": 11.877938000715618,
+     "fin_count": 3,
+     "fin_root": 6.5596065502655865,
+     "fin_tip": 0.0,
+     "fin_sweep": 12.581730357931097,
+     "fin_height": 13.690415831516983,
+     "fin_thickness": 0.8,
+     "fin_material": "poliestireno",
+     "fin_cant": -0.09486260829405993,
+     "fin_position": -0.3797846256792317,
+     "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+     "launch_angle": 54.30158717317902
+    },
+    "nota": 74.57262880844362,
+    "alcance_medio": 288.9757908888914,
+    "alcance_pior": 266.58841413609053,
+    "alcance_por_eta": {
+     "0.7": 266.58841413609053,
+     "0.8": 282.7319220117101,
+     "0.9": 297.5391079452866,
+     "1.0": 309.04371946247846
+    },
+    "psi_por_eta": {
+     "0.7": 132.3,
+     "0.8": 151.2,
+     "0.9": 170.1,
+     "1.0": 189.0
+    },
+    "massa_seca": 0.33068814940753277,
+    "estab_min": 1.3131311321611439,
+    "estab_max": 2.2771670648845097,
+    "trilho_min": 30.546559341144352,
+    "apogeu_medio": 81.29188596559788,
+    "partes": {
+     "alcance": 30.722871070707534,
+     "consistencia": 22.2528538865013,
+     "leveza": 13.465592529623363,
+     "estabilidade": 3.1313113216114385,
+     "saida_trilho": 5.0
+    },
+    "motivo_descarte": null
+   },
+   "descarte": null,
+   "ork": "D:\\OBAFOG\\bit06 1,8L\\bit06_A_CAMPEAO.ork"
+  },
+  {
+   "tag": "B_CONSTRUTIVEL",
+   "descricao": "PLA 1,2 mm + polietileno 1,0 mm, medidas de régua",
+   "design": {
+    "nose_length": 27.5,
+    "nose_shape": "PARABOLIC",
+    "nose_shape_param": 0.61,
+    "nose_thickness": 1.2,
+    "nose_material": "pla",
+    "ballast_fill": 12.0,
+    "fin_count": 3,
+    "fin_root": 6.5,
+    "fin_tip": 0.0,
+    "fin_sweep": 12.5,
+    "fin_height": 13.5,
+    "fin_thickness": 1.0,
+    "fin_material": "polietileno",
+    "fin_cant": 0.0,
+    "fin_position": -0.3797846256792317,
+    "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+    "launch_angle": 54.0
+   },
+   "avaliacao": {
+    "design": {
+     "nose_length": 27.5,
+     "nose_shape": "PARABOLIC",
+     "nose_shape_param": 0.61,
+     "nose_thickness": 1.2,
+     "nose_material": "pla",
+     "ballast_fill": 12.0,
+     "fin_count": 3,
+     "fin_root": 6.5,
+     "fin_tip": 0.0,
+     "fin_sweep": 12.5,
+     "fin_height": 13.5,
+     "fin_thickness": 1.0,
+     "fin_material": "polietileno",
+     "fin_cant": 0.0,
+     "fin_position": -0.3797846256792317,
+     "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+     "launch_angle": 54.0
+    },
+    "nota": 73.81833158464437,
+    "alcance_medio": 286.9771573540247,
+    "alcance_pior": 264.77424926164935,
+    "alcance_por_eta": {
+     "0.7": 264.77424926164935,
+     "0.8": 280.99585989859463,
+     "0.9": 294.93241172424865,
+     "1.0": 307.2061085316063
+    },
+    "psi_por_eta": {
+     "0.7": 132.3,
+     "0.8": 151.2,
+     "0.9": 170.1,
+     "1.0": 189.0
+    },
+    "massa_seca": 0.338975638788643,
+    "estab_min": 1.3144451061111442,
+    "estab_max": 2.2763159663449666,
+    "trilho_min": 30.364929118658793,
+    "apogeu_medio": 81.57018337320396,
+    "partes": {
+     "alcance": 30.35948315527722,
+     "consistencia": 22.263179307687864,
+     "leveza": 13.051218060567848,
+     "estabilidade": 3.144451061111442,
+     "saida_trilho": 5.0
+    },
+    "motivo_descarte": null
+   },
+   "descarte": null,
+   "ork": "D:\\OBAFOG\\bit06 1,8L\\bit06_B_CONSTRUTIVEL.ork"
+  },
+  {
+   "tag": "C_MARGEM_EXTRA",
+   "descricao": "Construtível com mais lastro e aleta maior",
+   "design": {
+    "nose_length": 27.5,
+    "nose_shape": "PARABOLIC",
+    "nose_shape_param": 0.61,
+    "nose_thickness": 1.2,
+    "nose_material": "pla",
+    "ballast_fill": 16.0,
+    "fin_count": 3,
+    "fin_root": 7.5,
+    "fin_tip": 0.0,
+    "fin_sweep": 12.5,
+    "fin_height": 14.5,
+    "fin_thickness": 1.0,
+    "fin_material": "polietileno",
+    "fin_cant": 0.0,
+    "fin_position": -0.3797846256792317,
+    "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+    "launch_angle": 54.0
+   },
+   "avaliacao": {
+    "design": {
+     "nose_length": 27.5,
+     "nose_shape": "PARABOLIC",
+     "nose_shape_param": 0.61,
+     "nose_thickness": 1.2,
+     "nose_material": "pla",
+     "ballast_fill": 16.0,
+     "fin_count": 3,
+     "fin_root": 7.5,
+     "fin_tip": 0.0,
+     "fin_sweep": 12.5,
+     "fin_height": 14.5,
+     "fin_thickness": 1.0,
+     "fin_material": "polietileno",
+     "fin_cant": 0.0,
+     "fin_position": -0.3797846256792317,
+     "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng",
+     "launch_angle": 54.0
+    },
+    "nota": 67.0627834914651,
+    "alcance_medio": 297.6152153161208,
+    "alcance_pior": 266.76179906316537,
+    "alcance_por_eta": {
+     "0.7": 266.76179906316537,
+     "0.8": 288.7454232365648,
+     "0.9": 309.0883135998952,
+     "1.0": 325.8653253648577
+    },
+    "psi_por_eta": {
+     "0.7": 132.3,
+     "0.8": 151.2,
+     "0.9": 170.1,
+     "1.0": 189.0
+    },
+    "massa_seca": 0.5149988535210015,
+    "estab_min": 1.5885932006026167,
+    "estab_max": 2.60783516013253,
+    "trilho_min": 28.57250491309511,
+    "apogeu_medio": 73.8055721405871,
+    "partes": {
+     "alcance": 32.29367551202196,
+     "consistencia": 19.63311864946705,
+     "leveza": 4.250057323949925,
+     "estabilidade": 5.885932006026167,
+     "saida_trilho": 5.0
+    },
+    "motivo_descarte": null
+   },
+   "descarte": null,
+   "ork": "D:\\OBAFOG\\bit06 1,8L\\bit06_C_MARGEM_EXTRA.ork"
+  }
+ ],
+ "modelo_antigo": {
+  "nota": 68.37497110592781,
+  "partes": {
+   "alcance": 38.07315013654522,
+   "consistencia": 18.875107174698403,
+   "leveza": 6.426713794684192,
+   "estabilidade": 0.0,
+   "saida_trilho": 5.0
+  },
+  "alcance_medio": 329.4023257509987,
+  "alcance_pior": 292.75667004714927,
+  "alcance_por_eta": {
+   "0.7": 292.75667004714927,
+   "0.8": 320.34651413275424,
+   "0.9": 342.39485854671904,
+   "1.0": 362.1112602773724
+  },
+  "psi_por_eta": {
+   "0.7": 119.6,
+   "0.8": 136.6,
+   "0.9": 153.7,
+   "1.0": 170.8
+  },
+  "massa_seca": 0.47146572410631615,
+  "estab_min": 0.5134175210743249,
+  "estab_max": 1.0270520841590336,
+  "trilho_min": 30.359463048327715,
+  "apogeu_medio": 81.41355640687733,
+  "reprova": [
+   "estabilidade mínima 0.51 cal < 1.0"
+  ]
+ }
+}

@@ -1,0 +1,173 @@
+# Foguete de garrafa PET 2L retornável — LASTRO METÁLICO (metal permitido!)
+# Lastro = arruelas/porcas de aço empilhadas na ponta da ogiva, fixadas com
+# Durepoxi nos vazios. Densidade efetiva 5,5 g/cm3 (aço 7,85 + vazios/Durepoxi
+# 1,7), vs 1,7 do Durepoxi puro -> 3,2x mais massa no mesmo espaço, concentrada
+# na PONTA (CG mais à frente = mais estável).
+# Baseado em foguete_real_otimizado. Original:
+# - garrafa: geometria/massa fiéis à REF-PET 2L (104 mm, ~100 g, bocal PCO 28)
+# - motor: modelo físico vinagre 4% + bicarbonato em excesso, calibrado no
+#   dado real do Murilo (1,55 L -> 170 psi); 8 cargas de vinagre diferentes
+# - ângulo do lançamento também é otimizado (25-60°)
+# Objetivo: máximo alcance horizontal, como se fosse lançado de verdade.
+
+base_ork: D:\OBAFOG\bit04 2L script\foguete_real\garrafa2L_base.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42          # trilho 1 m, vento 2 m/s contra — herdados do .ork
+
+parameters:
+  # ---------- ogiva (impressa em 3D) ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 6.0
+    high: 30.0
+
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK, PARABOLIC, POWER]
+
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.0
+    high: 1.0
+
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.6
+    high: 3.0
+
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pla, poliestireno, papel_cartao]
+
+  # ---------- lastro METÁLICO (arruelas de aço + Durepoxi nos vazios) ----------
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 20.0
+    options:
+      density_g_cm3: 5.5
+
+  # ---------- aletas (no ombro da garrafa) ----------
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 3
+    high: 6
+    integer: true
+
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 2.0
+    high: 12.0
+
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 16.0
+
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0
+
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 2.0
+    high: 14.0
+
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.6
+    high: 3.0
+
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [poliestireno, pla, pet_garrafa, papel_cartao]
+
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: -2.0
+    high: 2.0
+
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -3.0
+    high: 0.0
+
+  # ---------- motor físico (cargas de vinagre; garrafa = 2 L) ----------
+  - name: motor
+    component: Garrafa 2L - cilindro
+    attribute: motor
+    choices:
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_6L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_8L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_0L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_2L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_4L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_55L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_7L.eng"
+      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_8L.eng"
+
+  # ---------- ângulo do trilho de lançamento (graus da vertical) ----------
+  - name: launch_angle
+    component: Ogiva
+    attribute: sim_launch_rod_angle_deg
+    unit: ""
+    low: 25.0
+    high: 60.0
+
+objective:
+  metric: horizontal_distance
+  direction: maximize
+
+constraints:
+  - metric: stability_static
+    min: 0.15
+  - metric: stability_max
+    min: 1.0
+    max: 3.5
+  - metric: apogee
+    min: 10.0
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 10000
+  seed: 42
+  profile: balanced
+
+batch:
+  workers: 4
+
+db_path: D:\OBAFOG\bit04 2L script\foguete_real\otimizacao\orx.sqlite
+output_dir: D:\OBAFOG\bit04 2L script\foguete_real\otimizacao

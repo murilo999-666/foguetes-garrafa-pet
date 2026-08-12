@@ -1,0 +1,194 @@
+# bit06 — garrafa PET retornável REDUZIDA (~1,8 L, Ø9,585 cm)
+# Reprojeto pelo método do bit07: NOTA multicritério + restrições duras.
+#
+# Por que reprojetar
+# -----------------
+# O bit06 antigo (`_MODELO_ANTIGO_falhou/`) foi otimizado por ALCANCE PURO e
+# entregue com estabilidade ~1,03 cal — a mesma borda que produziu bit04 e bit05,
+# que foram lançados de verdade, saíram rasos e bateram numa cerca.
+# Pior: as pressões do projeto antigo (1,35 L -> "170 psi", 1,5 L -> "189 psi")
+# são exatamente as pressões NOMINAIS daquelas cargas, ou seja, o modelo assumiu
+# rendimento PERFEITO da reação. A bancada real do Murilo entregou eta~0,82-0,88.
+#
+# Esta etapa 1 é a varredura ampla no cenário RUIM (rendimento eta=0,80), já com
+# as restrições que faltavam. A nota completa (alcance x robustez x leveza x
+# segurança) é aplicada na etapa 2 por scripts/bit06_robusto.py, que re-simula os
+# finalistas em TODOS os rendimentos (0,70 a 1,00) x 3 ventos.
+
+base_ork: D:\OBAFOG\bit06 1,8L\garrafa_bit06_base.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42
+    wind_speed_average: 2.0
+    launch_rod_length: 1.0
+
+parameters:
+  # ---------- ogiva (impressa em 3D) ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 6.0
+    high: 30.0
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [CONICAL, OGIVE, ELLIPSOID, HAACK, PARABOLIC, POWER]
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.0
+    high: 1.0
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.8
+    high: 3.0
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pla, petg, poliestireno, papel_cartao]
+
+  # ---------- lastro de Durepoxi no bico (sem metal, regulamento) ----------
+  # massa DERIVADA do volume real do bico (discos finos, CG fisicamente correto)
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 26.0
+    options:
+      density_g_cm3: 1.7
+
+  # ---------- aletas ----------
+  # polietileno entra como opção porque é a chapa que o Murilo passou a usar
+  # (bit07_B); poliestireno e PLA seguem disponíveis.
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 3
+    high: 5
+    integer: true
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 3.0
+    high: 14.0
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 16.0
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 3.0
+    high: 15.0
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.8
+    high: 2.0
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [polietileno, poliestireno, pla, pet_garrafa, papel_cartao]
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: -2.0
+    high: 2.0
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -3.0
+    high: 0.0
+
+  # ---------- carga de vinagre (o motor) ----------
+  # Etapa 1 usa a coluna eta=0,80 — o rendimento ruim que a bancada realmente
+  # entregou no bit04/05. A etapa 2 troca o rendimento do MESMO arquivo
+  # (mesma carga de vinagre), varrendo 0,70 a 1,00.
+  - name: motor
+    component: Garrafa reduzida - cilindro
+    attribute: motor
+    choices:
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng"
+      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng"
+
+  - name: launch_angle
+    component: Ogiva
+    attribute: sim_launch_rod_angle_deg
+    unit: ""
+    low: 30.0
+    high: 60.0
+
+# Etapa 1 otimiza A PRÓPRIA NOTA da etapa 2, avaliada no cenário ruim (eta=0,80),
+# menos o termo de consistência (que precisa de vários rendimentos). Lição do
+# bit07: usar um atalho ("alcance − peso") na etapa 1 devolve finalistas colados
+# na borda de 1,0 cal. Aqui estabilidade e leveza PAGAM ponto desde a 1ª simulação.
+#
+#   40 pts alcance   (120 m -> 0 pt ; 340 m -> 40 pts)
+#   20 pts leveza    (600 g -> 0 pt ; 200 g -> 20 pts)   dry_mass = sem propelente
+#   10 pts estabilidade mínima (1,08 cal -> 0 pt ; 2,08 cal -> 10 pts)
+#    5 pts saída do trilho     (15 m/s -> 0 pt ; 25 m/s -> 5 pts)
+#
+# Âncoras de alcance mais baixas que as do bit07 (150/400 m): a garrafa reduzida
+# carrega menos vinagre e o cenário base aqui é eta=0,80, não 140 psi nominais.
+objective:
+  metric: 40*min(1,max(0,(horizontal_distance-120)/220)) + 20*min(1,max(0,(0.600-dry_mass)/0.400)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10))
+  direction: maximize
+
+# As restrições que FALTAVAM no bit04/bit05/bit06-antigo:
+constraints:
+  # 1,08 e não 1,00: a estabilidade varia ~0,02-0,05 cal entre os rendimentos, e
+  # um design que marca exatamente 1,00 no cenário da busca reprova em outro.
+  - metric: stability_min
+    min: 1.08
+    max: 3.5
+  - metric: stability_max
+    min: 1.0
+    max: 3.5
+  - metric: launch_rod_velocity   # sai rápido do trilho = tolera tip-off e vento
+    min: 15.0
+  - metric: apogee
+    min: 30.0
+  - metric: fin_root_ratio        # aleta colada por raiz suficiente (não descola)
+    min: 0.5
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 8000
+  seed: 42
+  profile: balanced
+  options:
+    chunk_size: 1500
+
+batch:
+  workers: 6
+
+db_path: D:\OBAFOG\bit06 1,8L\simulacoes\orx_bit06_nota.sqlite
+output_dir: D:\OBAFOG\bit06 1,8L\simulacoes

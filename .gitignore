@@ -1,0 +1,41 @@
+# ---- vídeos e mídia pesada (conteúdo de terceiros, ~5,6 GB) ----
+*.mp4
+*.mkv
+*.webm
+*.avi
+*.mov
+playlist/
+
+# ---- bancos de simulação (regeneráveis, chegam a 780 MB) ----
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.backup_corrompido
+
+# ---- instaladores / binários baixáveis ----
+*.exe
+*.msi
+
+# ---- motores gerados automaticamente (72k arquivos de uma varredura) ----
+**/_motores_gerados/
+
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# ---- crash logs da JVM e saída de execução volumosa ----
+hs_err_pid*.log
+replay_pid*.log
+*.err
+
+# ---- sistema ----
+Thumbs.db
+desktop.ini
+.DS_Store

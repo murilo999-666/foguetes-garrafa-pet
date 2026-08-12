@@ -1,0 +1,89 @@
+# Otimização de alcance (lançamento oblíquo 45°) do bit04 — OBAFOG
+# Varia APENAS: comprimento da ogiva (atual = máximo), massa do lastro e
+# formato das aletas (planform trapezoidal das 4 aletas freeform, idênticas).
+
+base_ork: D:\OBAFOG\bit04 2L script\foguete_real\bit04.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42          # vento reprodutível; demais opções vêm do .ork
+                             # (45°, trilho 1 m, vento 2 m/s contra, dir 90°)
+
+parameters:
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 8.0
+    high: 27.3               # tamanho atual = máximo (pedido do Murilo)
+
+  # Lastro reprodutível (regulamento: sem metal): Durepoxi preenchendo o bico
+  # da ogiva até a profundidade X. A massa é DERIVADA de densidade × volume
+  # interno real da ogiva — instrução construtiva: "encha X cm do bico".
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 26.0               # limitado a 95% do comprimento da ogiva em runtime
+    options:
+      density_g_cm3: 1.7     # Durepoxi (massa epóxi + cargas minerais); ajuste
+                             # se medir a densidade real do seu lote
+
+  - name: fin_root
+    component: "Conjunto de aletas de formato livre*"
+    attribute: ff_root
+    unit: cm
+    low: 3.0
+    high: 16.0               # atual: 8,0
+
+  - name: fin_tip
+    component: "Conjunto de aletas de formato livre*"
+    attribute: ff_tip
+    unit: cm
+    low: 0.0                 # 0 = aleta triangular
+    high: 18.0               # atual: 11,2
+
+  - name: fin_sweep
+    component: "Conjunto de aletas de formato livre*"
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0               # atual: 6,4
+
+  - name: fin_height
+    component: "Conjunto de aletas de formato livre*"
+    attribute: ff_height
+    unit: cm
+    low: 2.0
+    high: 12.0               # atual: 6,4
+
+objective:
+  metric: horizontal_distance
+  direction: maximize
+
+constraints:
+  # bit04 atual: estática inicial 0,22 (cheio de líquido) subindo a 1,49 pós-queima
+  # (bate com os CSVs "1,5 calibre" da equipe). Restrições espelham isso:
+  - metric: stability_static # no início do voo (tanque cheio)
+    min: 0.15                # não pior que o design atual
+  - metric: stability_max    # pós-queima (vazio) — métrica que a equipe usa
+    min: 1.0
+    max: 3.5
+  - metric: apogee
+    min: 10.0                # descarta não-voos
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 10000
+  seed: 42
+  profile: balanced
+
+batch:
+  workers: 6
+
+db_path: D:\OBAFOG\bit04 2L script\otimizacao\orx.sqlite
+output_dir: D:\OBAFOG\bit04 2L script\otimizacao

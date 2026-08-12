@@ -1,0 +1,248 @@
+LABORATÓRIO — 105,000 simulações (40,628 viáveis)
+gerado em 26/07/2026 04:40
+
+=== Run 1 (random) — objetivo: maximizar horizontal_distance ===
+Avaliações: 40000 | viáveis: 9527 | erros: 19118
+Melhor horizontal_distance: 563.1 (iteração 22011)
+Melhor design:
+  nose_length = 35.4
+  nose_shape = CONICAL
+  nose_shape_param = 0.9163
+  nose_thickness = 4.14
+  nose_material = balsa
+  ballast_fill = 25.46
+  fin_count = 3
+  fin_root = 11.04
+  fin_tip = 7.992
+  fin_sweep = 15.08
+  fin_height = 8.912
+  fin_thickness = 1.795
+  fin_material = poliestireno
+  fin_cant = -4.795
+  fin_position = -2.974
+  body_diameter = 9.372
+  body_length = 49.92
+  body_wall = 0.8187
+  body_material = pet_garrafa
+  vinegar_fill = 0.9149
+  nozzle_diameter = 6.91
+  launch_angle = 38.68
+
+Faixas ideais (top-10%, n=953):
+  nose_length: entre 3.025 e 44.96
+  nose_shape_param: entre 0.0009291 e 1
+  nose_thickness: entre 0.4052 e 4.997
+  ballast_fill: entre 0.05025 e 39.98
+  fin_count: entre 2 e 8
+  fin_root: entre 1.007 e 19.94
+  fin_tip: entre 0.05889 e 21.98
+  fin_sweep: entre 0.03247 e 21.98
+  fin_height: entre 1.311 e 19.98
+  fin_thickness: entre 0.4045 e 4.973
+  fin_cant: entre -4.996 e 4.996
+  fin_position: entre -5.999 e -0.01905
+  body_diameter: entre 6.007 e 13.9
+  body_length: entre 18.07 e 54.99
+  body_wall: entre 0.3478 e 3
+  vinegar_fill: entre 0.3201 e 0.92
+  nozzle_diameter: entre 6.028 e 39.98
+  launch_angle: entre 17.31 e 74.93
+
+nose_shape: 'CONICAL' foi o melhor (média 147.7, n=1620), 3% acima de 'OGIVE' (143.3).
+
+nose_material: 'balsa' foi o melhor (média 142, n=1806), 3% acima de 'papel_cartao' (138.1).
+
+fin_material: 'balsa' foi o melhor (média 143.2, n=2144), 5% acima de 'papel_cartao' (136.6).
+
+body_material: 'pet_garrafa' foi o melhor (média 146.7, n=5275), 16% acima de 'pla' (127).
+
+Influência dos parâmetros (|correlação| com o objetivo):
+  ##  body_length: 0.41
+  ##  vinegar_fill: 0.37
+  ##  ballast_fill: 0.28
+  #   launch_angle: 0.24
+  #   body_diameter: 0.18
+  #   body_material: 0.16
+  #   fin_thickness: 0.16
+  #   nose_length: 0.13
+  #   nose_shape: 0.11
+      fin_height: 0.09
+      body_wall: 0.08
+      fin_count: 0.08
+      nozzle_diameter: 0.07
+      fin_material: 0.06
+      nose_material: 0.05
+      fin_root: 0.04
+      fin_sweep: 0.04
+      fin_tip: 0.04
+      fin_position: 0.02
+      nose_shape_param: 0.02
+      nose_thickness: 0.02
+      fin_cant: 0.00
+  (pouca influência detectada: nose_shape_param, nose_thickness, nose_material, fin_count, fin_root, fin_tip, fin_sweep, fin_height, fin_material, fin_cant, fin_position, body_wall, nozzle_diameter)
+
+=== Run 2 (adaptive) — objetivo: maximizar horizontal_distance ===
+Avaliações: 40000 | viáveis: 21111 | erros: 7554
+Melhor horizontal_distance: 637.6 (iteração 18727)
+Melhor design:
+  nose_length = 9.108
+  nose_shape = PARABOLIC
+  nose_shape_param = 0.5086
+  nose_thickness = 1.351
+  nose_material = balsa
+  ballast_fill = 27.81
+  fin_count = 3
+  fin_root = 11
+  fin_tip = 14.13
+  fin_sweep = 20.96
+  fin_height = 6.795
+  fin_thickness = 0.7885
+  fin_material = papel_cartao
+  fin_cant = 1.117
+  fin_position = -4.076
+  body_diameter = 9.306
+  body_length = 54.69
+  body_wall = 0.7735
+  body_material = pet_garrafa
+  vinegar_fill = 0.8976
+  nozzle_diameter = 6.004
+  launch_angle = 40.32
+
+Faixas ideais (top-10%, n=2112):
+  nose_length: entre 3.336 e 45
+  nose_shape_param: entre 0.2028 e 1
+  nose_thickness: entre 0.4001 e 4.959
+  ballast_fill: entre 0.002969 e 40
+  fin_count: entre 3 e 7
+  fin_root: entre 1 e 17.66
+  fin_tip: entre 0.001131 e 21.34
+  fin_sweep: entre 0.5694 e 22
+  fin_height: entre 4.256 e 14.81
+  fin_thickness: entre 0.4 e 2.884
+  fin_cant: entre -5 e 4.997
+  fin_position: entre -6 e -0.7994
+  body_diameter: entre 8.56 e 10.41
+  body_length: entre 42.78 e 55
+  body_wall: entre 0.5865 e 2.674
+  vinegar_fill: entre 0.8329 e 0.92
+  nozzle_diameter: entre 6 e 7.39
+  launch_angle: entre 27.71 e 70.69
+
+nose_shape: 'PARABOLIC' foi o melhor (média 472.1, n=9031), 9% acima de 'OGIVE' (431.7).
+
+nose_material: 'balsa' foi o melhor (média 459.4, n=5759), 11% acima de 'papel_cartao' (415.7).
+
+fin_material: 'poliestireno' foi o melhor (média 444, n=6334), 8% acima de 'balsa' (409.9).
+
+body_material: 'pet_garrafa' foi o melhor (média 424.1, n=13885), 51% acima de 'pla' (280.7).
+
+Influência dos parâmetros (|correlação| com o objetivo):
+  ### vinegar_fill: 0.77
+  ### nozzle_diameter: 0.77
+  ### fin_thickness: 0.72
+  ### nose_shape: 0.64
+  ### body_length: 0.60
+  ### body_diameter: 0.57
+  ### nose_material: 0.54
+  ### fin_count: 0.52
+  ##  fin_material: 0.48
+  ##  body_material: 0.44
+  ##  body_wall: 0.40
+  ##  fin_root: 0.38
+  ##  fin_height: 0.37
+  ##  fin_tip: 0.37
+  ##  fin_sweep: 0.31
+  ##  nose_shape_param: 0.26
+  #   fin_cant: 0.23
+  #   fin_position: 0.22
+  #   nose_length: 0.15
+  #   nose_thickness: 0.14
+  #   launch_angle: 0.14
+  #   ballast_fill: 0.11
+
+=== Run 3 (genetic) — objetivo: maximizar horizontal_distance ===
+Avaliações: 25000 | viáveis: 9990 | erros: 4312
+Melhor horizontal_distance: 655.8 (iteração 24891)
+Melhor design:
+  nose_length = 5.427
+  nose_shape = HAACK
+  nose_shape_param = 0.3028
+  nose_thickness = 3.384
+  nose_material = poliestireno
+  ballast_fill = 15.88
+  fin_count = 3
+  fin_root = 6.669
+  fin_tip = 0.3219
+  fin_sweep = 18.39
+  fin_height = 6.058
+  fin_thickness = 0.4026
+  fin_material = pla
+  fin_cant = -0.9047
+  fin_position = -0.8108
+  body_diameter = 9.276
+  body_length = 54.61
+  body_wall = 1.101
+  body_material = pet_garrafa
+  vinegar_fill = 0.9114
+  nozzle_diameter = 6.013
+  launch_angle = 41.48
+
+Faixas ideais (top-10%, n=999):
+  nose_length: entre 4.125 e 6.496
+  nose_shape_param: entre 0.02724 e 0.4733
+  nose_thickness: entre 2.482 e 4.608
+  ballast_fill: entre 13.12 e 23.91
+  fin_count: entre 3 e 3
+  fin_root: entre 1.356 e 10.28
+  fin_tip: entre 0.04071 e 5.782
+  fin_sweep: entre 15.39 e 21.98
+  fin_height: entre 3.98 e 10.42
+  fin_thickness: entre 0.4 e 0.6884
+  fin_cant: entre -2.705 e -0.1553
+  fin_position: entre -2.347 e -0.1032
+  body_diameter: entre 8.978 e 9.443
+  body_length: entre 53.16 e 55
+  body_wall: entre 0.6971 e 1.365
+  vinegar_fill: entre 0.8868 e 0.92
+  nozzle_diameter: entre 6 e 6.497
+  launch_angle: entre 35.21 e 46.35
+
+nose_shape: 'HAACK' foi o melhor (média 542, n=8412), 34% acima de 'ELLIPSOID' (405.1).
+
+nose_material: 'poliestireno' foi o melhor (média 528.4, n=8696), 20% acima de 'pet_garrafa' (441.5).
+
+fin_material: 'pla' foi o melhor (média 536.7, n=8166), 26% acima de 'balsa' (426.8).
+
+body_material: 'pet_garrafa' foi o melhor (média 516.2, n=9936), 212% acima de 'pla' (165.6).
+
+Influência dos parâmetros (|correlação| com o objetivo):
+  ### body_diameter: 0.53
+  ##  nose_shape: 0.48
+  ##  fin_material: 0.36
+  ##  fin_count: 0.34
+  ##  body_length: 0.32
+  ##  fin_height: 0.32
+  ##  nozzle_diameter: 0.31
+  ##  vinegar_fill: 0.29
+  ##  nose_material: 0.28
+  #   nose_length: 0.21
+  #   fin_tip: 0.21
+  #   body_material: 0.20
+  #   fin_thickness: 0.19
+  #   fin_sweep: 0.17
+  #   body_wall: 0.17
+  #   fin_root: 0.11
+      launch_angle: 0.09
+      nose_shape_param: 0.08
+      ballast_fill: 0.04
+      fin_position: 0.02
+      nose_thickness: 0.02
+      fin_cant: 0.01
+  (pouca influência detectada: nose_shape_param, nose_thickness, ballast_fill, fin_cant, fin_position, launch_angle)
+
+=== Comparação de runs ===
+run 1 (random): melhor=563.1 | avaliações viáveis=9527 | atingiu 95% do melhor na iteração 22011
+run 2 (adaptive): melhor=637.6 | avaliações viáveis=21111 | atingiu 95% do melhor na iteração 11621
+run 3 (genetic): melhor=655.8 | avaliações viáveis=9990 | atingiu 95% do melhor na iteração 2470
+
+'genetic' (run 3) superou 'adaptive' (run 2) em 2.9%.

@@ -1,0 +1,522 @@
+
+===== ETAPA 1 â€” bloco 1/3 (6000 simulaÃ§Ãµes a 140 psi) =====
+23:22:03 INFO    orx.optimizer.adaptive: fase 1/3: exploraÃ§Ã£o ampla (random) â€” espaÃ§o completo
+23:22:04 INFO    orx.optimizer.engine: pool paralelo: 4 workers (1 JVM cada)
+23:22:04 INFO    orx.optimizer.engine: run 1: adaptive, objetivo 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10)) (maximize), 6000 avaliaÃ§Ãµes
+23:22:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:22:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:22:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:22:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000d3700000, 243269632, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 243269632 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid13780.log
+23:22:12 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:22:12 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:22:15 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:22:16 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:22:16 INFO    orx.bridge.jvm: OpenRocket headless pronto
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid388.log
+23:22:18 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:22:18 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:22:27 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:22:27 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b1 150/6000] melhor=26.2
+  [b1 300/6000] melhor=26.2
+  [b1 450/6000] melhor=26.2
+  [b1 600/6000] melhor=32.5
+  [b1 750/6000] melhor=32.5
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000cdb00000, 337641472, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 337641472 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid13072.log
+23:24:16 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+[1.016s][warning][gc] Failed to reserve memory for new overflow mark stack with 4096 chunks and size 33554432B.
+Error occurred during initialization of VM
+Failed to allocate initial concurrent mark overflow mark stack.
+23:24:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid3992.log
+23:24:22 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid4704.log
+23:24:24 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid3896.log
+23:24:26 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid15544.log
+23:24:27 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 2097152 bytes. Error detail: AllocateHeap
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid15432.log
+23:24:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 240 bytes. Error detail: AllocateHeap
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid14752.log
+#
+# Compiler replay data is saved as:
+# C:\Users\muril\openrocket-optimizer\replay_pid14752.log
+23:24:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid12384.log
+23:24:50 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid15792.log
+23:24:53 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid13748.log
+23:24:56 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+[2.020s][warning][gc] Failed to reserve memory for new overflow mark stack with 4096 chunks and size 33554432B.
+Error occurred during initialization of VM
+Failed to allocate initial concurrent mark overflow mark stack.
+23:24:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+[1.028s][warning][gc] Failed to reserve memory for new overflow mark stack with 4096 chunks and size 33554432B.
+Error occurred during initialization of VM
+Failed to allocate initial concurrent mark overflow mark stack.
+23:25:01 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000c0000000, 266338304, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid15716.log
+23:25:03 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:25:07 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:25:07 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:27:11 ERROR   orx.optimizer.engine: lote de 4 designs travado por >180s â€” provÃ¡vel worker morto (JVM sem memÃ³ria nativa). Reiniciando o pool e tentando de novo.
+23:27:12 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:27:12 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:27:12 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:27:12 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000ca700000, 244318208, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 244318208 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid2148.log
+23:27:21 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000d5000000, 187695104, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 187695104 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid772.log
+23:27:22 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:27:22 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:27:22 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:27:22 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:27:24 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+OpenJDK 64-Bit Server VM warning: INFO: os::commit_memory(0x00000000d7300000, 153092096, 0) failed; error='O arquivo de paginação é muito pequeno para que esta operação seja concluída' (DOS error/errno=1455)
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 153092096 bytes. Error detail: G1 virtual space
+# An error report file with more information is saved as:
+# C:\Users\muril\openrocket-optimizer\hs_err_pid9628.log
+23:27:33 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:27:33 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:27:33 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:27:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:27:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b1 900/6000] melhor=32.5
+  [b1 1050/6000] melhor=32.5
+  [b1 1200/6000] melhor=32.5
+  [b1 1350/6000] melhor=32.5
+  [b1 1500/6000] melhor=32.5
+  [b1 1650/6000] melhor=32.5
+  [b1 1800/6000] melhor=32.5
+23:29:28 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+23:29:28 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['pla']
+23:29:28 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+23:29:28 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_10-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng']
+23:29:28 INFO    orx.optimizer.adaptive: parÃ¢metros de baixa influÃªncia (|corr|<0.1): ['nose_length', 'nose_thickness', 'fin_count', 'fin_root', 'fin_tip', 'fin_height', 'fin_cant']
+23:29:28 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [2.259, 26]
+23:29:28 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.793, 15]
+23:29:28 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 2.556]
+23:29:28 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [30, 59.55]
+23:29:28 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b1 1950/6000] melhor=42.3
+  [b1 2100/6000] melhor=43.1
+  [b1 2250/6000] melhor=43.6
+  [b1 2400/6000] melhor=43.6
+  [b1 2550/6000] melhor=43.8
+  [b1 2700/6000] melhor=44.3
+23:32:03 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:32:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:32:09 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:32:09 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:32:09 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:32:09 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:32:16 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:32:20 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:32:20 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:32:21 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:32:26 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:32:26 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b1 2850/6000] melhor=44.3
+  [b1 3000/6000] melhor=44.3
+  [b1 3150/6000] melhor=44.6
+  [b1 3300/6000] melhor=44.6
+23:34:01 INFO    orx.optimizer.adaptive: novo bloco TPE (3300 tells acumulados)
+23:34:01 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+23:34:01 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['pla']
+23:34:01 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+23:34:01 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_10-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng']
+23:34:01 INFO    orx.optimizer.adaptive: parÃ¢metros de baixa influÃªncia (|corr|<0.1): ['nose_thickness', 'fin_count']
+23:34:01 INFO    orx.optimizer.adaptive: estreitando nose_length: [6, 30] -> [8.607, 28.72]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0, 1] -> [0.409, 0.8995]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [3.864, 13.03]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 6] -> [3.7, 6]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_root: [3, 14] -> [3.919, 10.13]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 16] -> [1.007, 8.745]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [5.27, 14]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [7.259, 15]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 1.056]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_cant: [-2, 2] -> [-2, 0.9507]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.086, 0]
+23:34:01 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [50.28, 60]
+23:34:01 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b1 3450/6000] melhor=44.6
+  [b1 3600/6000] melhor=44.6
+  [b1 3750/6000] melhor=44.8
+  [b1 3900/6000] melhor=45.3
+  [b1 4050/6000] melhor=45.7
+  [b1 4200/6000] melhor=45.7
+  [b1 4350/6000] melhor=45.7
+  [b1 4500/6000] melhor=45.7
+  [b1 4650/6000] melhor=46.1
+23:38:44 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:38:48 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:38:48 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:38:49 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+  [b1 4800/6000] melhor=46.1
+23:38:50 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+23:38:55 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:38:55 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:38:55 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:39:00 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:39:00 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:39:00 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:39:06 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:39:06 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b1 4950/6000] melhor=46.1
+  [b1 5100/6000] melhor=46.1
+  [b1 5250/6000] melhor=46.1
+  [b1 5400/6000] melhor=46.1
+  [b1 5550/6000] melhor=46.1
+  [b1 5700/6000] melhor=46.1
+  [b1 5850/6000] melhor=46.1
+  [b1 6000/6000] melhor=46.1
+23:41:26 INFO    orx.optimizer.engine: run 1 concluÃ­da: melhor 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10))=46.09 em {"nose_length": 24.67538187267374, "nose_shape": "PARABOLIC", "nose_shape_param": 0.5704308417077195, "nose_thickness": 0.6463892094374636, "nose_material": "poliestireno", "ballast_fill": 12.637926602085205, "fin_count": 3, "fin_root": 7.182586761453186, "fin_tip": 3.106843642106349, "fin_sweep": 11.247161601475609, "fin_height": 13.589129354834187, "fin_thickness": 0.6530333362027934, "fin_material": "papel_cartao", "fin_cant": -1.2449789264674385, "fin_position": -0.0013832384277565613, "motor": "file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L0_90-P140.eng", "launch_angle": 52.81197021883797}
+
+===== ETAPA 1 â€” bloco 2/3 (6000 simulaÃ§Ãµes a 140 psi) =====
+23:41:26 INFO    orx.optimizer.adaptive: fase 1/3: exploraÃ§Ã£o ampla (random) â€” espaÃ§o completo
+23:41:26 INFO    orx.optimizer.engine: pool paralelo: 4 workers (1 JVM cada)
+23:41:26 INFO    orx.optimizer.engine: run 2: adaptive, objetivo 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10)) (maximize), 6000 avaliaÃ§Ãµes
+23:41:26 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:41:27 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:41:27 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:41:27 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:41:37 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:41:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:41:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:41:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:41:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:41:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:41:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:41:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b2 150/6000] melhor=31.6
+  [b2 300/6000] melhor=31.6
+  [b2 450/6000] melhor=31.6
+  [b2 600/6000] melhor=31.7
+  [b2 750/6000] melhor=31.7
+  [b2 900/6000] melhor=31.7
+  [b2 1050/6000] melhor=31.7
+  [b2 1200/6000] melhor=31.7
+  [b2 1350/6000] melhor=31.7
+  [b2 1500/6000] melhor=31.7
+  [b2 1650/6000] melhor=31.7
+  [b2 1800/6000] melhor=34.2
+23:45:17 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+23:45:17 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['poliestireno']
+23:45:17 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['pla', 'pet_garrafa']
+23:45:17 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_80-P140.eng']
+23:45:17 INFO    orx.optimizer.adaptive: parÃ¢metros de baixa influÃªncia (|corr|<0.1): ['nose_shape_param', 'fin_tip', 'fin_cant']
+23:45:17 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [0.0003322, 26]
+23:45:17 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [6.412, 15]
+23:45:17 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 2.894]
+23:45:17 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b2 1950/6000] melhor=41.2
+23:45:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:45:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:45:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:45:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:45:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:45:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:45:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:45:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:45:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:45:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:45:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:45:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b2 2100/6000] melhor=43.1
+  [b2 2250/6000] melhor=43.8
+  [b2 2400/6000] melhor=43.8
+  [b2 2550/6000] melhor=44.4
+  [b2 2700/6000] melhor=44.6
+  [b2 2850/6000] melhor=44.6
+  [b2 3000/6000] melhor=44.7
+  [b2 3150/6000] melhor=44.7
+  [b2 3300/6000] melhor=44.9
+23:50:05 INFO    orx.optimizer.adaptive: novo bloco TPE (3300 tells acumulados)
+23:50:05 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+23:50:05 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['poliestireno']
+23:50:05 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['pla', 'pet_garrafa']
+23:50:05 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_80-P140.eng']
+23:50:05 INFO    orx.optimizer.adaptive: parÃ¢metros de baixa influÃªncia (|corr|<0.1): ['nose_shape_param', 'fin_height']
+23:50:05 INFO    orx.optimizer.adaptive: estreitando nose_length: [6, 30] -> [22.67, 30]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0, 1] -> [0.2025, 1]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [7.833, 18.15]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_root: [3, 14] -> [5.782, 11.25]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 16] -> [0, 9.191]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [7.974, 14]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [7.805, 15]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 1.041]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.144, 0]
+23:50:05 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [49.1, 60]
+23:50:05 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b2 3450/6000] melhor=45.0
+  [b2 3600/6000] melhor=45.1
+  [b2 3750/6000] melhor=45.5
+  [b2 3900/6000] melhor=45.5
+23:51:54 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:51:54 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:51:55 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:51:55 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:52:05 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:52:05 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:52:05 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:52:05 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:52:06 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:52:06 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:52:06 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:52:06 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b2 4050/6000] melhor=45.5
+  [b2 4200/6000] melhor=45.9
+  [b2 4350/6000] melhor=45.9
+  [b2 4500/6000] melhor=45.9
+  [b2 4650/6000] melhor=45.9
+  [b2 4800/6000] melhor=45.9
+23:55:01 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [b2 4950/6000] melhor=47.1
+  [b2 5100/6000] melhor=47.1
+  [b2 5250/6000] melhor=47.1
+  [b2 5400/6000] melhor=47.1
+  [b2 5550/6000] melhor=47.1
+  [b2 5700/6000] melhor=47.1
+  [b2 5850/6000] melhor=47.1
+  [b2 6000/6000] melhor=47.1
+23:57:22 INFO    orx.optimizer.engine: run 2 concluÃ­da: melhor 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10))=47.11 em {"nose_length": 28.381801725513476, "nose_shape": "PARABOLIC", "nose_shape_param": 0.6018719189757012, "nose_thickness": 1.056628582200323, "nose_material": "papel_cartao", "ballast_fill": 12.701768849955991, "fin_count": 4, "fin_root": 6.553649430730449, "fin_tip": 0.0, "fin_sweep": 11.795354662894, "fin_height": 13.702456357156175, "fin_thickness": 0.6, "fin_material": "papel_cartao", "fin_cant": 1.560662468037097, "fin_position": 0.0, "motor": "file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L0_90-P140.eng", "launch_angle": 52.75182349191485}
+
+===== ETAPA 1 â€” bloco 3/3 (6000 simulaÃ§Ãµes a 140 psi) =====
+23:57:22 INFO    orx.optimizer.adaptive: fase 1/3: exploraÃ§Ã£o ampla (random) â€” espaÃ§o completo
+23:57:23 INFO    orx.optimizer.engine: pool paralelo: 4 workers (1 JVM cada)
+23:57:23 INFO    orx.optimizer.engine: run 3: adaptive, objetivo 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10)) (maximize), 6000 avaliaÃ§Ãµes
+23:57:23 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:57:23 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:57:23 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:57:23 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+23:57:34 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:57:34 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:57:34 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:57:35 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:57:35 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:57:35 INFO    orx.bridge.jvm: OpenRocket headless pronto
+23:57:35 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+23:57:35 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b3 150/6000] melhor=23.1
+  [b3 300/6000] melhor=23.1
+  [b3 450/6000] melhor=23.1
+  [b3 600/6000] melhor=23.1
+  [b3 750/6000] melhor=23.1
+  [b3 900/6000] melhor=27.6
+  [b3 1050/6000] melhor=28.6
+  [b3 1200/6000] melhor=28.6
+  [b3 1350/6000] melhor=31.7
+  [b3 1500/6000] melhor=32.1
+  [b3 1650/6000] melhor=32.1
+  [b3 1800/6000] melhor=32.1
+00:01:18 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+00:01:18 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['poliestireno']
+00:01:18 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+00:01:18 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_30-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng']
+00:01:18 INFO    orx.optimizer.adaptive: parÃ¢metros de baixa influÃªncia (|corr|<0.1): ['nose_thickness', 'fin_count', 'fin_sweep', 'fin_height', 'fin_cant']
+00:01:18 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [4.655, 26]
+00:01:18 INFO    orx.optimizer.adaptive: estreitando fin_root: [3, 14] -> [3.639, 14]
+00:01:18 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [5.287, 15]
+00:01:18 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 2.754]
+00:01:18 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b3 1950/6000] melhor=43.7
+00:01:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:01:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:01:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:01:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:01:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:01:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:02:00 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:02:00 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:02:00 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:02:00 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:02:01 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:02:01 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b3 2100/6000] melhor=44.8
+  [b3 2250/6000] melhor=44.8
+  [b3 2400/6000] melhor=45.4
+  [b3 2550/6000] melhor=45.4
+  [b3 2700/6000] melhor=45.7
+  [b3 2850/6000] melhor=45.7
+  [b3 3000/6000] melhor=45.9
+  [b3 3150/6000] melhor=45.9
+  [b3 3300/6000] melhor=45.9
+00:06:25 INFO    orx.optimizer.adaptive: novo bloco TPE (3300 tells acumulados)
+00:06:25 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_shape: ['ELLIPSOID', 'HAACK', 'POWER']
+00:06:25 INFO    orx.optimizer.adaptive: descartando categorias fracas de nose_material: ['poliestireno']
+00:06:25 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+00:06:25 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_30-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_55-P140.eng', 'file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L1_70-P140.eng']
+00:06:25 INFO    orx.optimizer.adaptive: estreitando nose_length: [6, 30] -> [15.65, 30]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0, 1] -> [0.4503, 1]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.6, 3] -> [0.6, 1.645]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 26] -> [6.056, 15.88]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_root: [3, 14] -> [5.094, 10.6]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 16] -> [0, 8.261]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [7.191, 14]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [9.575, 15]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.6, 3] -> [0.6, 1.022]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.728, 0]
+00:06:25 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [47.21, 60]
+00:06:25 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) â€” espaÃ§o estreitado
+  [b3 3450/6000] melhor=45.9
+  [b3 3600/6000] melhor=45.9
+  [b3 3750/6000] melhor=45.9
+  [b3 3900/6000] melhor=46.1
+00:08:20 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:08:20 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:08:20 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:08:20 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:08:31 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:08:31 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:08:31 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:08:31 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:08:32 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:08:32 INFO    orx.bridge.jvm: OpenRocket headless pronto
+00:08:32 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:08:32 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [b3 4050/6000] melhor=46.2
+  [b3 4200/6000] melhor=46.4
+  [b3 4350/6000] melhor=46.5
+  [b3 4500/6000] melhor=46.5
+  [b3 4650/6000] melhor=46.5
+  [b3 4800/6000] melhor=46.5
+00:11:26 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [b3 4950/6000] melhor=47.1
+  [b3 5100/6000] melhor=47.1
+  [b3 5250/6000] melhor=47.1
+  [b3 5400/6000] melhor=47.1
+  [b3 5550/6000] melhor=47.1
+  [b3 5700/6000] melhor=47.1
+  [b3 5850/6000] melhor=47.1
+  [b3 6000/6000] melhor=47.1
+00:14:02 INFO    orx.optimizer.engine: run 3 concluÃ­da: melhor 40*min(1,max(0,(horizontal_distance-150)/250)) + 20*min(1,max(0,(0.700-dry_mass)/0.450)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-15)/10))=47.14 em {"nose_length": 28.01658335567077, "nose_shape": "PARABOLIC", "nose_shape_param": 0.693600288381705, "nose_thickness": 0.9016594859815921, "nose_material": "papel_cartao", "ballast_fill": 11.31898862196407, "fin_count": 4, "fin_root": 6.966238572209965, "fin_tip": 0.0, "fin_sweep": 13.791235578925146, "fin_height": 14.631838669741493, "fin_thickness": 0.6, "fin_material": "papel_cartao", "fin_cant": -1.4704356368537108, "fin_position": 0.0, "motor": "file:D:\\OBAFOG\\bit07 robusto 2L\\motores\\Bit07-L0_90-P140.eng", "launch_angle": 56.03119359068957}
+
+===== ETAPA 2 â€” nota multicritÃ©rio dos 40 finalistas =====
+00:14:03 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+00:14:06 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+00:14:06 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [1/40] nota  72.3 | mÃ©dio   273 m | pior   254 m | seca  309 g | estab 1.70 cal
+  [2/40] nota  71.8 | mÃ©dio   286 m | pior   264 m | seca  368 g | estab 1.80 cal
+  [3/40] nota  72.1 | mÃ©dio   283 m | pior   263 m | seca  342 g | estab 1.71 cal
+  [4/40] nota  70.7 | mÃ©dio   299 m | pior   273 m | seca  446 g | estab 1.92 cal
+  [5/40] nota  70.4 | mÃ©dio   296 m | pior   270 m | seca  445 g | estab 1.95 cal
+  [6/40] nota  70.6 | mÃ©dio   297 m | pior   271 m | seca  445 g | estab 1.94 cal
+  [7/40] nota  70.9 | mÃ©dio   295 m | pior   271 m | seca  381 g | estab 1.67 cal
+  [8/40] nota  70.9 | mÃ©dio   293 m | pior   269 m | seca  373 g | estab 1.64 cal
+  [9/40] nota  72.0 | mÃ©dio   278 m | pior   260 m | seca  324 g | estab 1.64 cal
+  [10/40] nota  70.2 | mÃ©dio   299 m | pior   273 m | seca  418 g | estab 1.73 cal
+  [11/40] nota  70.7 | mÃ©dio   295 m | pior   271 m | seca  383 g | estab 1.66 cal
+  [12/40] nota  70.9 | mÃ©dio   294 m | pior   271 m | seca  386 g | estab 1.69 cal
+  [13/40] nota  70.9 | mÃ©dio   293 m | pior   270 m | seca  386 g | estab 1.70 cal
+  [14/40] nota  70.6 | mÃ©dio   294 m | pior   270 m | seca  385 g | estab 1.67 cal
+  [15/40] nota  71.2 | mÃ©dio   293 m | pior   271 m | seca  371 g | estab 1.64 cal
+  [16/40] nota  71.0 | mÃ©dio   292 m | pior   270 m | seca  369 g | estab 1.62 cal
+  [17/40] nota  70.8 | mÃ©dio   296 m | pior   273 m | seca  377 g | estab 1.60 cal
+  [18/40] nota  71.0 | mÃ©dio   292 m | pior   269 m | seca  379 g | estab 1.69 cal
+  [19/40] nota  70.0 | mÃ©dio   299 m | pior   273 m | seca  423 g | estab 1.74 cal
+  [20/40] nota  70.7 | mÃ©dio   295 m | pior   271 m | seca  394 g | estab 1.71 cal
+  [21/40] nota  71.7 | mÃ©dio   276 m | pior   257 m | seca  339 g | estab 1.74 cal
+  [22/40] nota  71.0 | mÃ©dio   295 m | pior   271 m | seca  387 g | estab 1.69 cal
+  [23/40] nota  70.8 | mÃ©dio   289 m | pior   267 m | seca  364 g | estab 1.64 cal
+  [24/40] nota  70.9 | mÃ©dio   294 m | pior   271 m | seca  392 g | estab 1.71 cal
+  [25/40] nota  70.8 | mÃ©dio   290 m | pior   268 m | seca  358 g | estab 1.58 cal
+  [26/40] nota  70.6 | mÃ©dio   293 m | pior   269 m | seca  382 g | estab 1.68 cal
+  [27/40] nota  70.4 | mÃ©dio   296 m | pior   271 m | seca  408 g | estab 1.75 cal
+  [28/40] nota  70.9 | mÃ©dio   297 m | pior   273 m | seca  383 g | estab 1.63 cal
+  [29/40] nota  70.9 | mÃ©dio   290 m | pior   268 m | seca  364 g | estab 1.62 cal
+  [30/40] nota  70.8 | mÃ©dio   294 m | pior   270 m | seca  386 g | estab 1.69 cal
+  [31/40] nota  70.6 | mÃ©dio   294 m | pior   270 m | seca  392 g | estab 1.72 cal
+  [32/40] nota  70.8 | mÃ©dio   297 m | pior   273 m | seca  395 g | estab 1.69 cal
+  [33/40] nota  71.7 | mÃ©dio   270 m | pior   252 m | seca  289 g | estab 1.59 cal
+  [34/40] nota  70.9 | mÃ©dio   290 m | pior   268 m | seca  359 g | estab 1.60 cal
+  [35/40] nota  70.6 | mÃ©dio   298 m | pior   273 m | seca  395 g | estab 1.66 cal
+  [36/40] nota  69.9 | mÃ©dio   298 m | pior   272 m | seca  420 g | estab 1.75 cal
+  [37/40] nota  70.5 | mÃ©dio   297 m | pior   272 m | seca  406 g | estab 1.73 cal
+  [38/40] nota  70.9 | mÃ©dio   286 m | pior   265 m | seca  343 g | estab 1.56 cal
+  [39/40] nota  70.7 | mÃ©dio   290 m | pior   267 m | seca  360 g | estab 1.62 cal
+  [40/40] nota  70.6 | mÃ©dio   295 m | pior   271 m | seca  392 g | estab 1.68 cal
+
+>> campeÃ£o salvo em D:\OBAFOG\bit07 robusto 2L\bit07_MODELO_FINAL.ork
+>> relatÃ³rio: D:\OBAFOG\bit07 robusto 2L\RELATORIO_bit07.md
+>> ranking:   D:\OBAFOG\bit07 robusto 2L\ranking_bit07.csv
+
+tempo total: 58.5 min

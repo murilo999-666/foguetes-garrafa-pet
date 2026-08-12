@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="210.0mm" height="297.0mm" viewBox="0 0 210.0 297.0">
+<rect width="210.0" height="297.0" fill="white"/>
+<polygon points="18.000,153.000 143.000,18.000 183.000,18.000 83.000,182.805" fill="none" stroke="#000" stroke-width="0.3"/>
+<circle cx="18.00" cy="153.00" r="0.8" fill="#c00"/>
+<circle cx="143.00" cy="18.00" r="0.8" fill="#c00"/>
+<circle cx="183.00" cy="18.00" r="0.8" fill="#c00"/>
+<circle cx="83.00" cy="182.80" r="0.8" fill="#c00"/>
+<text x="80.50" y="85.50" font-size="4" fill="#06c" text-anchor="middle">184</text>
+<text x="163.00" y="18.00" font-size="4" fill="#06c" text-anchor="middle">40</text>
+<text x="133.00" y="100.40" font-size="4" fill="#06c" text-anchor="middle">193</text>
+<text x="50.50" y="167.90" font-size="4" fill="#06c" text-anchor="middle">72</text>
+<line x1="83.00" y1="182.80" x2="18.00" y2="153.00" stroke="#0a0" stroke-width="0.6" stroke-dasharray="3,2"/>
+<text x="50.50" y="173.90" font-size="4" fill="#0a0" text-anchor="middle">raiz - colar no corpo</text>
+<text x="18.0" y="273.0" font-size="6">bit06 - molde de aleta (1:1)</text>
+<text x="18.0" y="281.0" font-size="4.5">polietileno 1,0 mm - cortar 3 unidades</text>
+<line x1="18.0" y1="288.0" x2="118.0" y2="288.0" stroke="#000" stroke-width="0.4"/>
+<line x1="18.0" y1="286.5" x2="18.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="28.0" y1="286.5" x2="28.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="38.0" y1="286.5" x2="38.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="48.0" y1="286.5" x2="48.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="58.0" y1="286.5" x2="58.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="68.0" y1="286.5" x2="68.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="78.0" y1="286.5" x2="78.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="88.0" y1="286.5" x2="88.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="98.0" y1="286.5" x2="98.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="108.0" y1="286.5" x2="108.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<line x1="118.0" y1="286.5" x2="118.0" y2="289.5" stroke="#000" stroke-width="0.4"/>
+<text x="68.0" y="293.0" font-size="4" text-anchor="middle">100 mm - imprima a 100% (sem "ajustar a pagina")</text>
+</svg>

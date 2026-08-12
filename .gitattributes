@@ -1,0 +1,40 @@
+# Sem esta lista o Git trata PDF/STL/ORK como texto e aplica conversão de fim de
+# linha (LF->CRLF) no checkout, o que CORROMPE o arquivo. Tudo que é binário
+# precisa estar marcado aqui.
+
+* text=auto
+
+# --- modelos e simulação ---
+*.ork    binary
+# .eng é entrada de física: sem conversão, byte a byte idêntico ao simulado
+*.eng    -text
+*.rse    binary
+
+# --- fabricação ---
+*.stl    binary
+*.obj    binary
+*.step   binary
+*.stp    binary
+*.f3d    binary
+*.3mf    binary
+*.gcode  text eol=lf
+
+# --- documentos e imagens ---
+*.pdf    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.xlsx   binary
+*.docx   binary
+*.zip    binary
+
+# --- texto que deve manter LF ---
+*.py     text eol=lf
+*.md     text eol=lf
+*.yaml   text eol=lf
+*.yml    text eol=lf
+*.json   text eol=lf
+*.csv    -text
+*.svg    text eol=lf
+*.dxf    -text

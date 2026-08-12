@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orx"
+version = "0.1.0"
+description = "Plataforma de otimização automática para OpenRocket (Claude Code driven)"
+requires-python = ">=3.11"
+dependencies = [
+    "jpype1>=1.5",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "optuna",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+extra-optimizers = ["nevergrad"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["integration: requires OpenRocket + JVM (slow)"]

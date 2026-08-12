@@ -1,0 +1,98 @@
+[
+ {
+  "fill_cm": 8.0,
+  "lastro_g": 50.7,
+  "seca_g": 243.5,
+  "estab_min": 1.081,
+  "alcance_medio": 255.1,
+  "alcance_pior": 239.6,
+  "trilho": 31.57,
+  "nota": 72.11,
+  "alcance_por_eta": {
+   "0.7": 239.6,
+   "0.8": 250.6,
+   "0.9": 260.9,
+   "1.0": 269.4
+  }
+ },
+ {
+  "fill_cm": 10.0,
+  "lastro_g": 89.7,
+  "seca_g": 282.5,
+  "estab_min": 1.187,
+  "alcance_medio": 270.5,
+  "alcance_pior": 252.1,
+  "trilho": 31.15,
+  "nota": 73.29,
+  "alcance_por_eta": {
+   "0.7": 252.1,
+   "0.8": 265.6,
+   "0.9": 277.2,
+   "1.0": 287.3
+  }
+ },
+ {
+  "fill_cm": 12.0,
+  "lastro_g": 146.2,
+  "seca_g": 339.0,
+  "estab_min": 1.314,
+  "alcance_medio": 286.9,
+  "alcance_pior": 264.5,
+  "trilho": 30.36,
+  "nota": 73.73,
+  "alcance_por_eta": {
+   "0.7": 264.5,
+   "0.8": 280.5,
+   "0.9": 295.4,
+   "1.0": 307.2
+  }
+ },
+ {
+  "fill_cm": 14.0,
+  "lastro_g": 222.2,
+  "seca_g": 414.9,
+  "estab_min": 1.458,
+  "alcance_medio": 298.8,
+  "alcance_pior": 271.7,
+  "trilho": 29.67,
+  "nota": 72.29,
+  "alcance_por_eta": {
+   "0.7": 271.7,
+   "0.8": 291.4,
+   "0.9": 308.7,
+   "1.0": 323.2
+  }
+ },
+ {
+  "fill_cm": 16.0,
+  "lastro_g": 319.1,
+  "seca_g": 511.9,
+  "estab_min": 1.597,
+  "alcance_medio": 301.7,
+  "alcance_pior": 269.9,
+  "trilho": 28.63,
+  "nota": 67.86,
+  "alcance_por_eta": {
+   "0.7": 269.9,
+   "0.8": 292.6,
+   "0.9": 313.5,
+   "1.0": 331.0
+  }
+ },
+ {
+  "fill_cm": 18.0,
+  "lastro_g": 437.9,
+  "seca_g": 630.7,
+  "estab_min": 1.729,
+  "alcance_medio": 292.9,
+  "alcance_pior": 257.2,
+  "trilho": 27.33,
+  "nota": 61.54,
+  "alcance_por_eta": {
+   "0.7": 257.2,
+   "0.8": 282.4,
+   "0.9": 306.2,
+   "1.0": 325.6
+  }
+ }
+]

@@ -1,0 +1,163 @@
+[
+ {
+  "carga_L": 0.5,
+  "bicarb_estequiometrico_g": 28.0,
+  "bicarb_uso_g": 65.0,
+  "pressao_teto_psi": 64.8,
+  "psi_por_eta": {
+   "0.7": 45.4,
+   "0.8": 51.9,
+   "0.9": 58.3,
+   "1.0": 64.8
+  },
+  "alcance_por_eta": {
+   "0.7": 120.1,
+   "0.8": 135.1,
+   "0.9": 148.1,
+   "1.0": 159.6
+  },
+  "estab_min": 1.935,
+  "trilho_min": 34.59,
+  "apogeu_medio": 33.2,
+  "nota": -1.0,
+  "descarte": "apogeu 27 m em eta=0.7"
+ },
+ {
+  "carga_L": 0.7,
+  "bicarb_estequiometrico_g": 39.2,
+  "bicarb_uso_g": 91.0,
+  "pressao_teto_psi": 90.2,
+  "psi_por_eta": {
+   "0.7": 63.2,
+   "0.8": 72.2,
+   "0.9": 81.2,
+   "1.0": 90.2
+  },
+  "alcance_por_eta": {
+   "0.7": 172.6,
+   "0.8": 188.3,
+   "0.9": 202.8,
+   "1.0": 217.3
+  },
+  "estab_min": 1.703,
+  "trilho_min": 35.23,
+  "apogeu_medio": 50.0,
+  "nota": 57.16,
+  "descarte": null
+ },
+ {
+  "carga_L": 0.9,
+  "bicarb_estequiometrico_g": 50.4,
+  "bicarb_uso_g": 117.0,
+  "pressao_teto_psi": 115.4,
+  "psi_por_eta": {
+   "0.7": 80.7,
+   "0.8": 92.3,
+   "0.9": 103.8,
+   "1.0": 115.4
+  },
+  "alcance_por_eta": {
+   "0.7": 210.7,
+   "0.8": 228.6,
+   "0.9": 243.5,
+   "1.0": 256.4
+  },
+  "estab_min": 1.558,
+  "trilho_min": 35.23,
+  "apogeu_medio": 63.4,
+  "nota": 64.26,
+  "descarte": null
+ },
+ {
+  "carga_L": 1.05,
+  "bicarb_estequiometrico_g": 58.8,
+  "bicarb_uso_g": 136.0,
+  "pressao_teto_psi": 134.0,
+  "psi_por_eta": {
+   "0.7": 93.8,
+   "0.8": 107.2,
+   "0.9": 120.6,
+   "1.0": 134.0
+  },
+  "alcance_por_eta": {
+   "0.7": 232.4,
+   "0.8": 248.2,
+   "0.9": 261.6,
+   "1.0": 275.0
+  },
+  "estab_min": 1.475,
+  "trilho_min": 34.53,
+  "apogeu_medio": 70.2,
+  "nota": 68.6,
+  "descarte": null
+ },
+ {
+  "carga_L": 1.2,
+  "bicarb_estequiometrico_g": 67.1,
+  "bicarb_uso_g": 156.0,
+  "pressao_teto_psi": 152.5,
+  "psi_por_eta": {
+   "0.7": 106.7,
+   "0.8": 122.0,
+   "0.9": 137.2,
+   "1.0": 152.5
+  },
+  "alcance_por_eta": {
+   "0.7": 247.2,
+   "0.8": 263.3,
+   "0.9": 278.2,
+   "1.0": 291.3
+  },
+  "estab_min": 1.413,
+  "trilho_min": 33.52,
+  "apogeu_medio": 75.9,
+  "nota": 71.02,
+  "descarte": null
+ },
+ {
+  "carga_L": 1.35,
+  "bicarb_estequiometrico_g": 75.5,
+  "bicarb_uso_g": 176.0,
+  "pressao_teto_psi": 170.8,
+  "psi_por_eta": {
+   "0.7": 119.6,
+   "0.8": 136.6,
+   "0.9": 153.7,
+   "1.0": 170.8
+  },
+  "alcance_por_eta": {
+   "0.7": 257.2,
+   "0.8": 274.7,
+   "0.9": 288.0,
+   "1.0": 300.5
+  },
+  "estab_min": 1.359,
+  "trilho_min": 32.01,
+  "apogeu_medio": 79.3,
+  "nota": 72.57,
+  "descarte": null
+ },
+ {
+  "carga_L": 1.5,
+  "bicarb_estequiometrico_g": 83.9,
+  "bicarb_uso_g": 195.0,
+  "pressao_teto_psi": 189.0,
+  "psi_por_eta": {
+   "0.7": 132.3,
+   "0.8": 151.2,
+   "0.9": 170.1,
+   "1.0": 189.0
+  },
+  "alcance_por_eta": {
+   "0.7": 264.1,
+   "0.8": 280.6,
+   "0.9": 295.3,
+   "1.0": 307.7
+  },
+  "estab_min": 1.314,
+  "trilho_min": 30.36,
+  "apogeu_medio": 81.4,
+  "nota": 73.58,
+  "descarte": null
+ }
+]

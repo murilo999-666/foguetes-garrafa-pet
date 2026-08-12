@@ -1,0 +1,69 @@
+06:27:36 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+06:27:39 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+06:27:39 INFO    orx.bridge.jvm: OpenRocket headless pronto
+
+=== busca livre: 30 candidatos ===
+  [1/30] nota  71.1 |   279 m |  309 g | 1.70 cal
+  [2/30] nota  70.6 |   293 m |  368 g | 1.79 cal
+  [3/30] nota  71.1 |   290 m |  342 g | 1.71 cal
+  [4/30] nota  69.5 |   307 m |  446 g | 1.91 cal
+  [5/30] nota  69.2 |   305 m |  445 g | 1.94 cal
+  [6/30] nota  69.4 |   305 m |  445 g | 1.93 cal
+  [7/30] nota  70.1 |   302 m |  381 g | 1.67 cal
+  [8/30] nota  69.9 |   300 m |  373 g | 1.64 cal
+  [9/30] nota  70.6 |   284 m |  324 g | 1.64 cal
+  [10/30] nota  69.0 |   307 m |  418 g | 1.72 cal
+  [11/30] nota  69.6 |   302 m |  383 g | 1.65 cal
+  [12/30] nota  69.9 |   302 m |  386 g | 1.69 cal
+  [13/30] nota  69.7 |   301 m |  386 g | 1.69 cal
+  [14/30] nota  69.6 |   302 m |  385 g | 1.67 cal
+  [15/30] nota  70.1 |   300 m |  371 g | 1.64 cal
+  [16/30] nota  69.7 |   299 m |  369 g | 1.62 cal
+  [17/30] nota  69.6 |   304 m |  377 g | 1.59 cal
+  [18/30] nota  69.7 |   299 m |  379 g | 1.68 cal
+  [19/30] nota  68.8 |   308 m |  423 g | 1.74 cal
+  [20/30] nota  69.6 |   303 m |  394 g | 1.70 cal
+  [21/30] nota  70.5 |   282 m |  339 g | 1.73 cal
+  [22/30] nota  69.8 |   303 m |  387 g | 1.69 cal
+  [23/30] nota  69.6 |   296 m |  364 g | 1.63 cal
+  [24/30] nota  69.5 |   302 m |  392 g | 1.71 cal
+  [25/30] nota  69.7 |   297 m |  358 g | 1.58 cal
+  [26/30] nota  69.6 |   301 m |  382 g | 1.68 cal
+  [27/30] nota  69.3 |   304 m |  408 g | 1.74 cal
+  [28/30] nota  69.6 |   304 m |  383 g | 1.62 cal
+  [29/30] nota  69.7 |   298 m |  364 g | 1.62 cal
+  [30/30] nota  69.6 |   302 m |  386 g | 1.69 cal
+
+=== materiais reais (PLA + poliestireno): 22 candidatos ===
+  [1/22] nota  68.5 |   308 m |  372 g | 1.40 cal
+  [2/22] nota  68.7 |   306 m |  340 g | 1.23 cal
+  [3/22] nota  68.5 |   315 m |  379 g | 1.32 cal
+  [4/22] nota  68.0 |   311 m |  385 g | 1.37 cal
+  [5/22] nota  67.5 |   313 m |  404 g | 1.42 cal
+  [6/22] nota  67.8 |   304 m |  365 g | 1.34 cal
+  [7/22] nota  66.8 |   320 m |  437 g | 1.46 cal
+  [8/22] nota  67.3 |   307 m |  378 g | 1.31 cal
+  [9/22] nota  66.3 |   317 m |  448 g | 1.52 cal
+  [10/22] nota  67.3 |   293 m |  386 g | 1.55 cal
+  [11/22] nota  67.0 |   290 m |  373 g | 1.53 cal
+  [12/22] nota  66.6 |   303 m |  436 g | 1.64 cal
+  [13/22] nota  67.1 |   284 m |  347 g | 1.46 cal
+  [14/22] nota  66.1 |   301 m |  429 g | 1.60 cal
+  [15/22] nota  67.3 |   285 m |  347 g | 1.45 cal
+  [16/22] nota  67.4 |   285 m |  341 g | 1.44 cal
+  [17/22] nota  67.1 |   288 m |  359 g | 1.47 cal
+  [18/22] nota  67.3 |   284 m |  350 g | 1.48 cal
+  [19/22] nota  67.3 |   283 m |  343 g | 1.45 cal
+  [20/22] nota  66.8 |   290 m |  377 g | 1.54 cal
+  [21/22] nota  65.8 |   300 m |  429 g | 1.61 cal
+  [22/22] nota  66.7 |   295 m |  415 g | 1.64 cal
+
+A) Maior nota (busca livre) -> D:\OBAFOG\bit07 robusto 2L\bit07_A_maior_nota.ork
+
+B) Maior alcance entre os aprovados -> D:\OBAFOG\bit07 robusto 2L\bit07_B_maior_alcance.ork
+
+C) Mais leve entre os aprovados -> D:\OBAFOG\bit07 robusto 2L\bit07_C_mais_leve.ork
+
+D) MATERIAIS REAIS (PLA + poliestireno) — o de construir -> D:\OBAFOG\bit07 robusto 2L\bit07_D_materiais_reais.ork
+
+relatório atualizado: D:\OBAFOG\bit07 robusto 2L\RELATORIO_bit07.md
