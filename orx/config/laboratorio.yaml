@@ -6,7 +6,7 @@
 # incluindo geometrias exóticas. O CORPO é livre — o .ork base serve só de
 # ponto de partida; diâmetro, comprimento, parede e material são redefinidos.
 
-base_ork: D:\OBAFOG\_laboratorio testes livres\garrafa2L_base.ork
+base_ork: D:\1-Competicoes\OBAFOG\laboratorios\_laboratorio testes livres\garrafa2L_base.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -177,5 +177,5 @@ optimizer:
 batch:
   workers: 4
 
-db_path: D:\OBAFOG\_laboratorio testes livres\simulacoes\orx.sqlite
-output_dir: D:\OBAFOG\_laboratorio testes livres\simulacoes
+db_path: D:\1-Competicoes\OBAFOG\laboratorios\_laboratorio testes livres\simulacoes\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\laboratorios\_laboratorio testes livres\simulacoes

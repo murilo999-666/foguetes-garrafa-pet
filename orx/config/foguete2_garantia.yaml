@@ -8,7 +8,7 @@
 # Motor: FIXO em VinagreReal-1_2L (não é escolha — é o combustível que sobra).
 # Livre: coifa, lastro Durepoxi, aletas, ângulo. Materiais reais (PLA + poliestireno).
 
-base_ork: D:\OBAFOG\bit04 2L script\foguete_real\garrafa2L_base.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\garrafa2L_base.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -131,7 +131,7 @@ parameters:
     component: Garrafa 2L - cilindro
     attribute: motor
     choices:
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_2L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_2L.eng"
 
   # ---------- ângulo do trilho de lançamento (graus da vertical) ----------
   - name: launch_angle
@@ -169,5 +169,5 @@ optimizer:
 batch:
   workers: 4
 
-db_path: D:\OBAFOG\_foguete2_garantia\orx.sqlite
-output_dir: D:\OBAFOG\_foguete2_garantia
+db_path: D:\1-Competicoes\OBAFOG\laboratorios\_foguete2_garantia\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\laboratorios\_foguete2_garantia

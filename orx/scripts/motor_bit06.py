@@ -26,7 +26,7 @@ K_FLIGHT = 2.172  # fator de escoamento calibrado nos 275 m reais (2L)
 # agora troca o volume da garrafa para a reduzida (kH_eff permanece o de 2L)
 mv.V_BOTTLE = 1.82e-3   # m3 internos até a boca (~1,8 L úteis + gargalo)
 
-OUT = Path(r"D:\OBAFOG\bit06 1,8L script\motores")
+OUT = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L script\motores")
 # cargas de vinagre; a reduzida comporta menos líquido — máx ~1,5 L deixando
 # headspace mínimo. As pressões sobem em relação à 2L para a mesma carga.
 LOADS_L = [0.5, 0.7, 0.9, 1.05, 1.2, 1.35, 1.45, 1.5]

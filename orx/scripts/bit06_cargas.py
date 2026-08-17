@@ -23,7 +23,7 @@ from orx.simulation.runner import Runner
 
 import bit06_robusto as B
 
-PASTA = Path(r"D:\OBAFOG\bit06 1,8L")
+PASTA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L")
 CARGAS = [0.50, 0.70, 0.90, 1.05, 1.20, 1.35, 1.50]
 NaHCO3 = 84.007
 ACIDO_MOL_L = 40.0 / 60.052      # vinagre 4% m/v

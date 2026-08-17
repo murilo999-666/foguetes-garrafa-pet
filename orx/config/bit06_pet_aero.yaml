@@ -1,0 +1,206 @@
+# bit06 v2 — coifa de GARRAFA PET moldada a quente + nota aerodinâmica ampliada
+#
+# O que mudou em relação a config/bit06_robusto.yaml
+# --------------------------------------------------
+# 1) A COIFA DEIXOU DE SER VARIÁVEL LIVRE. O Murilo moldou uma coifa esquentando
+#    uma garrafa PET sobre um molde: é ogival, tem 17–18 cm e parede de garrafa.
+#    Então forma, material e comprimento entram como DADO, não como escolha —
+#    otimizar uma coifa que não existe não serve para nada.
+#
+# 2) A NOTA GANHOU AERODINÂMICA. Antes ela só olhava o RESULTADO do voo (alcance,
+#    consistência, massa, estabilidade). Agora olha também COMO o foguete voa:
+#    arrasto e sua composição, ângulo de ataque, amortecimento e rigidez da aleta.
+#
+# Consequência importante da coifa curta: 17–18 cm de coifa numa garrafa de
+# Ø9,585 cm dá razão de finura ~1,8 no nariz — bem rombuda. Isso sobe o arrasto
+# de pressão e, sobretudo, deixa MENOS espaço para o lastro de Durepoxi, que é
+# o que empurra o CG para frente. A busca vai ter de compensar com aleta.
+
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\garrafa_bit06_base.ork
+
+paths:
+  openrocket_dir: C:\Program Files\OpenRocket
+
+simulation:
+  overrides:
+    random_seed: 42
+    wind_speed_average: 2.0
+    launch_rod_length: 1.0
+
+parameters:
+  # ---------- coifa: DADO DE CONSTRUÇÃO, não escolha ----------
+  - name: nose_length
+    component: Ogiva
+    attribute: length
+    unit: cm
+    low: 17.0
+    high: 18.0
+  - name: nose_shape
+    component: Ogiva
+    attribute: shape
+    choices: [OGIVE]
+  - name: nose_shape_param
+    component: Ogiva
+    attribute: shape_parameter
+    unit: ""
+    low: 0.6
+    high: 1.0          # 1,0 = ogiva tangente (o que um molde costuma dar)
+  - name: nose_thickness
+    component: Ogiva
+    attribute: thickness
+    unit: mm
+    low: 0.3
+    high: 0.8          # parede de garrafa PET estirada sobre o molde
+  - name: nose_material
+    component: Ogiva
+    attribute: bulk_material
+    choices: [pet_garrafa]
+
+  # ---------- lastro de Durepoxi no bico ----------
+  # limitado pelo comprimento da coifa: não dá para encher 20 cm de um bico de 17
+  - name: ballast_fill
+    component: Componente de massa
+    attribute: durepox_fill
+    unit: cm
+    low: 0.0
+    high: 16.0
+    options:
+      density_g_cm3: 1.7
+
+  # ---------- aletas ----------
+  # A espessura passou a ir até 3 mm: com a nota de rigidez aeroelástica no jogo,
+  # vale a pena a busca poder escolher uma aleta mais grossa e menos mole.
+  # 3 aletas: decisão do Murilo (mais fácil de alinhar e de colar direito, e
+  # alinhamento é o defeito nº 1 da lista). Fixo, não é escolha da busca.
+  - name: fin_count
+    component: Conjunto de aletas de formato livre
+    attribute: fin_count
+    unit: ""
+    low: 3
+    high: 3
+    integer: true
+  - name: fin_root
+    component: Conjunto de aletas de formato livre
+    attribute: ff_root
+    unit: cm
+    low: 4.0
+    high: 16.0
+  - name: fin_tip
+    component: Conjunto de aletas de formato livre
+    attribute: ff_tip
+    unit: cm
+    low: 0.0
+    high: 14.0
+  - name: fin_sweep
+    component: Conjunto de aletas de formato livre
+    attribute: ff_sweep
+    unit: cm
+    low: 0.0
+    high: 14.0
+  - name: fin_height
+    component: Conjunto de aletas de formato livre
+    attribute: ff_height
+    unit: cm
+    low: 3.0
+    high: 15.0
+  - name: fin_thickness
+    component: Conjunto de aletas de formato livre
+    attribute: thickness
+    unit: mm
+    low: 0.8
+    high: 3.0
+  - name: fin_material
+    component: Conjunto de aletas de formato livre
+    attribute: bulk_material
+    choices: [polietileno, poliestireno, pla, pet_garrafa, papel_cartao]
+  # Aleta RETA: o Murilo não consegue reproduzir inclinação na colagem à mão, e
+  # cant que existe no papel mas não na peça é pior que cant nenhum — o modelo
+  # contaria com um giro que o foguete real não vai ter. Fixo em 0.
+  - name: fin_cant
+    component: Conjunto de aletas de formato livre
+    attribute: cant_angle
+    unit: deg
+    low: 0.0
+    high: 0.0
+  - name: fin_position
+    component: Conjunto de aletas de formato livre
+    attribute: position
+    unit: cm
+    low: -3.0
+    high: 0.0
+
+  # ---------- carga de vinagre ----------
+  - name: motor
+    component: Garrafa reduzida - cilindro
+    attribute: motor
+    choices:
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng"
+
+  - name: launch_angle
+    component: Ogiva
+    attribute: sim_launch_rod_angle_deg
+    unit: ""
+    low: 30.0
+    high: 60.0
+
+# Objetivo da etapa 1 = a nota da etapa 2 menos o termo de consistência (que
+# exige vários rendimentos). Âncoras calibradas por amostragem do próprio espaço
+# (scripts/calibrar_ancoras_aero.py) — chutar faixa faz o critério virar ruído,
+# com todo mundo tirando 0 ou nota cheia.
+#   30 alcance | 10 leveza | 10 estabilidade | 5 trilho
+#   12 arrasto | 5 ângulo de ataque | 5 rigidez da aleta
+# Âncoras medidas em 140 amostras VIÁVEIS do próprio espaço (p05..p95). As do
+# bit06 v1 não serviam aqui: alcance ia até 340 m (ninguém passa de 255 com a
+# coifa curta de PET) e trilho tinha nota cheia em 25 m/s (o p05 já é 27,8),
+# ou seja, dois critérios que não separavam nada.
+# LEVEZA VOLTOU A VALER 20 (v1 do bit06 tinha 20; na primeira versão desta
+# campanha eu a cortei para 10 ao abrir espaço para os termos aerodinâmicos —
+# era o 3º critério mais pesado e virou um dos menores). Agora é o 2º maior,
+# atrás só do alcance, e a aerodinâmica ficou com 28 pontos em vez de 30.
+#   28 alcance | 20 leveza | 12 arrasto | 10 estabilidade
+#    6 amortecimento | 6 rigidez | 4 ângulo de ataque | 2 trilho   (+12 consistência na etapa 2)
+objective:
+  metric: >-
+    28*min(1,max(0,(horizontal_distance-100)/180))
+    + 20*min(1,max(0,(1.00-dry_mass)/0.70))
+    + 10*min(1,max(0,(stability_min-1.08)/1.0))
+    + 2*min(1,max(0,(launch_rod_velocity-25)/15))
+    + 12*min(1,max(0,(0.55-cd_medio)/0.22))
+    + 6*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026))
+    + 4*min(1,max(0,(6.5-aoa_max)/3.0))
+    + 6*min(1,max(0,(fin_flutter_velocity-30)/270))
+  direction: maximize
+
+constraints:
+  - metric: stability_min
+    min: 1.08
+    max: 3.5
+  - metric: stability_max
+    min: 1.0
+    max: 3.5
+  - metric: launch_rod_velocity
+    min: 15.0
+  - metric: apogee
+    min: 30.0
+  - metric: fin_root_ratio
+    min: 0.5
+
+optimizer:
+  algorithm: adaptive
+  max_evaluations: 8000
+  seed: 42
+  profile: balanced
+  options:
+    chunk_size: 1500
+
+batch:
+  workers: 6
+
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\simulacoes\orx_bit06_pet_aero.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\simulacoes

@@ -15,7 +15,7 @@
 # segurança) é aplicada na etapa 2 por scripts/bit06_robusto.py, que re-simula os
 # finalistas em TODOS os rendimentos (0,70 a 1,00) x 3 ventos.
 
-base_ork: D:\OBAFOG\bit06 1,8L\garrafa_bit06_base.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\garrafa_bit06_base.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -131,13 +131,13 @@ parameters:
     component: Garrafa reduzida - cilindro
     attribute: motor
     choices:
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\motores\\Bit06-L1_50-E080.eng"
 
   - name: launch_angle
     component: Ogiva
@@ -190,5 +190,5 @@ optimizer:
 batch:
   workers: 6
 
-db_path: D:\OBAFOG\bit06 1,8L\simulacoes\orx_bit06_nota.sqlite
-output_dir: D:\OBAFOG\bit06 1,8L\simulacoes
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\simulacoes\orx_bit06_nota.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\simulacoes

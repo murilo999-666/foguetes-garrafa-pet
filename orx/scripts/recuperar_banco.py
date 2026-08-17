@@ -20,7 +20,7 @@ def contagens(con: sqlite3.Connection) -> dict:
 
 def main() -> int:
     src = Path(sys.argv[1] if len(sys.argv) > 1
-               else r"D:\OBAFOG\bit04 2L script\foguete_real\otimizacao\orx.sqlite")
+               else r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\otimizacao\orx.sqlite")
     dst = src.with_name(src.stem + "_limpo.sqlite")
     backup = src.with_name(src.name + ".backup_corrompido")
 

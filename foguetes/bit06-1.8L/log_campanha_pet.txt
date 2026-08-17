@@ -1,0 +1,683 @@
+>>> bloco 1/5 (processo proprio) 18:58:00
+
+-- bloco 1/5 (8000 simulações, semente 201) --
+18:58:01 INFO    orx.optimizer.adaptive: fase 1/3: exploração ampla (random) — espaço completo
+18:58:01 INFO    orx.optimizer.engine: pool paralelo: 6 workers (1 JVM cada)
+18:58:01 INFO    orx.optimizer.engine: run 1: adaptive, objetivo 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270)) (maximize), 8000 avaliações
+18:58:01 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+18:58:18 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:18 INFO    orx.bridge.jvm: OpenRocket headless pronto
+18:58:20 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:20 INFO    orx.bridge.jvm: OpenRocket headless pronto
+18:58:20 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:20 INFO    orx.bridge.jvm: OpenRocket headless pronto
+18:58:21 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:21 INFO    orx.bridge.jvm: OpenRocket headless pronto
+18:58:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+18:58:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+18:58:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 1/5] [..............................]    400/40000 ( 1.0%) melhor=53.00 | 4.5 sims/s | resta ~2h25m
+  [bloco 1/5] [..............................]    800/40000 ( 2.0%) melhor=53.00 | 3.7 sims/s | resta ~2h55m
+  [bloco 1/5] [..............................]   1200/40000 ( 3.0%) melhor=53.00 | 4.5 sims/s | resta ~2h24m
+  [bloco 1/5] [#.............................]   1600/40000 ( 4.0%) melhor=53.00 | 5.1 sims/s | resta ~2h06m
+  [bloco 1/5] [#.............................]   2000/40000 ( 5.0%) melhor=53.00 | 5.4 sims/s | resta ~1h56m
+  [bloco 1/5] [#.............................]   2400/40000 ( 6.0%) melhor=53.00 | 5.5 sims/s | resta ~1h53m
+19:05:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+19:05:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+19:05:14 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_shape_param', 'nose_thickness', 'fin_count', 'fin_height', 'fin_cant', 'fin_position']
+19:05:14 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [7.066, 16]
+19:05:14 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.974, 15]
+19:05:14 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [30.8, 60]
+19:05:14 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 1/5] [##............................]   2800/40000 ( 7.0%) melhor=57.65 | 5.6 sims/s | resta ~1h50m
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:02 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:07:21 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:21 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:21 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:07:21 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:07:21 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:21 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:07:22 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:22 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:22 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:07:22 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:07:22 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:07:22 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 1/5] [##............................]   3200/40000 ( 8.0%) melhor=59.07 | 5.3 sims/s | resta ~1h54m
+  [bloco 1/5] [##............................]   3600/40000 ( 9.0%) melhor=59.76 | 5.3 sims/s | resta ~1h54m
+19:10:15 INFO    orx.optimizer.adaptive: novo bloco TPE (3900 tells acumulados)
+19:10:15 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+19:10:15 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+19:10:15 INFO    orx.optimizer.adaptive: estreitando nose_length: [17, 18] -> [17, 17.64]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.7994, 1]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.394, 11.64]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3, 3.2]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 8.82]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [1.19, 7.391]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [2.256, 10.21]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [10.4, 15]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.307]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_cant: [-2, 2] -> [-1.012, 1.715]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.262, 0]
+19:10:15 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [51.42, 60]
+19:10:15 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 1/5] [###...........................]   4000/40000 (10.0%) melhor=59.81 | 5.4 sims/s | resta ~1h52m
+  [bloco 1/5] [###...........................]   4400/40000 (11.0%) melhor=59.99 | 5.0 sims/s | resta ~1h57m
+  [bloco 1/5] [###...........................]   4800/40000 (12.0%) melhor=59.99 | 5.1 sims/s | resta ~1h54m
+  [bloco 1/5] [###...........................]   5200/40000 (13.0%) melhor=60.59 | 5.1 sims/s | resta ~1h53m
+19:15:29 INFO    orx.optimizer.adaptive: novo bloco TPE (5400 tells acumulados)
+19:15:29 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+19:15:29 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+19:15:29 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_thickness']
+19:15:29 INFO    orx.optimizer.adaptive: estreitando nose_length: [17, 18] -> [17, 17.74]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.7743, 1]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.46, 11.84]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3, 3.2]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 9.515]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0.7773, 7.391]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [3.215, 11.61]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [9.252, 15]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.261]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_cant: [-2, 2] -> [-1.407, 2]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.189, 0]
+19:15:29 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [48.9, 60]
+19:15:29 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 1/5] [####..........................]   5600/40000 (14.0%) melhor=60.59 | 5.2 sims/s | resta ~1h50m
+  [bloco 1/5] [####..........................]   6000/40000 (15.0%) melhor=60.59 | 5.1 sims/s | resta ~1h51m
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:39 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:17:57 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:17:57 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:17:57 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:17:57 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:17:57 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:17:57 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:17:57 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:17:58 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:17:58 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:17:58 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:18:01 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:18:01 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 1/5] [####..........................]   6400/40000 (16.0%) melhor=60.71 | 5.0 sims/s | resta ~1h51m
+19:19:11 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [bloco 1/5] [#####.........................]   6800/40000 (17.0%) melhor=60.71 | 5.2 sims/s | resta ~1h47m
+  [bloco 1/5] [#####.........................]   7200/40000 (18.0%) melhor=60.71 | 5.3 sims/s | resta ~1h43m
+  [bloco 1/5] [#####.........................]   7600/40000 (19.0%) melhor=60.71 | 5.4 sims/s | resta ~1h39m
+  [bloco 1/5] [######........................]   8000/40000 (20.0%) melhor=60.71 | 5.5 sims/s | resta ~1h36m
+19:22:15 INFO    orx.optimizer.engine: run 1 concluída: melhor 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270))=60.71 em {"nose_length": 17.366942322218843, "nose_shape": "OGIVE", "nose_shape_param": 0.927099924883292, "nose_thickness": 0.660243435467779, "nose_material": "pet_garrafa", "ballast_fill": 8.73739784534875, "fin_count": 3, "fin_root": 6.093630886167414, "fin_tip": 3.7560624169060697, "fin_sweep": 8.429970514607001, "fin_height": 12.78725868270485, "fin_thickness": 0.8133380050458918, "fin_material": "papel_cartao", "fin_cant": -0.4784452451469272, "fin_position": -0.060343482208868746, "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng", "launch_angle": 58.356508932279596}
+>>> bloco 2/5 (processo proprio) 19:22:16
+
+-- bloco 2/5 (8000 simulações, semente 202) --
+19:22:18 INFO    orx.optimizer.adaptive: fase 1/3: exploração ampla (random) — espaço completo
+19:22:19 INFO    orx.optimizer.engine: pool paralelo: 6 workers (1 JVM cada)
+19:22:19 INFO    orx.optimizer.engine: run 2: adaptive, objetivo 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270)) (maximize), 8000 avaliações
+19:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:19 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:20 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:22:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:22:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:22:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:22:38 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:38 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:22:39 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:39 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:22:42 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:22:42 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 2/5] [######........................]   8400/40000 (21.0%) melhor=44.75 | 5.0 sims/s | resta ~1h45m
+  [bloco 2/5] [######........................]   8800/40000 (22.0%) melhor=44.75 | 5.1 sims/s | resta ~1h42m
+  [bloco 2/5] [######........................]   9200/40000 (23.0%) melhor=45.56 | 5.2 sims/s | resta ~1h39m
+  [bloco 2/5] [#######.......................]   9600/40000 (24.0%) melhor=55.78 | 5.3 sims/s | resta ~1h36m
+  [bloco 2/5] [#######.......................]  10000/40000 (25.0%) melhor=55.78 | 5.3 sims/s | resta ~1h34m
+  [bloco 2/5] [#######.......................]  10400/40000 (26.0%) melhor=55.78 | 5.4 sims/s | resta ~1h31m
+19:27:55 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pla']
+19:27:55 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng']
+19:27:55 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_shape_param', 'fin_tip']
+19:27:55 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.285, 16]
+19:27:55 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 15.22]
+19:27:55 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.482, 15]
+19:27:55 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [30.06, 60]
+19:27:55 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 2/5] [########......................]  10800/40000 (27.0%) melhor=56.79 | 5.4 sims/s | resta ~1h30m
+19:29:27 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:29 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:29 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:29 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:29 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:29 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:29:46 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:46 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:29:47 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:47 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:29:47 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:48 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:29:48 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:48 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:29:51 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:51 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:29:51 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:29:51 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 2/5] [########......................]  11200/40000 (28.0%) melhor=58.35 | 5.3 sims/s | resta ~1h30m
+  [bloco 2/5] [########......................]  11600/40000 (29.0%) melhor=59.16 | 5.3 sims/s | resta ~1h29m
+19:33:06 INFO    orx.optimizer.adaptive: novo bloco TPE (3900 tells acumulados)
+19:33:06 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pla']
+19:33:06 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng']
+19:33:06 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length']
+19:33:06 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.6, 0.8532]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.3, 0.6296]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.977, 12.84]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3.8, 5]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [5.274, 10.82]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0, 6.028]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [8.175, 14]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [6.21, 11.8]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.394]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.56, 0]
+19:33:06 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [48.81, 60]
+19:33:06 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 2/5] [#########.....................]  12000/40000 (30.0%) melhor=59.16 | 5.3 sims/s | resta ~1h28m
+  [bloco 2/5] [#########.....................]  12400/40000 (31.0%) melhor=59.28 | 5.3 sims/s | resta ~1h26m
+  [bloco 2/5] [#########.....................]  12800/40000 (32.0%) melhor=59.85 | 5.3 sims/s | resta ~1h25m
+  [bloco 2/5] [#########.....................]  13200/40000 (33.0%) melhor=59.90 | 5.1 sims/s | resta ~1h27m
+19:39:40 INFO    orx.optimizer.adaptive: novo bloco TPE (5400 tells acumulados)
+19:39:40 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pla']
+19:39:40 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_05-E080.eng']
+19:39:40 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_thickness', 'fin_cant']
+19:39:40 INFO    orx.optimizer.adaptive: estreitando nose_length: [17, 18] -> [17, 17.94]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.6, 0.8932]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.3, 0.6796]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.707, 13.44]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3.8, 5]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4.868, 9.304]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0, 5.493]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [8.136, 14]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [5.725, 12.24]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.24]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-1.459, 0]
+19:39:40 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [47.47, 60]
+19:39:40 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 2/5] [##########....................]  13600/40000 (34.0%) melhor=60.32 | 5.1 sims/s | resta ~1h26m
+19:41:36 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+  [bloco 2/5] [##########....................]  14000/40000 (35.0%) melhor=60.32 | 5.1 sims/s | resta ~1h25m
+19:41:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:41:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:41:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:41:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:41:38 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:41:52 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:41:52 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:41:56 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:41:57 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:41:57 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:41:57 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:41:58 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:41:58 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:42:00 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:42:00 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:42:01 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:42:01 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 2/5] [##########....................]  14400/40000 (36.0%) melhor=60.32 | 5.0 sims/s | resta ~1h24m
+19:43:25 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [bloco 2/5] [###########...................]  14800/40000 (37.0%) melhor=61.53 | 5.1 sims/s | resta ~1h22m
+  [bloco 2/5] [###########...................]  15200/40000 (38.0%) melhor=61.53 | 5.0 sims/s | resta ~1h22m
+  [bloco 2/5] [###########...................]  15600/40000 (39.0%) melhor=61.53 | 5.1 sims/s | resta ~1h20m
+  [bloco 2/5] [############..................]  16000/40000 (40.0%) melhor=61.53 | 5.1 sims/s | resta ~1h18m
+19:48:07 INFO    orx.optimizer.engine: run 2 concluída: melhor 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270))=61.53 em {"nose_length": 17.00413246121233, "nose_shape": "OGIVE", "nose_shape_param": 0.7879814786833157, "nose_thickness": 0.5025259656383291, "nose_material": "pet_garrafa", "ballast_fill": 9.520415180959672, "fin_count": 4, "fin_root": 7.5957872963620945, "fin_tip": 0.0, "fin_sweep": 14.0, "fin_height": 10.818139851227505, "fin_thickness": 0.8449287107754573, "fin_material": "papel_cartao", "fin_cant": -1.9926037875176923, "fin_position": 0.0, "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng", "launch_angle": 57.797370093358374}
+>>> bloco 3/5 (processo proprio) 19:48:07
+
+-- bloco 3/5 (8000 simulações, semente 203) --
+19:48:08 INFO    orx.optimizer.adaptive: fase 1/3: exploração ampla (random) — espaço completo
+19:48:08 INFO    orx.optimizer.engine: pool paralelo: 6 workers (1 JVM cada)
+19:48:08 INFO    orx.optimizer.engine: run 3: adaptive, objetivo 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270)) (maximize), 8000 avaliações
+19:48:08 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:09 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:09 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:09 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:09 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:09 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:48:26 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:26 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:48:27 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:27 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:48:27 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:27 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:48:27 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:27 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:48:28 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:28 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:48:30 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:48:30 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 3/5] [############..................]  16400/40000 (41.0%) melhor=49.87 | 5.0 sims/s | resta ~1h18m
+  [bloco 3/5] [############..................]  16800/40000 (42.0%) melhor=49.87 | 5.0 sims/s | resta ~1h16m
+  [bloco 3/5] [############..................]  17200/40000 (43.0%) melhor=49.87 | 5.1 sims/s | resta ~1h14m
+  [bloco 3/5] [#############.................]  17600/40000 (44.0%) melhor=52.48 | 5.1 sims/s | resta ~1h12m
+  [bloco 3/5] [#############.................]  18000/40000 (45.0%) melhor=52.48 | 5.2 sims/s | resta ~1h10m
+  [bloco 3/5] [#############.................]  18400/40000 (46.0%) melhor=53.86 | 5.2 sims/s | resta ~1h09m
+19:53:36 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pla']
+19:53:36 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng']
+19:53:36 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_shape_param', 'nose_thickness', 'fin_sweep', 'fin_height', 'fin_cant']
+19:53:36 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.822, 15.94]
+19:53:36 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 15.81]
+19:53:36 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [3.783, 15]
+19:53:36 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 3/5] [##############................]  18800/40000 (47.0%) melhor=58.44 | 5.2 sims/s | resta ~1h07m
+19:55:24 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:25 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:25 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:26 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:26 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:26 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+19:55:41 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:41 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:55:44 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:44 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:44 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:55:45 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:55:46 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:46 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:46 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:55:46 INFO    orx.bridge.jvm: OpenRocket headless pronto
+19:55:46 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+19:55:46 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 3/5] [##############................]  19200/40000 (48.0%) melhor=60.54 | 5.2 sims/s | resta ~1h07m
+  [bloco 3/5] [##############................]  19600/40000 (49.0%) melhor=60.76 | 5.0 sims/s | resta ~1h08m
+20:01:08 INFO    orx.optimizer.adaptive: novo bloco TPE (3900 tells acumulados)
+20:01:08 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pla']
+20:01:08 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng']
+20:01:08 INFO    orx.optimizer.adaptive: estreitando nose_length: [17, 18] -> [17, 17.57]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.7444, 1]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.3, 0.7366]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [5.992, 11.05]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3.8, 4.2]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [5.923, 10.32]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0.3258, 5.77]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [9.13, 14]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [6.737, 15]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.257]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.892, 0]
+20:01:08 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [51.31, 60]
+20:01:08 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 3/5] [###############...............]  20000/40000 (50.0%) melhor=60.88 | 5.0 sims/s | resta ~1h06m
+  [bloco 3/5] [###############...............]  20400/40000 (51.0%) melhor=60.88 | 4.9 sims/s | resta ~1h06m
+  [bloco 3/5] [###############...............]  20800/40000 (52.0%) melhor=60.88 | 4.9 sims/s | resta ~1h05m
+  [bloco 3/5] [###############...............]  21200/40000 (53.0%) melhor=61.26 | 4.9 sims/s | resta ~1h03m
+20:07:13 INFO    orx.optimizer.adaptive: novo bloco TPE (5400 tells acumulados)
+20:07:13 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pla']
+20:07:13 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_20-E080.eng']
+20:07:13 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['fin_cant']
+20:07:13 INFO    orx.optimizer.adaptive: estreitando nose_length: [17, 18] -> [17, 17.62]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.7641, 1]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.3, 0.7831]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [5.992, 12.36]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3, 4.2]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [5.293, 10.04]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0, 5.617]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [9.13, 14]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [6.737, 14.69]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.257]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.6879, 0]
+20:07:13 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [48.43, 60]
+20:07:13 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 3/5] [################..............]  21600/40000 (54.0%) melhor=61.26 | 4.9 sims/s | resta ~1h02m
+20:08:45 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:08:46 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+  [bloco 3/5] [################..............]  22000/40000 (55.0%) melhor=61.26 | 5.0 sims/s | resta ~1h00m
+20:08:47 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:08:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:08:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:08:48 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:08:59 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:08:59 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:09:04 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:09:04 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:09:05 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:09:05 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:09:06 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:09:06 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:09:07 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:09:07 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:09:07 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:09:07 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 3/5] [################..............]  22400/40000 (56.0%) melhor=61.26 | 4.8 sims/s | resta ~1h00m
+20:12:11 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [bloco 3/5] [#################.............]  22800/40000 (57.0%) melhor=61.26 | 4.9 sims/s | resta ~59m04s
+  [bloco 3/5] [#################.............]  23200/40000 (58.0%) melhor=61.26 | 4.9 sims/s | resta ~57m18s
+  [bloco 3/5] [#################.............]  23600/40000 (59.0%) melhor=61.26 | 4.9 sims/s | resta ~55m42s
+  [bloco 3/5] [##################............]  24000/40000 (60.0%) melhor=61.26 | 4.9 sims/s | resta ~54m10s
+20:16:04 INFO    orx.optimizer.engine: run 3 concluída: melhor 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270))=61.26 em {"nose_length": 17.3605831771406, "nose_shape": "OGIVE", "nose_shape_param": 0.9217614794442531, "nose_thickness": 0.5660089444985762, "nose_material": "pet_garrafa", "ballast_fill": 9.029474442352575, "fin_count": 4, "fin_root": 7.026741221844285, "fin_tip": 2.191754517735307, "fin_sweep": 11.726832346090053, "fin_height": 11.996046653495867, "fin_thickness": 0.800472095393934, "fin_material": "papel_cartao", "fin_cant": 0.2715196937286155, "fin_position": -0.000409369595933233, "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng", "launch_angle": 53.89628237211061}
+>>> bloco 4/5 (processo proprio) 20:16:04
+
+-- bloco 4/5 (8000 simulações, semente 204) --
+20:16:05 INFO    orx.optimizer.adaptive: fase 1/3: exploração ampla (random) — espaço completo
+20:16:05 INFO    orx.optimizer.engine: pool paralelo: 6 workers (1 JVM cada)
+20:16:06 INFO    orx.optimizer.engine: run 4: adaptive, objetivo 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270)) (maximize), 8000 avaliações
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:16:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:16:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:16:25 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:25 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:16:25 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:25 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:16:25 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:25 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:16:28 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:16:28 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 4/5] [##################............]  24400/40000 (61.0%) melhor=49.25 | 4.9 sims/s | resta ~52m37s
+  [bloco 4/5] [##################............]  24800/40000 (62.0%) melhor=54.48 | 4.7 sims/s | resta ~54m04s
+  [bloco 4/5] [##################............]  25200/40000 (63.0%) melhor=54.48 | 4.7 sims/s | resta ~52m13s
+  [bloco 4/5] [###################...........]  25600/40000 (64.0%) melhor=54.48 | 4.8 sims/s | resta ~50m24s
+  [bloco 4/5] [###################...........]  26000/40000 (65.0%) melhor=54.48 | 4.8 sims/s | resta ~48m38s
+  [bloco 4/5] [###################...........]  26400/40000 (66.0%) melhor=54.48 | 4.8 sims/s | resta ~46m56s
+20:27:11 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+20:27:11 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:27:11 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_thickness', 'fin_height', 'fin_cant']
+20:27:11 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.279, 16]
+20:27:11 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 15.99]
+20:27:11 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [5.459, 15]
+20:27:11 INFO    orx.optimizer.adaptive: estreitando fin_cant: [-2, 2] -> [-1.954, 2]
+20:27:11 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-2.877, 0]
+20:27:11 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 4/5] [####################..........]  26800/40000 (67.0%) melhor=57.69 | 4.8 sims/s | resta ~45m26s
+20:28:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:28:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:28:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:28:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:28:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:28:59 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:29:13 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:13 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:29:19 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:19 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:19 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:29:19 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:29:19 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:19 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:19 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:29:19 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:29:20 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:29:20 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 4/5] [####################..........]  27200/40000 (68.0%) melhor=59.16 | 4.8 sims/s | resta ~44m10s
+  [bloco 4/5] [####################..........]  27600/40000 (69.0%) melhor=59.73 | 4.8 sims/s | resta ~42m39s
+20:31:53 INFO    orx.optimizer.adaptive: novo bloco TPE (3900 tells acumulados)
+20:31:53 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+20:31:53 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:31:53 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_shape_param', 'nose_thickness']
+20:31:53 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.6, 0.9117]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.4207, 0.8]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [8.564, 13.86]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [4.8, 5]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4.283, 10.66]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0, 6.196]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [5.435, 14]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.953, 10.65]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.244]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_cant: [-2, 2] -> [-2, 1.668]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.8299, 0]
+20:31:53 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [52.03, 60]
+20:31:53 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 4/5] [#####################.........]  28000/40000 (70.0%) melhor=59.73 | 4.9 sims/s | resta ~41m09s
+  [bloco 4/5] [#####################.........]  28400/40000 (71.0%) melhor=59.73 | 4.9 sims/s | resta ~39m41s
+  [bloco 4/5] [#####################.........]  28800/40000 (72.0%) melhor=59.73 | 4.9 sims/s | resta ~38m14s
+  [bloco 4/5] [#####################.........]  29200/40000 (73.0%) melhor=59.73 | 4.9 sims/s | resta ~36m54s
+20:36:37 INFO    orx.optimizer.adaptive: novo bloco TPE (5400 tells acumulados)
+20:36:37 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['polietileno', 'pet_garrafa']
+20:36:37 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:36:37 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_shape_param', 'nose_thickness']
+20:36:37 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.6507, 0.9512]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando nose_thickness: [0.3, 0.8] -> [0.3721, 0.8]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.964, 13.3]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [4.8, 5]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4.283, 10.48]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0, 7.592]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [5.738, 14]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.552, 10.56]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.293]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.8299, 0]
+20:36:37 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [49.83, 60]
+20:36:37 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 4/5] [######################........]  29600/40000 (74.0%) melhor=59.73 | 4.9 sims/s | resta ~35m29s
+20:38:00 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:38:04 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+  [bloco 4/5] [######################........]  30000/40000 (75.0%) melhor=59.73 | 4.9 sims/s | resta ~33m59s
+20:38:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:38:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:38:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:38:06 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:38:08 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:08 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:38:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:38:23 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:23 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:38:24 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:24 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:38:25 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:25 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:38:25 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:38:25 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 4/5] [######################........]  30400/40000 (76.0%) melhor=59.78 | 4.9 sims/s | resta ~32m44s
+20:39:45 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [bloco 4/5] [#######################.......]  30800/40000 (77.0%) melhor=59.78 | 4.9 sims/s | resta ~31m14s
+  [bloco 4/5] [#######################.......]  31200/40000 (78.0%) melhor=59.78 | 4.9 sims/s | resta ~29m51s
+  [bloco 4/5] [#######################.......]  31600/40000 (79.0%) melhor=59.78 | 4.9 sims/s | resta ~28m24s
+  [bloco 4/5] [########################......]  32000/40000 (80.0%) melhor=59.78 | 5.0 sims/s | resta ~26m55s
+20:43:48 INFO    orx.optimizer.engine: run 4 concluída: melhor 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270))=59.78 em {"nose_length": 17.10510257504345, "nose_shape": "OGIVE", "nose_shape_param": 0.9323556080445936, "nose_thickness": 0.6203955403737844, "nose_material": "pet_garrafa", "ballast_fill": 8.263051654333346, "fin_count": 4, "fin_root": 7.806317836003598, "fin_tip": 4.908809037183262, "fin_sweep": 10.45707279878329, "fin_height": 7.757371674162206, "fin_thickness": 1.1011235416095322, "fin_material": "poliestireno", "fin_cant": -1.770891609381691, "fin_position": -0.08718806079884436, "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng", "launch_angle": 58.08909288110377}
+>>> bloco 5/5 (processo proprio) 20:43:49
+
+-- bloco 5/5 (8000 simulações, semente 205) --
+20:43:49 INFO    orx.optimizer.adaptive: fase 1/3: exploração ampla (random) — espaço completo
+20:43:50 INFO    orx.optimizer.engine: pool paralelo: 6 workers (1 JVM cada)
+20:43:50 INFO    orx.optimizer.engine: run 5: adaptive, objetivo 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270)) (maximize), 8000 avaliações
+20:43:50 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:43:50 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:43:50 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:43:50 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:43:51 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:43:51 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:44:08 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:08 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:44:09 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:09 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:44:09 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:09 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:44:10 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:10 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:10 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:44:10 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:44:10 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:44:10 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 5/5] [########################......]  32400/40000 (81.0%) melhor=44.95 | 5.0 sims/s | resta ~25m19s
+  [bloco 5/5] [########################......]  32800/40000 (82.0%) melhor=52.87 | 5.0 sims/s | resta ~23m51s
+  [bloco 5/5] [########################......]  33200/40000 (83.0%) melhor=52.87 | 5.1 sims/s | resta ~22m24s
+  [bloco 5/5] [#########################.....]  33600/40000 (84.0%) melhor=52.87 | 5.1 sims/s | resta ~20m58s
+  [bloco 5/5] [#########################.....]  34000/40000 (85.0%) melhor=52.87 | 5.1 sims/s | resta ~19m33s
+  [bloco 5/5] [#########################.....]  34400/40000 (86.0%) melhor=52.87 | 5.1 sims/s | resta ~18m20s
+20:49:51 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+20:49:51 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:49:51 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length', 'nose_thickness', 'fin_count', 'fin_tip', 'fin_cant']
+20:49:51 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.564, 16]
+20:49:51 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4, 15.55]
+20:49:51 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [5.056, 15]
+20:49:51 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 2.8]
+20:49:51 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-2.864, 0]
+20:49:51 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 5/5] [##########################....]  34800/40000 (87.0%) melhor=58.68 | 5.1 sims/s | resta ~17m02s
+20:51:52 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:51:52 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:51:52 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:51:52 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:51:52 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:51:53 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+20:52:10 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:10 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:52:11 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:11 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:52:11 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:11 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:11 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:52:11 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:52:12 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:12 INFO    orx.bridge.jvm: OpenRocket headless pronto
+20:52:15 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+20:52:15 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 5/5] [##########################....]  35200/40000 (88.0%) melhor=59.67 | 5.1 sims/s | resta ~15m47s
+  [bloco 5/5] [##########################....]  35600/40000 (89.0%) melhor=59.97 | 5.1 sims/s | resta ~14m28s
+20:55:14 INFO    orx.optimizer.adaptive: novo bloco TPE (3900 tells acumulados)
+20:55:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+20:55:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:55:14 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.639, 1]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.759, 13.12]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3.8, 5]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4.39, 11.37]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0.1155, 7.967]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [6.385, 14]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.617, 10.25]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.453]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.6875, 0]
+20:55:14 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [49, 60]
+20:55:14 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 5/5] [###########################...]  36000/40000 (90.0%) melhor=60.10 | 5.1 sims/s | resta ~13m08s
+  [bloco 5/5] [###########################...]  36400/40000 (91.0%) melhor=60.10 | 5.1 sims/s | resta ~11m47s
+  [bloco 5/5] [###########################...]  36800/40000 (92.0%) melhor=60.10 | 5.1 sims/s | resta ~10m27s
+  [bloco 5/5] [###########################...]  37200/40000 (93.0%) melhor=60.10 | 5.1 sims/s | resta ~9m08s
+20:59:14 INFO    orx.optimizer.adaptive: novo bloco TPE (5400 tells acumulados)
+20:59:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de fin_material: ['poliestireno', 'pet_garrafa']
+20:59:14 INFO    orx.optimizer.adaptive: descartando categorias fracas de motor: ['file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_50-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_70-E080.eng', 'file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L0_90-E080.eng']
+20:59:14 INFO    orx.optimizer.adaptive: parâmetros de baixa influência (|corr|<0.1): ['nose_length']
+20:59:14 INFO    orx.optimizer.adaptive: estreitando nose_shape_param: [0.6, 1] -> [0.6435, 1]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando ballast_fill: [0, 16] -> [6.835, 12.87]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_count: [3, 5] -> [3.8, 5]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_root: [4, 16] -> [4.39, 11.37]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_tip: [0, 14] -> [0.3708, 7.967]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_sweep: [0, 14] -> [7.291, 14]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_height: [3, 15] -> [4.718, 11.43]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_thickness: [0.8, 3] -> [0.8, 1.453]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando fin_position: [-3, 0] -> [-0.7965, 0]
+20:59:14 INFO    orx.optimizer.adaptive: estreitando launch_angle: [30, 60] -> [49, 60]
+20:59:14 INFO    orx.optimizer.adaptive: fase 2/3: modelagem (Optuna TPE) — espaço estreitado
+  [bloco 5/5] [############################..]  37600/40000 (94.0%) melhor=60.10 | 5.1 sims/s | resta ~7m49s
+  [bloco 5/5] [############################..]  38000/40000 (95.0%) melhor=60.60 | 5.1 sims/s | resta ~6m30s
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:00:58 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:01:17 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:17 INFO    orx.bridge.jvm: OpenRocket headless pronto
+21:01:17 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:17 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:17 INFO    orx.bridge.jvm: OpenRocket headless pronto
+21:01:17 INFO    orx.bridge.jvm: OpenRocket headless pronto
+21:01:18 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:18 INFO    orx.bridge.jvm: OpenRocket headless pronto
+21:01:18 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:18 INFO    orx.bridge.jvm: OpenRocket headless pronto
+21:01:18 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:01:18 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [bloco 5/5] [############################..]  38400/40000 (96.0%) melhor=60.75 | 5.1 sims/s | resta ~5m13s
+21:02:32 INFO    orx.optimizer.adaptive: fase 3/3: refinamento local (hill climbing) em volta do melhor
+  [bloco 5/5] [#############################.]  38800/40000 (97.0%) melhor=60.75 | 5.1 sims/s | resta ~3m54s
+  [bloco 5/5] [#############################.]  39200/40000 (98.0%) melhor=60.75 | 5.1 sims/s | resta ~2m35s
+  [bloco 5/5] [#############################.]  39600/40000 (99.0%) melhor=60.75 | 5.2 sims/s | resta ~1m17s
+  [bloco 5/5] [##############################]  40000/40000 (100.0%) melhor=60.75 | 5.2 sims/s | resta ~0m00s
+21:05:47 INFO    orx.optimizer.engine: run 5 concluída: melhor 30*min(1,max(0,(horizontal_distance-100)/180)) + 10*min(1,max(0,(1.00-dry_mass)/0.70)) + 10*min(1,max(0,(stability_min-1.08)/1.0)) + 5*min(1,max(0,(launch_rod_velocity-25)/15)) + 12*min(1,max(0,(0.55-cd_medio)/0.22)) + 8*min(1,max(0,(amortecimento_pitch-0.0002)/0.0026)) + 5*min(1,max(0,(6.5-aoa_max)/3.0)) + 5*min(1,max(0,(fin_flutter_velocity-30)/270))=60.75 em {"nose_length": 17.931396795066323, "nose_shape": "OGIVE", "nose_shape_param": 0.8897769577862294, "nose_thickness": 0.3046571237616064, "nose_material": "pet_garrafa", "ballast_fill": 8.985808369246374, "fin_count": 4, "fin_root": 6.78655410888741, "fin_tip": 3.1521015713635534, "fin_sweep": 10.05142968266572, "fin_height": 10.28667022114241, "fin_thickness": 0.8361178203677002, "fin_material": "papel_cartao", "fin_cant": -0.747592877370547, "fin_position": -0.05384448725473785, "motor": "file:D:\\OBAFOG\\bit06 1,8L\\motores\\Bit06-L1_35-E080.eng", "launch_angle": 55.81059119896775}
+>>> ETAPA 2 21:05:47
+
+===== ETAPA 2 — nota aerodinâmica dos 60 finalistas =====
+21:05:51 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+21:05:54 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+21:05:54 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [1/60] nota  73.8 |   282 m | seca  381 g | estab 1.52 | Cd 0.353 | AoA  4.4° | rig    17
+  [2/60] nota  72.2 |   286 m | seca  383 g | estab 1.42 | Cd 0.350 | AoA  4.6° | rig    17
+  [3/60] nota  72.4 |   286 m | seca  382 g | estab 1.39 | Cd 0.348 | AoA  4.7° | rig    17
+  [4/60] nota  72.4 |   283 m | seca  365 g | estab 1.39 | Cd 0.349 | AoA  5.0° | rig    17
+  [5/60] nota  72.3 |   284 m | seca  369 g | estab 1.40 | Cd 0.351 | AoA  4.8° | rig    15
+  [6/60] nota  71.5 |   285 m | seca  359 g | estab 1.31 | Cd 0.345 | AoA  5.1° | rig    18
+  [7/60] nota  71.9 |   288 m | seca  404 g | estab 1.44 | Cd 0.351 | AoA  4.9° | rig    17
+  [8/60] nota  72.0 |   288 m | seca  345 g | estab 1.19 | Cd 0.332 | AoA  4.4° | rig    23
+  [9/60] nota  72.2 |   284 m | seca  366 g | estab 1.38 | Cd 0.350 | AoA  4.9° | rig    16
+  [10/60] nota  71.8 |   286 m | seca  362 g | estab 1.31 | Cd 0.345 | AoA  4.7° | rig    18
+  [11/60] nota  72.3 |   293 m | seca  445 g | estab 1.55 | Cd 0.342 | AoA  4.8° | rig    17
+  [12/60] nota  71.7 |   285 m | seca  355 g | estab 1.28 | Cd 0.344 | AoA  4.9° | rig    17
+  [13/60] nota  72.5 |   284 m | seca  359 g | estab 1.36 | Cd 0.348 | AoA  4.5° | rig    18
+  [14/60] nota  71.1 |   287 m | seca  385 g | estab 1.37 | Cd 0.348 | AoA  4.8° | rig    17
+  [15/60] nota  72.4 |   284 m | seca  330 g | estab 1.19 | Cd 0.335 | AoA  4.4° | rig    24
+  [16/60] nota  72.1 |   289 m | seca  357 g | estab 1.22 | Cd 0.334 | AoA  4.3° | rig    22
+  [17/60] nota  71.6 |   287 m | seca  407 g | estab 1.41 | Cd 0.350 | AoA  4.4° | rig    21
+  [18/60] nota  72.0 |   283 m | seca  350 g | estab 1.29 | Cd 0.345 | AoA  4.6° | rig    24
+  [19/60] nota  72.0 |   286 m | seca  380 g | estab 1.35 | Cd 0.347 | AoA  4.6° | rig    22
+  [20/60] nota  71.4 |   285 m | seca  366 g | estab 1.32 | Cd 0.348 | AoA  4.9° | rig    16
+  [21/60] nota  71.8 |   285 m | seca  341 g | estab 1.21 | Cd 0.338 | AoA  4.6° | rig    27
+  [22/60] nota  72.6 |   284 m | seca  338 g | estab 1.21 | Cd 0.338 | AoA  4.3° | rig    27
+  [23/60] nota  72.3 |   285 m | seca  375 g | estab 1.37 | Cd 0.350 | AoA  4.6° | rig    18
+  [24/60] nota  72.4 |   288 m | seca  383 g | estab 1.30 | Cd 0.338 | AoA  4.0° | rig    23
+  [25/60] nota  72.2 |   286 m | seca  366 g | estab 1.27 | Cd 0.340 | AoA  4.0° | rig    20
+  [26/60] nota  71.9 |   283 m | seca  344 g | estab 1.29 | Cd 0.345 | AoA  4.6° | rig    24
+  [27/60] nota  71.9 |   287 m | seca  339 g | estab 1.17 | Cd 0.334 | AoA  4.4° | rig    27
+  [28/60] nota  71.7 |   285 m | seca  324 g | estab 1.13 | Cd 0.332 | AoA  4.5° | rig    31
+  [29/60] nota  72.1 |   283 m | seca  323 g | estab 1.18 | Cd 0.336 | AoA  4.5° | rig    27
+  [30/60] nota  72.1 |   285 m | seca  375 g | estab 1.35 | Cd 0.350 | AoA  4.5° | rig    22
+  [31/60] nota  71.5 |   287 m | seca  346 g | estab 1.20 | Cd 0.336 | AoA  4.6° | rig    23
+  [32/60] nota  71.9 |   285 m | seca  358 g | estab 1.25 | Cd 0.339 | AoA  4.3° | rig    19
+  [33/60] nota  71.8 |   286 m | seca  378 g | estab 1.36 | Cd 0.348 | AoA  4.9° | rig    16
+  [34/60] nota  71.9 |   285 m | seca  357 g | estab 1.23 | Cd 0.338 | AoA  4.3° | rig    18
+  [35/60] nota  71.7 |   285 m | seca  379 g | estab 1.36 | Cd 0.349 | AoA  4.7° | rig    20
+  [36/60] nota  71.4 |   285 m | seca  365 g | estab 1.31 | Cd 0.346 | AoA  5.0° | rig    18
+  [37/60] nota  71.5 |   289 m | seca  354 g | estab 1.20 | Cd 0.334 | AoA  4.5° | rig    26
+  [38/60] nota  71.3 |   287 m | seca  347 g | estab 1.19 | Cd 0.336 | AoA  4.7° | rig    27
+  [39/60] nota  71.5 |   287 m | seca  362 g | estab 1.26 | Cd 0.340 | AoA  4.7° | rig    21
+  [40/60] nota  71.5 |   286 m | seca  334 g | estab 1.16 | Cd 0.334 | AoA  4.9° | rig    29
+  [41/60] nota  72.7 |   283 m | seca  335 g | estab 1.23 | Cd 0.340 | AoA  4.4° | rig    26
+  [42/60] nota  71.9 |   285 m | seca  377 g | estab 1.37 | Cd 0.349 | AoA  4.8° | rig    19
+  [43/60] nota  72.4 |   286 m | seca  342 g | estab 1.19 | Cd 0.336 | AoA  4.0° | rig    28
+  [44/60] nota  72.0 |   287 m | seca  360 g | estab 1.23 | Cd 0.336 | AoA  4.3° | rig    19
+  [45/60] nota  72.2 |   283 m | seca  382 g | estab 1.42 | Cd 0.355 | AoA  4.7° | rig    19
+  [46/60] nota  72.6 |   283 m | seca  375 g | estab 1.39 | Cd 0.352 | AoA  4.5° | rig    19
+  [47/60] nota  71.9 |   287 m | seca  337 g | estab 1.16 | Cd 0.333 | AoA  4.3° | rig    30
+  [48/60] nota  71.4 |   287 m | seca  380 g | estab 1.36 | Cd 0.348 | AoA  4.9° | rig    12
+  [49/60] nota  71.8 |   285 m | seca  369 g | estab 1.36 | Cd 0.349 | AoA  4.6° | rig    25
+  [50/60] nota  71.5 |   286 m | seca  362 g | estab 1.24 | Cd 0.339 | AoA  4.4° | rig    29
+  [51/60] nota  71.5 |   286 m | seca  335 g | estab 1.16 | Cd 0.334 | AoA  4.6° | rig    23
+  [52/60] nota  71.4 |   287 m | seca  377 g | estab 1.31 | Cd 0.345 | AoA  4.7° | rig    30
+  [53/60] nota  71.6 |   286 m | seca  366 g | estab 1.27 | Cd 0.341 | AoA  4.4° | rig    28
+  [54/60] nota  70.1 |   287 m | seca  349 g | estab 1.19 | Cd 0.335 | AoA  5.3° | rig    28
+  [55/60] nota  71.7 |   284 m | seca  336 g | estab 1.19 | Cd 0.338 | AoA  4.6° | rig    22
+  [56/60] nota  72.2 |   289 m | seca  353 g | estab 1.20 | Cd 0.333 | AoA  4.1° | rig    25
+  [57/60] nota  71.9 |   285 m | seca  343 g | estab 1.20 | Cd 0.338 | AoA  4.4° | rig    24
+  [58/60] nota  71.2 |   286 m | seca  372 g | estab 1.30 | Cd 0.346 | AoA  4.5° | rig    29
+  [59/60] nota  71.5 |   289 m | seca  361 g | estab 1.21 | Cd 0.334 | AoA  4.6° | rig    21
+  [60/60] nota  72.0 |   286 m | seca  348 g | estab 1.23 | Cd 0.337 | AoA  4.4° | rig    23
+
+>> campeão: D:\OBAFOG\bit06 1,8L\bit06_PET_AERO_FINAL.ork
+>> relatório: D:\OBAFOG\bit06 1,8L\RELATORIO_bit06_PET_AERO.md
+
+tempo total: 9m12s | 40720 simulações
+>>> FIM 21:15:00

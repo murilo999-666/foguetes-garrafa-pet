@@ -23,7 +23,7 @@ from orx.simulation.runner import Runner
 from orx.utils.logging import setup_logging
 
 CONFIG = r"C:\Users\muril\openrocket-optimizer\config\foguete2_garantia.yaml"
-OUT = r"D:\OBAFOG\_foguete2_garantia\foguete2_1_2L_MELHOR.ork"
+OUT = r"D:\1-Competicoes\OBAFOG\laboratorios\_foguete2_garantia\foguete2_1_2L_MELHOR.ork"
 FASES = [("random", 8_000, 7), ("adaptive", 16_000, 21)]
 SEEDS = list(range(101, 121))   # 20 ventos p/ validação
 

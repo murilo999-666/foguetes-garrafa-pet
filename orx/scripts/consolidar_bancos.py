@@ -1,7 +1,7 @@
 """Consolida TODOS os bancos SQLite da OBAFOG num resumo único e num Excel
 mestre, para o Murilo acessar tudo de um lugar só.
 
-Gera em D:\\OBAFOG\\:
+Gera em D:\\1-Competicoes\\OBAFOG\\:
   - _TODOS_OS_TESTES.xlsx  (aba 'runs' = todos os experimentos; aba 'melhores'
     = melhor design de cada run)
   - imprime a tabela resumo no terminal
@@ -16,7 +16,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from orx.results.db import ResultsDB
 
-OBAFOG = Path(r"D:\OBAFOG")
+OBAFOG = Path(r"D:\1-Competicoes\OBAFOG")
 # (rótulo do foguete, caminho do banco)
 BANCOS = [
     ("bit03 2L real (corpo original)", OBAFOG / "bit03 2L real/otimizacao/orx.sqlite"),

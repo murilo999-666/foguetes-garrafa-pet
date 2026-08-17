@@ -2,7 +2,7 @@
 # Varia APENAS: comprimento da ogiva (atual = máximo), massa do lastro e
 # formato das aletas (planform trapezoidal das 4 aletas freeform, idênticas).
 
-base_ork: D:\OBAFOG\bit04 2L script\foguete_real\bit04.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\bit04.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -85,5 +85,5 @@ optimizer:
 batch:
   workers: 6
 
-db_path: D:\OBAFOG\bit04 2L script\otimizacao\orx.sqlite
-output_dir: D:\OBAFOG\bit04 2L script\otimizacao
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\otimizacao\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\otimizacao

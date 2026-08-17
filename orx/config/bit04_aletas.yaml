@@ -9,7 +9,7 @@
 # - ângulo do lançamento também é otimizado (25-60°)
 # Objetivo: máximo alcance horizontal, como se fosse lançado de verdade.
 
-base_ork: D:\OBAFOG\bit04 2L script\foguete_real\garrafa2L_base.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\garrafa2L_base.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -131,14 +131,14 @@ parameters:
     component: Garrafa 2L - cilindro
     attribute: motor
     choices:
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_6L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_8L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_0L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_2L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_4L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_55L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_7L.eng"
-      - "file:D:\\OBAFOG\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_8L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_6L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-0_8L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_0L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_2L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_4L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_55L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_7L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\foguete_real\\motores\\VinagreReal-1_8L.eng"
 
   # ---------- ângulo do trilho de lançamento (graus da vertical) ----------
   - name: launch_angle
@@ -174,5 +174,5 @@ optimizer:
 batch:
   workers: 3
 
-db_path: D:\OBAFOG\bit04 2L script\foguete_real\otimizacao_aletas\orx.sqlite
-output_dir: D:\OBAFOG\bit04 2L script\foguete_real\otimizacao_aletas
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\otimizacao_aletas\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\otimizacao_aletas

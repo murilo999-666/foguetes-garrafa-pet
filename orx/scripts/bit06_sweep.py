@@ -3,8 +3,8 @@ sys.path.insert(0, "src")
 from orx.bridge.orjava import OrBridge
 from orx.simulation.metrics import extract_metrics
 b = OrBridge()
-path = r"D:\OBAFOG\bit06 1,8L\foguete_bit06_OTIMIZADO.ork"
-eng = r"D:\OBAFOG\bit06 1,8L\motores\VinagreBit06-1_5L.eng"
+path = r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\foguete_bit06_OTIMIZADO.ork"
+eng = r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\motores\VinagreBit06-1_5L.eng"
 doc = b.load_document(path)
 mount = None
 for c in b.iter_components(doc):

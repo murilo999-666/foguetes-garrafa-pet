@@ -4,7 +4,7 @@ sys.path.insert(0, "src")
 from orx.bridge.orjava import OrBridge
 from orx.simulation.metrics import extract_metrics
 
-ORK = r"D:\OBAFOG\bit07 robusto 2L\bit07_B_maior_alcance.ork"
+ORK = r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L\bit07_B_maior_alcance.ork"
 
 b = OrBridge()
 doc = b.load_document(ORK)

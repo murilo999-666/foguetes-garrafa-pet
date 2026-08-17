@@ -1,0 +1,116 @@
+{
+ "montagem": {
+  "n_aletas": 3,
+  "raiz_mm": 75.0,
+  "ombro_mm": 385.0,
+  "aleta_ataque_mm": 361.8,
+  "aleta_fuga_mm": 436.8,
+  "antes_do_ombro_mm": 23.2,
+  "do_bocal_ataque_mm": 150.0,
+  "do_bocal_fuga_mm": 75.0,
+  "comprimento_cm": 51.2,
+  "lastro_g": 209
+ },
+ "lastros": [
+  {
+   "fill_cm": 4.0,
+   "reprova": "estabilidade 1.00 cal < 1.0 em eta=0.7"
+  },
+  {
+   "fill_cm": 6.0,
+   "lastro_g": 88,
+   "seca_g": 245,
+   "estab_min": 1.132,
+   "alcance": 244.1,
+   "nota": 69.34
+  },
+  {
+   "fill_cm": 8.0,
+   "lastro_g": 180,
+   "seca_g": 336,
+   "estab_min": 1.312,
+   "alcance": 272.7,
+   "nota": 73.32
+  },
+  {
+   "fill_cm": 9.5,
+   "lastro_g": 274,
+   "seca_g": 430,
+   "estab_min": 1.456,
+   "alcance": 285.2,
+   "nota": 72.17
+  },
+  {
+   "fill_cm": 11.0,
+   "lastro_g": 390,
+   "seca_g": 546,
+   "estab_min": 1.589,
+   "alcance": 284.0,
+   "nota": 68.98
+  },
+  {
+   "fill_cm": 13.0,
+   "lastro_g": 574,
+   "seca_g": 730,
+   "estab_min": 1.735,
+   "alcance": 262.7,
+   "nota": 61.52
+  }
+ ],
+ "cargas": [
+  {
+   "carga_L": 0.7,
+   "bicarb_g": 91,
+   "teto_psi": 90.2,
+   "alcance_080": 183.3,
+   "alcance_100": 212.4,
+   "estab_min": 1.644,
+   "descarte": null
+  },
+  {
+   "carga_L": 0.9,
+   "bicarb_g": 117,
+   "teto_psi": 115.4,
+   "alcance_080": 224.3,
+   "alcance_100": 252.4,
+   "estab_min": 1.517,
+   "descarte": null
+  },
+  {
+   "carga_L": 1.05,
+   "bicarb_g": 136,
+   "teto_psi": 134.0,
+   "alcance_080": 244.2,
+   "alcance_100": 272.4,
+   "estab_min": 1.458,
+   "descarte": null
+  },
+  {
+   "carga_L": 1.2,
+   "bicarb_g": 156,
+   "teto_psi": 152.5,
+   "alcance_080": 260.6,
+   "alcance_100": 289.5,
+   "estab_min": 1.398,
+   "descarte": null
+  },
+  {
+   "carga_L": 1.35,
+   "bicarb_g": 176,
+   "teto_psi": 170.8,
+   "alcance_080": 272.0,
+   "alcance_100": 298.4,
+   "estab_min": 1.358,
+   "descarte": null
+  },
+  {
+   "carga_L": 1.5,
+   "bicarb_g": 195,
+   "teto_psi": 189.0,
+   "alcance_080": 279.1,
+   "alcance_100": 306.1,
+   "estab_min": 1.323,
+   "descarte": null
+  }
+ ]
+}

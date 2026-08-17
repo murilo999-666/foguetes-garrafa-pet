@@ -27,7 +27,7 @@ from pathlib import Path
 RAIZ = Path(__file__).parent.parent
 PY = RAIZ / ".venv" / "Scripts" / "python.exe"
 SCRIPT = RAIZ / "scripts" / "bit06_robusto.py"
-PASTA = Path(r"D:\OBAFOG\bit06 1,8L")
+PASTA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L")
 LOG = PASTA / "log_busca_bit06.txt"
 
 

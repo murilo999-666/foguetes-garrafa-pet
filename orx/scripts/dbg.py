@@ -3,8 +3,8 @@ sys.path.insert(0,"src")
 from orx.bridge.orjava import OrBridge
 from orx.simulation.metrics import extract_metrics
 b=OrBridge()
-for path in [r"D:\OBAFOG\bit03\resultados_digitais\foguete_novo_PET_otimizado.ork",
-             r"D:\OBAFOG\bit07 robusto 2L\bit07_MODELO_FINAL.ork"]:
+for path in [r"D:\1-Competicoes\OBAFOG\foguetes\bit03\resultados_digitais\foguete_novo_PET_otimizado.ork",
+             r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L\bit07_MODELO_FINAL.ork"]:
     doc=b.load_document(path); rocket=doc.getRocket()
     print("###",path.split("\\")[-1])
     ids=rocket.getIds()  # flight config ids

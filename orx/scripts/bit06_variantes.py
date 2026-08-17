@@ -35,7 +35,7 @@ from orx.simulation.runner import Runner
 
 import bit06_robusto as B
 
-PASTA = Path(r"D:\OBAFOG\bit06 1,8L")
+PASTA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L")
 ANTIGO = PASTA / "_MODELO_ANTIGO_falhou" / "bit06_MODELO_FINAL.ork"
 
 

@@ -22,8 +22,8 @@ import jpype
 from orx.bridge.orjava import J, OrBridge
 from orx.rocket.parameters import _set_bulk_material
 
-DONOR = r"D:\OBAFOG\bit03 2L real\foguete_novo.ork"
-OUT = r"D:\OBAFOG\bit06 1,8L script\garrafa_bit06_base.ork"
+DONOR = r"D:\1-Competicoes\OBAFOG\foguetes\bit03 2L real\foguete_novo.ork"
+OUT = r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L script\garrafa_bit06_base.ork"
 
 R_OUT = 0.047925   # raio externo (Ø 9,585 cm)
 WALL = 0.00072     # parede efetiva maior (mesmo peso, garrafa "encolhida")

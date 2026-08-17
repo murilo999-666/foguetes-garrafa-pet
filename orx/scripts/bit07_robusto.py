@@ -64,7 +64,7 @@ from orx.simulation.runner import Runner
 from orx.utils.logging import setup_logging
 
 CONFIG = r"C:\Users\muril\openrocket-optimizer\config\bit07_robusto.yaml"
-PASTA = Path(r"D:\OBAFOG\bit07 robusto 2L")
+PASTA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L")
 MOTORES = PASTA / "motores"
 MANIFESTO = json.loads((MOTORES / "manifesto.json").read_text(encoding="utf-8"))
 

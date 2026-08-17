@@ -13,7 +13,7 @@ Saídas:
 
 Uso:
   python scripts/exportar_fabricacao.py "D:\\...\\bit06_B_CONSTRUTIVEL.ork" \
-      --saida "D:\\OBAFOG\\bit06 1,8L\\impressao" --nome bit06
+      --saida "D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L\\impressao" --nome bit06
 """
 
 from __future__ import annotations
@@ -26,6 +26,46 @@ import zipfile
 from pathlib import Path
 
 # ----------------------------------------------------------------- geometria
+
+def _pontos_com_raiz(caminho: Path) -> list[tuple[float, float]] | None:
+    """Contorno REAL da aleta (com a raiz seguindo a superfície do corpo).
+
+    Usa `FreeformFinSet.getFinPointsWithRoot()` do OpenRocket. Devolve None se a
+    ponte com a JVM não estiver disponível — aí o chamador usa os pontos do XML.
+    """
+    try:
+        sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
+        from orx.bridge.jvm import ensure_jvm
+        from orx.bridge.orjava import OrBridge
+
+        ensure_jvm()
+        br = OrBridge()
+        doc = br.load_document(str(caminho))
+        fins = br.find_component(doc, "*formato livre*")
+
+        # getFinPointsWithRoot() traz os pontos certos mas com um fora de ordem e
+        # um duplicado; remontamos o contorno de forma determinística:
+        #   bordo de ataque + ponta  (dos finPoints)  +  raiz em x decrescente
+        base = [(float(p.x) * 1000, float(p.y) * 1000) for p in fins.getFinPoints()]
+        raiz = [(float(p.x) * 1000, float(p.y) * 1000) for p in fins.getRootPoints()]
+        if len(base) < 3 or len(raiz) < 2:
+            return None
+        raiz = sorted(set(raiz), key=lambda p: -p[0])       # do bordo de fuga ao de ataque
+
+        contorno = base[:-1] + raiz                          # tira o último (é o início da raiz)
+        limpo: list[tuple[float, float]] = []
+        for p in contorno:
+            if not limpo or abs(p[0] - limpo[-1][0]) > 1e-6 or abs(p[1] - limpo[-1][1]) > 1e-6:
+                limpo.append(p)
+        while (len(limpo) > 2 and abs(limpo[-1][0] - limpo[0][0]) < 1e-6
+               and abs(limpo[-1][1] - limpo[0][1]) < 1e-6):
+            limpo.pop()
+        return limpo if len(limpo) >= 3 else None
+    except Exception as e:  # pragma: no cover — sem JVM, cai no XML
+        print(f"  (aviso: não foi possível ler a raiz real via OpenRocket: {e})")
+        print("  (o molde sairá com a raiz RETA — confira antes de cortar)")
+        return None
+
 
 def ler_ork(caminho: Path) -> dict:
     """Extrai ogiva e aletas do XML de dentro do .ork."""
@@ -51,6 +91,15 @@ def ler_ork(caminho: Path) -> dict:
 
     mat_nose = re.search(r'<material[^>]*>([^<]+)<', nose)
     mat_fin = re.search(r'<material[^>]*>([^<]+)<', fin)
+
+    # Os 4 pontos do XML descrevem a aleta com a raiz RETA. Quando a aleta fica
+    # sobre o ombro da garrafa (ou a cavalo entre cilindro e cone), a raiz real
+    # NÃO é reta: ela é plana no trecho cilíndrico e curva no cone. Cortar pelo
+    # contorno reto deixa a aleta sem encostar no corpo (chega a 8 mm de vão no
+    # bit07). Quem sabe a raiz de verdade é o OpenRocket — perguntamos a ele.
+    pts_reais = _pontos_com_raiz(caminho)
+    if pts_reais:
+        pts = pts_reais
 
     return {
         "nose_L": float(tag("length", nose)) * 1000,
@@ -270,9 +319,20 @@ def gera_moldes(g: dict, saida: Path, nome: str, titulo: str) -> list[Path]:
     Wd, Hd = maxx - minx, maxy - miny
     arestas = [(PTS[i], PTS[(i + 1) % len(PTS)],
                 math.dist(PTS[i], PTS[(i + 1) % len(PTS)])) for i in range(len(PTS))]
+    # Contorno: [bordo de ataque, ponta...] + raiz. A raiz começa no índice 3 e
+    # fecha no ponto 0 — vale tanto para o contorno real (muitos pontos) quanto
+    # para o simplificado de 4 pontos.
+    i_raiz = 3 if len(PTS) > 3 else len(PTS) - 1
+    raiz_pts = PTS[i_raiz:] + [PTS[0]]
+    comp_raiz = sum(math.dist(raiz_pts[i], raiz_pts[i + 1]) for i in range(len(raiz_pts) - 1))
+    # rotula só as arestas que valem medida (as curtas da raiz poluiriam o desenho)
+    rotular = [(a, b, d) for (a, b, d) in arestas[:i_raiz] if d >= 15.0]
     print(f"  aleta {Wd:.0f} x {Hd:.0f} mm | {N} unidades | {mat}")
-    for i, (_, _, d) in enumerate(arestas):
-        print(f"    aresta P{i}-P{(i+1) % len(PTS)}: {d:.1f} mm")
+    print(f"  contorno com {len(PTS)} pontos "
+          f"({'raiz real seguindo o corpo' if len(PTS) > 4 else 'raiz reta'})")
+    for i, (_, _, d) in enumerate(rotular):
+        print(f"    aresta {i}: {d:.1f} mm")
+    print(f"    raiz (desenvolvida): {comp_raiz:.1f} mm")
 
     M = 18.0
     A4W, A4H = 210.0, 297.0
@@ -291,15 +351,17 @@ def gera_moldes(g: dict, saida: Path, nome: str, titulo: str) -> list[Path]:
          f'viewBox="0 0 {PW} {PH}">',
          f'<rect width="{PW}" height="{PH}" fill="white"/>',
          f'<polygon points="{poly}" fill="none" stroke="#000" stroke-width="0.3"/>']
-    for x, y in PTS:
+    for x, y in PTS[:i_raiz + 1]:
         s.append(f'<circle cx="{X(x):.2f}" cy="{Y(y):.2f}" r="0.8" fill="#c00"/>')
-    for a, b, d in arestas:
+    for a, b, d in rotular:
         s.append(f'<text x="{X((a[0]+b[0])/2):.2f}" y="{Y((a[1]+b[1])/2):.2f}" '
                  f'font-size="4" fill="#06c" text-anchor="middle">{d:.0f}</text>')
-    r0, r1 = PTS[-1], PTS[0]
-    s.append(f'<line x1="{X(r0[0]):.2f}" y1="{Y(r0[1]):.2f}" x2="{X(r1[0]):.2f}" '
-             f'y2="{Y(r1[1]):.2f}" stroke="#0a0" stroke-width="0.6" stroke-dasharray="3,2"/>')
-    s.append(f'<text x="{X((r0[0]+r1[0])/2):.2f}" y="{Y((r0[1]+r1[1])/2)+6:.2f}" '
+    # raiz destacada: a curva inteira (é ela que encosta no corpo)
+    traj = " ".join(f"{X(x):.2f},{Y(y):.2f}" for x, y in raiz_pts)
+    s.append(f'<polyline points="{traj}" fill="none" stroke="#0a0" '
+             f'stroke-width="0.7" stroke-dasharray="3,2"/>')
+    mx, my = raiz_pts[len(raiz_pts) // 2]
+    s.append(f'<text x="{X(mx):.2f}" y="{Y(my)+6:.2f}" '
              f'font-size="4" fill="#0a0" text-anchor="middle">raiz - colar no corpo</text>')
     s.append(f'<text x="{M}" y="{PH-24:.1f}" font-size="6">{titulo}</text>')
     s.append(f'<text x="{M}" y="{PH-16:.1f}" font-size="4.5">{mat} - cortar {N} unidades</text>')
@@ -334,10 +396,12 @@ def gera_moldes(g: dict, saida: Path, nome: str, titulo: str) -> list[Path]:
         c.setLineWidth(0.85)
         c.drawPath(path, stroke=1, fill=0)
         c.setDash(3, 2); c.setStrokeColorRGB(0, 0.6, 0); c.setLineWidth(1.5)
-        c.line(PX(PTS[-1][0]), PY(PTS[-1][1]), PX(PTS[0][0]), PY(PTS[0][1]))
+        for i in range(len(raiz_pts) - 1):
+            c.line(PX(raiz_pts[i][0]), PY(raiz_pts[i][1]),
+                   PX(raiz_pts[i + 1][0]), PY(raiz_pts[i + 1][1]))
         c.setDash(); c.setStrokeColorRGB(0, 0, 0)
         c.setFont("Helvetica", 9); c.setFillColorRGB(0, 0.4, 0.8)
-        for a, b, d in arestas:
+        for a, b, d in rotular:
             c.drawCentredString((PX(a[0]) + PX(b[0])) / 2, (PY(a[1]) + PY(b[1])) / 2, f"{d:.0f}")
         c.setFillColorRGB(0, 0, 0)
         c.setFont("Helvetica-Bold", 12); c.drawString(M * MM, 26 * MM, titulo)

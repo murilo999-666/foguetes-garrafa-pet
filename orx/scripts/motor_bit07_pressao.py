@@ -42,7 +42,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 import motor_vinagre as mv
 
 K_FLIGHT = 2.172          # fator de escoamento calibrado no voo real (275 m)
-OUT = Path(r"D:\OBAFOG\bit07 robusto 2L\motores")
+OUT = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L\motores")
 
 # cargas de vinagre (L) na garrafa 2 L retornável — o corpo é o mesmo do bit04/05
 LOADS_L = [0.9, 1.1, 1.3, 1.45, 1.55, 1.7, 1.8]

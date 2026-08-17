@@ -21,9 +21,9 @@ sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 from orx.bridge.orjava import OrBridge
 from orx.simulation.metrics import extract_metrics
 
-ORK = r"D:\OBAFOG\bit04 2L script\bit04_MODELO_FINAL.ork"
-MOTORES = r"D:\OBAFOG\bit04 2L script\foguete_real\motores"
-SAIDA = Path(r"D:\OBAFOG\bit04 2L script")
+ORK = r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\bit04_MODELO_FINAL.ork"
+MOTORES = r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\motores"
+SAIDA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script")
 TS = 0.005
 
 b = OrBridge()

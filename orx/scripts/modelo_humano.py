@@ -21,7 +21,7 @@ from orx.simulation.runner import Runner
 from orx.utils.logging import setup_logging
 
 CONFIG = r"C:\Users\muril\openrocket-optimizer\config\foguete_real.yaml"
-MOTOR = r"file:D:\OBAFOG\foguete_real\motores\VinagreReal-1_55L.eng"
+MOTOR = r"file:D:\1-Competicoes\OBAFOG\foguete_real\motores\VinagreReal-1_55L.eng"
 ROBUST_SEEDS = list(range(101, 121))
 LASTRO_REAL_G = 113.0  # lastro de nariz que a equipe usa na prática (bit03 real)
 
@@ -115,7 +115,7 @@ def main() -> None:
     print(f"\n>>> gravado no banco: run_id={run_id}, evaluation_id={eval_id}")
 
     # --- salva o .ork ---
-    out = r"D:\OBAFOG\foguete_real\foguete_MODELO_HUMANO.ork"
+    out = r"D:\1-Competicoes\OBAFOG\foguete_real\foguete_MODELO_HUMANO.ork"
     runner.save_design(design, out)
     print(f">>> .ork salvo: {out}")
 

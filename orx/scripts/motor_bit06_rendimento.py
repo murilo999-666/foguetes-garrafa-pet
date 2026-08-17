@@ -47,7 +47,7 @@ mv.V_BOTTLE = 1.82e-3          # m3 internos até a boca (~1,8 L úteis + gargal
 DIAM_MM = 96                   # Ø 9,585 cm -> casa de motor 96 mm
 K_FLIGHT = 2.172               # fator de escoamento calibrado nos 275 m reais
 
-OUT = Path(r"D:\OBAFOG\bit06 1,8L\motores")
+OUT = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L\motores")
 
 # cargas de vinagre (L). A reduzida comporta menos líquido; acima de ~1,5 L o
 # headspace fica pequeno demais para a expulsão render.

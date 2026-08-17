@@ -3,7 +3,7 @@ import sys
 sys.path.insert(0, "src")
 from orx.bridge.orjava import OrBridge
 
-ORK = r"D:\OBAFOG\bit07 robusto 2L\bit07_MODELO_FINAL.ork"
+ORK = r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L\bit07_MODELO_FINAL.ork"
 b = OrBridge()
 doc = b.load_document(ORK)
 

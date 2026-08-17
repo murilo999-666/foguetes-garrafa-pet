@@ -10,7 +10,7 @@ import re
 import sys
 from pathlib import Path
 
-OBAFOG = Path(r"D:\OBAFOG")
+OBAFOG = Path(r"D:\1-Competicoes\OBAFOG")
 PROJ = Path(__file__).parent.parent
 
 # antigo -> novo

@@ -4,7 +4,7 @@ sys.path.insert(0, "src")
 from orx.bridge.orjava import OrBridge
 from orx.simulation.metrics import extract_metrics
 
-B = r"D:\OBAFOG"
+B = r"D:\1-Competicoes\OBAFOG"
 MODELOS = [
     ("bit03 (PET otim.)",      B+r"\bit03\resultados_digitais\foguete_novo_PET_otimizado.ork"),
     ("bit04 MODELO_FINAL",     B+r"\bit04 2L script\bit04_MODELO_FINAL.ork"),

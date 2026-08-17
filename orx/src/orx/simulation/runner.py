@@ -35,11 +35,30 @@ def _fin_geometry(design: dict[str, Any]) -> dict[str, float]:
         return {}
     root = float(design.get("fin_root", 0.0))
     total = max(root, float(design.get("fin_sweep", 0.0)) + float(design.get("fin_tip", 0.0)))
-    return {
+    out = {
         "fin_root_cm": root,
         "fin_total_chord": total,
         "fin_root_ratio": (root / total) if total > 1e-9 else 1.0,
     }
+
+    # Rigidez aeroelástica da aleta (índice RELATIVO — ver aeroelastica.py).
+    # O OpenRocket trata a aleta como rígida; nada na simulação penaliza uma
+    # chapa fina e esbelta que balança. Sem isto, "leveza" empurra a busca para
+    # a aleta mais mole possível.
+    from ..rocket.aeroelastica import flutter_trapezio
+
+    tip = float(design.get("fin_tip", 0.0))
+    span = float(design.get("fin_height", 0.0))
+    esp = float(design.get("fin_thickness", 0.0))
+    mat = str(design.get("fin_material", ""))
+    if root > 0 and span > 0 and esp > 0 and mat:
+        d = flutter_trapezio(root / 100.0, tip / 100.0, span / 100.0, esp / 1000.0, mat)
+        if d:
+            out["fin_flutter_velocity"] = d["flutter_velocity"]
+            out["fin_aspect_ratio"] = d["fin_aspect_ratio"]
+            out["fin_taper_ratio"] = d["fin_taper_ratio"]
+            out["fin_thickness_ratio"] = d["fin_thickness_ratio"]
+    return out
 
 
 @dataclass

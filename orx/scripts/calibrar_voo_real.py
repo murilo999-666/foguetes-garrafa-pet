@@ -24,9 +24,9 @@ from orx.rocket.parameters import _set_bulk_material
 from orx.simulation.metrics import extract_metrics
 from orx.utils.logging import setup_logging
 
-BASE = r"D:\OBAFOG\foguete_real\garrafa2L_base.ork"
+BASE = r"D:\1-Competicoes\OBAFOG\foguete_real\garrafa2L_base.ork"
 SEEDS = [42, 101, 102, 103, 104, 105, 106, 107]
-TMP_DIR = Path(r"D:\OBAFOG\foguete_real\motores\_cal")
+TMP_DIR = Path(r"D:\1-Competicoes\OBAFOG\foguete_real\motores\_cal")
 TARGETS = [275.0, 285.0, 300.0]
 K_CENTRAL_TARGET = 285.0
 
@@ -112,7 +112,7 @@ def main() -> None:
     print(f"\n>>> adotado k={k:.3f} (alvo central {K_CENTRAL_TARGET:.0f} m, "
           f"coifa torta corrigida); banda k={ks[TARGETS[0]]:.3f}..{ks[TARGETS[-1]]:.3f}")
 
-    out = Path(r"D:\OBAFOG\foguete_real\motores")
+    out = Path(r"D:\1-Competicoes\OBAFOG\foguete_real\motores")
     print(f"\n{'motor':20s} {'P0 psi':>7s} {'impulso ef. Ns':>14s}")
     for v in [0.6, 0.8, 1.0, 1.2, 1.4, 1.55, 1.7, 1.8]:
         name = f"VinagreReal-{str(v).replace('.', '_')}L"

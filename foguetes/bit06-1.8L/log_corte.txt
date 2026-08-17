@@ -1,0 +1,63 @@
+>>> BLOCO 1 COMPLETO, cortando o resto 22:16:23
+>>> ETAPA 2 22:16:38
+
+===== ETAPA 2 — nota aerodinâmica dos 50 finalistas =====
+22:16:47 INFO    orx.bridge.jvm: Iniciando JVM: C:\Program Files\OpenRocket\jar\OpenRocket-24.12.jar
+22:17:04 INFO    orx.bridge.jvm: Banco de motores carregado: 1096 conjuntos
+22:17:04 INFO    orx.bridge.jvm: OpenRocket headless pronto
+  [1/50] nota  73.7 |   282 m | seca  334 g | estab 1.21 | Cd 0.354 | AoA  4.7° | rig    19
+  [2/50] nota  73.9 |   284 m | seca  367 g | estab 1.37 | Cd 0.349 | AoA  5.1° | rig    15
+  [3/50] nota  74.1 |   284 m | seca  361 g | estab 1.32 | Cd 0.347 | AoA  4.9° | rig    11
+  [4/50] nota  73.3 |   286 m | seca  369 g | estab 1.31 | Cd 0.346 | AoA  5.2° | rig    21
+  [5/50] nota  74.3 |   284 m | seca  371 g | estab 1.37 | Cd 0.350 | AoA  4.6° | rig    14
+  [6/50] nota  74.1 |   283 m | seca  358 g | estab 1.33 | Cd 0.349 | AoA  4.9° | rig    15
+  [7/50] nota  73.7 |   284 m | seca  360 g | estab 1.29 | Cd 0.347 | AoA  4.9° | rig    20
+  [8/50] nota  73.9 |   284 m | seca  331 g | estab 1.15 | Cd 0.337 | AoA  4.9° | rig    25
+  [9/50] nota  73.4 |   285 m | seca  369 g | estab 1.32 | Cd 0.348 | AoA  5.0° | rig    22
+  [10/50] nota  74.6 |   283 m | seca  355 g | estab 1.31 | Cd 0.348 | AoA  4.6° | rig    11
+  [11/50] nota  73.5 |   285 m | seca  368 g | estab 1.32 | Cd 0.349 | AoA  5.0° | rig    20
+  [12/50] nota  73.9 |   285 m | seca  371 g | estab 1.34 | Cd 0.349 | AoA  4.8° | rig    15
+  [13/50] nota  73.2 |   284 m | seca  369 g | estab 1.30 | Cd 0.348 | AoA  5.2° | rig    22
+  [14/50] nota  73.4 |   286 m | seca  370 g | estab 1.29 | Cd 0.347 | AoA  5.0° | rig    22
+  [15/50] nota  74.3 |   282 m | seca  317 g | estab 1.10 | Cd 0.334 | AoA  4.8° | rig    25
+  [16/50] nota  73.7 |   284 m | seca  345 g | estab 1.21 | Cd 0.343 | AoA  4.8° | rig    21
+  [17/50] nota  74.1 |   283 m | seca  353 g | estab 1.27 | Cd 0.347 | AoA  4.5° | rig    15
+  [18/50] nota  73.6 |   284 m | seca  331 g | estab 1.12 | Cd 0.336 | AoA  4.9° | rig    26
+  [19/50] nota  73.6 |   285 m | seca  335 g | estab 1.12 | Cd 0.336 | AoA  4.8° | rig    26
+  [20/50] nota  73.7 |   285 m | seca  354 g | estab 1.22 | Cd 0.344 | AoA  4.6° | rig    28
+  [21/50] nota  73.4 |   284 m | seca  365 g | estab 1.30 | Cd 0.349 | AoA  5.0° | rig    21
+  [22/50] nota  73.5 |   287 m | seca  372 g | estab 1.28 | Cd 0.345 | AoA  4.7° | rig    22
+  [23/50] nota  73.9 |   285 m | seca  332 g | estab 1.11 | Cd 0.336 | AoA  4.6° | rig    26
+  [24/50] nota  72.7 |   287 m | seca  376 g | estab 1.29 | Cd 0.346 | AoA  5.3° | rig    20
+  [25/50] nota  73.5 |   286 m | seca  378 g | estab 1.33 | Cd 0.348 | AoA  4.8° | rig    22
+  [26/50] nota  73.5 |   286 m | seca  371 g | estab 1.28 | Cd 0.346 | AoA  4.8° | rig    22
+  [27/50] nota  73.5 |   286 m | seca  357 g | estab 1.22 | Cd 0.342 | AoA  4.8° | rig    24
+  [28/50] nota  74.0 |   282 m | seca  356 g | estab 1.32 | Cd 0.349 | AoA  4.9° | rig    12
+  [29/50] nota  73.7 |   284 m | seca  333 g | estab 1.22 | Cd 0.352 | AoA  4.9° | rig    16
+  [30/50] nota  73.5 |   287 m | seca  341 g | estab 1.22 | Cd 0.349 | AoA  4.8° | rig    15
+  [31/50] nota  73.6 |   284 m | seca  328 g | estab 1.10 | Cd 0.336 | AoA  4.8° | rig    26
+  [32/50] nota  73.9 |   284 m | seca  368 g | estab 1.31 | Cd 0.349 | AoA  4.7° | rig    21
+  [33/50] nota  73.8 |   283 m | seca  356 g | estab 1.27 | Cd 0.347 | AoA  4.8° | rig    21
+  [34/50] nota  73.1 |   283 m | seca  359 g | estab 1.27 | Cd 0.348 | AoA  5.1° | rig    18
+  [35/50] nota  72.8 |   289 m | seca  377 g | estab 1.27 | Cd 0.343 | AoA  5.0° | rig    18
+  [36/50] nota  73.4 |   286 m | seca  348 g | estab 1.16 | Cd 0.340 | AoA  4.8° | rig    27
+  [37/50] nota  73.0 |   285 m | seca  357 g | estab 1.20 | Cd 0.343 | AoA  4.9° | rig    23
+  [38/50] nota  74.1 |   284 m | seca  371 g | estab 1.38 | Cd 0.350 | AoA  4.9° | rig    15
+  [39/50] nota  74.7 |   283 m | seca  366 g | estab 1.36 | Cd 0.351 | AoA  4.5° | rig    12
+  [40/50] nota  73.4 |   285 m | seca  357 g | estab 1.23 | Cd 0.343 | AoA  4.9° | rig    25
+  [41/50] nota  73.9 |   282 m | seca  354 g | estab 1.29 | Cd 0.348 | AoA  5.0° | rig    21
+  [42/50] nota  73.4 |   283 m | seca  360 g | estab 1.27 | Cd 0.350 | AoA  4.9° | rig    20
+  [43/50] nota  73.9 |   282 m | seca  350 g | estab 1.26 | Cd 0.349 | AoA  4.7° | rig    22
+  [44/50] nota  74.3 |   280 m | seca  311 g | estab 1.08 | Cd 0.336 | AoA  4.7° | rig    24
+  [45/50] nota  73.5 |   283 m | seca  357 g | estab 1.26 | Cd 0.348 | AoA  4.8° | rig    22
+  [46/50] nota  74.0 |   284 m | seca  363 g | estab 1.31 | Cd 0.348 | AoA  4.8° | rig    21
+  [47/50] nota  73.9 |   283 m | seca  323 g | estab 1.08 | Cd 0.336 | AoA  4.7° | rig    25
+  [48/50] nota  74.3 |   277 m | seca  333 g | estab 1.29 | Cd 0.353 | AoA  4.6° | rig    15
+  [49/50] nota  73.4 |   290 m | seca  361 g | estab 1.28 | Cd 0.351 | AoA  4.7° | rig    16
+  [50/50] nota  73.4 |   281 m | seca  351 g | estab 1.25 | Cd 0.349 | AoA  5.2° | rig    20
+
+>> campeão: D:\OBAFOG\bit06 1,8L\bit06_PET_AERO_FINAL.ork
+>> relatório: D:\OBAFOG\bit06 1,8L\RELATORIO_bit06_PET_AERO.md
+
+tempo total: 10m37s | 8100 simulações
+>>> FIM 22:27:21

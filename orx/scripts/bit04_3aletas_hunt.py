@@ -95,7 +95,7 @@ def main() -> None:
 
     # resultado final
     if melhor_params is not None:
-        out = r"D:\OBAFOG\bit04 2L script\foguete_real\bit04_3aletas_SEMCANT.ork"
+        out = r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\bit04_3aletas_SEMCANT.ork"
         runner.save_design(melhor_params, out)
         m = runner.evaluate(melhor_params, sim_overrides={"random_seed": 42, "time_step": 0.005}).metrics
         print("\n" + "=" * 60)

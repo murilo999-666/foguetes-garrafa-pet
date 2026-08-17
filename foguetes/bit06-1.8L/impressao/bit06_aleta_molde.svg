@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="210.0mm" height="297.0mm" viewBox="0 0 210.0 297.0">
 <rect width="210.0" height="297.0" fill="white"/>
-<polygon points="18.000,153.000 143.000,18.000 183.000,18.000 83.000,182.805" fill="none" stroke="#000" stroke-width="0.3"/>
+<polygon points="18.000,153.000 143.000,18.000 183.000,18.000 83.000,182.805 80.500,179.596 78.000,176.709 75.500,174.092 73.000,171.708 70.500,169.528 68.000,167.530 65.500,165.697 63.000,164.013 60.500,162.469 58.000,161.053 55.500,159.759 53.000,158.578 50.500,157.507 48.000,156.538 45.500,155.670 43.000,154.897 40.500,154.217 38.000,153.627 35.500,153.125 34.798,153.000 33.000,153.000 30.500,153.000 28.000,153.000 25.500,153.000 23.000,153.000 20.500,153.000" fill="none" stroke="#000" stroke-width="0.3"/>
 <circle cx="18.00" cy="153.00" r="0.8" fill="#c00"/>
 <circle cx="143.00" cy="18.00" r="0.8" fill="#c00"/>
 <circle cx="183.00" cy="18.00" r="0.8" fill="#c00"/>
@@ -8,9 +8,8 @@
 <text x="80.50" y="85.50" font-size="4" fill="#06c" text-anchor="middle">184</text>
 <text x="163.00" y="18.00" font-size="4" fill="#06c" text-anchor="middle">40</text>
 <text x="133.00" y="100.40" font-size="4" fill="#06c" text-anchor="middle">193</text>
-<text x="50.50" y="167.90" font-size="4" fill="#06c" text-anchor="middle">72</text>
-<line x1="83.00" y1="182.80" x2="18.00" y2="153.00" stroke="#0a0" stroke-width="0.6" stroke-dasharray="3,2"/>
-<text x="50.50" y="173.90" font-size="4" fill="#0a0" text-anchor="middle">raiz - colar no corpo</text>
+<polyline points="83.00,182.80 80.50,179.60 78.00,176.71 75.50,174.09 73.00,171.71 70.50,169.53 68.00,167.53 65.50,165.70 63.00,164.01 60.50,162.47 58.00,161.05 55.50,159.76 53.00,158.58 50.50,157.51 48.00,156.54 45.50,155.67 43.00,154.90 40.50,154.22 38.00,153.63 35.50,153.13 34.80,153.00 33.00,153.00 30.50,153.00 28.00,153.00 25.50,153.00 23.00,153.00 20.50,153.00 18.00,153.00" fill="none" stroke="#0a0" stroke-width="0.7" stroke-dasharray="3,2"/>
+<text x="48.00" y="162.54" font-size="4" fill="#0a0" text-anchor="middle">raiz - colar no corpo</text>
 <text x="18.0" y="273.0" font-size="6">bit06 - molde de aleta (1:1)</text>
 <text x="18.0" y="281.0" font-size="4.5">polietileno 1,0 mm - cortar 3 unidades</text>
 <line x1="18.0" y1="288.0" x2="118.0" y2="288.0" stroke="#000" stroke-width="0.4"/>

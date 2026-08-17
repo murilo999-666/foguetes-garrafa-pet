@@ -222,7 +222,7 @@ def write_eng(result: MotorResult, out_dir: Path) -> Path:
 
 
 def main() -> None:
-    out_dir = Path(r"D:\OBAFOG\foguete_real\motores")
+    out_dir = Path(r"D:\1-Competicoes\OBAFOG\foguete_real\motores")
     loads_L = [0.6, 0.8, 1.0, 1.2, 1.4, 1.55, 1.7, 1.8]
     print(f"kH_eff calibrado = {KH_EFF:.4f} mol/(L·atm)  "
           f"[literatura agua pura ~0.034 — coerente]\n")

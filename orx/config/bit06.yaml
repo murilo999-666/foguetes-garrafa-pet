@@ -2,7 +2,7 @@
 # Corpo fiel (garrafa_bit06_base.ork), motor físico calibrado da garrafa reduzida,
 # ângulo de lançamento otimizável. Objetivo: máximo alcance horizontal.
 
-base_ork: D:\OBAFOG\bit06 1,8L script\garrafa_bit06_base.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L script\garrafa_bit06_base.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -106,14 +106,14 @@ parameters:
     component: Garrafa reduzida - cilindro
     attribute: motor
     choices:
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-0_5L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-0_7L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-0_9L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-1_05L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-1_2L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-1_35L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-1_45L.eng"
-      - "file:D:\\OBAFOG\\bit06 1,8L script\\motores\\VinagreBit06-1_5L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-0_5L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-0_7L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-0_9L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-1_05L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-1_2L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-1_35L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-1_45L.eng"
+      - "file:D:\\1-Competicoes\\OBAFOG\\foguetes\\bit06 1,8L script\\motores\\VinagreBit06-1_5L.eng"
 
   - name: launch_angle
     component: Ogiva
@@ -144,5 +144,5 @@ optimizer:
 batch:
   workers: 4
 
-db_path: D:\OBAFOG\bit06 1,8L script\simulacoes\orx.sqlite
-output_dir: D:\OBAFOG\bit06 1,8L script\simulacoes
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L script\simulacoes\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L script\simulacoes

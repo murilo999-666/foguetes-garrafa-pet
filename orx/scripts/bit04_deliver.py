@@ -1,7 +1,7 @@
 """Entrega da otimização do bit04:
-1. planilha xlsx com todos os testes em D:\\OBAFOG\\bit04 2L script\\
-2. versões .ork dos melhores designs em D:\\OBAFOG\\bit04 2L script\\versoes_teste\\
-3. gráficos em D:\\OBAFOG\\bit04 2L script\\otimizacao\\plots\\
+1. planilha xlsx com todos os testes em D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\
+2. versões .ork dos melhores designs em D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\versoes_teste\\
+3. gráficos em D:\\1-Competicoes\\OBAFOG\\foguetes\\bit04 2L script\\otimizacao\\plots\\
 4. resumo textual da run
 """
 
@@ -21,7 +21,7 @@ from orx.simulation.runner import Runner
 from orx.utils.logging import setup_logging
 
 CONFIG = r"C:\Users\muril\openrocket-optimizer\config\bit04.yaml"
-ROCKET_DIR = Path(r"D:\OBAFOG\bit04 2L script")
+ROCKET_DIR = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script")
 VERSIONS_DIR = ROCKET_DIR / "versoes_teste"
 TOP_N = 25
 

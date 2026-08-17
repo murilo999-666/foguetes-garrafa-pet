@@ -39,6 +39,18 @@ class FlightMetrics:
     dry_mass: float | None = None      # massa após queimar todo o propelente (kg)
     ballast_mass: float | None = None  # soma dos componentes de massa (kg)
     rocket_length: float | None = None
+
+    # ---- aerodinâmica (média/pico na fase de SUBIDA, que é onde importa) ----
+    cd_medio: float | None = None          # coeficiente de arrasto total
+    cd_atrito: float | None = None         # parcela de atrito (pele)
+    cd_pressao: float | None = None        # parcela de pressão (forma)
+    cd_base: float | None = None           # parcela de base (esteira atrás)
+    aoa_max: float | None = None           # ângulo de ataque máximo (graus)
+    aoa_medio: float | None = None         # tendência a "cata-vento" no vento
+    amortecimento_pitch: float | None = None   # |coef. de amortecimento em arfagem|
+    reynolds_medio: float | None = None
+    razao_finura: float | None = None      # comprimento / diâmetro
+    empuxo_peso: float | None = None       # relação empuxo/peso na saída
     warnings: list[str] = field(default_factory=list)
 
     def to_dict(self) -> dict[str, Any]:
@@ -121,6 +133,48 @@ def extract_metrics(sim: Any, doc: Any) -> FlightMetrics:
             m.stability_min = _clean(vals.min())
             m.stability_max = _clean(vals.max())
 
+    # ---------------- aerodinâmica ----------------
+    # Só a SUBIDA conta, e só acima de uma velocidade mínima: perto de v=0 os
+    # coeficientes adimensionais explodem (dividem por pressão dinâmica ~0) e
+    # contaminariam qualquer média.
+    vel = _series(branch, "TYPE_VELOCITY_TOTAL")
+    if time.size and vel.size == time.size:
+        subindo = np.isfinite(vel) & (vel > 15.0)
+        if m.time_to_apogee is not None:
+            subindo &= time <= m.time_to_apogee
+
+        def _media(tipo: str) -> float | None:
+            s = _series(branch, tipo)
+            if s.size != time.size:
+                return None
+            ok = subindo & np.isfinite(s)
+            return _clean(float(np.mean(s[ok]))) if ok.any() else None
+
+        m.cd_medio = _media("TYPE_DRAG_COEFF")
+        m.cd_atrito = _media("TYPE_FRICTION_DRAG_COEFF")
+        m.cd_pressao = _media("TYPE_PRESSURE_DRAG_COEFF")
+        m.cd_base = _media("TYPE_BASE_DRAG_COEFF")
+        m.reynolds_medio = _media("TYPE_REYNOLDS_NUMBER")
+
+        # ângulo de ataque: quanto o foguete voa "de lado". Alto = perde energia
+        # empurrando ar de través e vira contra o vento (cata-vento).
+        aoa = _series(branch, "TYPE_AOA")
+        if aoa.size == time.size:
+            ok = subindo & np.isfinite(aoa)
+            if ok.any():
+                graus = np.degrees(np.abs(aoa[ok]))
+                m.aoa_max = _clean(float(np.max(graus)))
+                m.aoa_medio = _clean(float(np.mean(graus)))
+
+        # amortecimento em arfagem: é o que faz a oscilação MORRER depois de uma
+        # rajada. Estabilidade estática alta com amortecimento baixo = foguete
+        # que oscila o voo todo sem divergir nem assentar.
+        amort = _series(branch, "TYPE_PITCH_DAMPING_MOMENT_COEFF")
+        if amort.size == time.size:
+            ok = subindo & np.isfinite(amort)
+            if ok.any():
+                m.amortecimento_pitch = _clean(float(np.mean(np.abs(amort[ok]))))
+
     cp = _series(branch, "TYPE_CP_LOCATION")
     cg = _series(branch, "TYPE_CG_LOCATION")
     for series, attr in ((cp, "cp_location"), (cg, "cg_location")):
@@ -132,6 +186,20 @@ def extract_metrics(sim: Any, doc: Any) -> FlightMetrics:
         m.rocket_length = _clean(doc.getRocket().getLength())
     except Exception:
         pass
+
+    # razão de finura (comprimento/diâmetro): governa o balanço entre arrasto de
+    # atrito (cresce com o comprimento) e de pressão/base (cai com o afilamento).
+    ref = _series(branch, "TYPE_REFERENCE_LENGTH")
+    if m.rocket_length and ref.size:
+        diam = float(ref[np.isfinite(ref)][0]) if np.isfinite(ref).any() else None
+        if diam and diam > 0:
+            m.razao_finura = _clean(m.rocket_length / diam)
+
+    twr = _series(branch, "TYPE_THRUST_WEIGHT_RATIO")
+    if twr.size:
+        fin = twr[np.isfinite(twr)]
+        if fin.size:
+            m.empuxo_peso = _clean(float(np.max(fin)))
 
     try:
         import jpype

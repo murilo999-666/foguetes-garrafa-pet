@@ -4,7 +4,7 @@
 # lastro em Durepoxi (sem metal, massa derivada do volume), aletas (planform,
 # quantidade, espessura, material, cant, posição) e motor (família VinagreCO2).
 
-base_ork: D:\OBAFOG\bit03 2L real\foguete_novo.ork
+base_ork: D:\1-Competicoes\OBAFOG\foguetes\bit03 2L real\foguete_novo.ork
 
 paths:
   openrocket_dir: C:\Program Files\OpenRocket
@@ -148,5 +148,5 @@ optimizer:
 batch:
   workers: 6
 
-db_path: D:\OBAFOG\bit03 2L real\otimizacao\orx.sqlite
-output_dir: D:\OBAFOG\bit03 2L real\otimizacao
+db_path: D:\1-Competicoes\OBAFOG\foguetes\bit03 2L real\otimizacao\orx.sqlite
+output_dir: D:\1-Competicoes\OBAFOG\foguetes\bit03 2L real\otimizacao

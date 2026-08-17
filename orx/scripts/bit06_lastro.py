@@ -21,7 +21,7 @@ from orx.bridge.orjava import OrBridge, J
 
 import bit06_robusto as B
 
-PASTA = Path(r"D:\OBAFOG\bit06 1,8L")
+PASTA = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit06 1,8L")
 FILLS_CM = [8.0, 10.0, 12.0, 14.0, 16.0, 18.0]
 
 

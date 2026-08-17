@@ -25,8 +25,8 @@ import jpype
 from orx.bridge.orjava import J, OrBridge
 from orx.rocket.parameters import _set_bulk_material
 
-DONOR = r"D:\OBAFOG\bit03 2L real\foguete_novo.ork"
-OUT = r"D:\OBAFOG\bit04 2L script\foguete_real\garrafa2L_base.ork"
+DONOR = r"D:\1-Competicoes\OBAFOG\foguetes\bit03 2L real\foguete_novo.ork"
+OUT = r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\foguete_real\garrafa2L_base.ork"
 
 
 def _get_or_add(b, doc, stage, name, cls_name, after_component):

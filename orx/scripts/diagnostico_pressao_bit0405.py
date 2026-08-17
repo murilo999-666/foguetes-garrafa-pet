@@ -22,15 +22,15 @@ from orx.config.loader import AppConfig, BatchConfig, SimulationConfig
 from orx.simulation.runner import Runner
 from orx.utils.logging import setup_logging
 
-MOTORES = Path(r"D:\OBAFOG\bit07 robusto 2L\motores")
+MOTORES = Path(r"D:\1-Competicoes\OBAFOG\foguetes\bit07 robusto 2L\motores")
 PRESSOES = [130, 140, 150, 160, 170, 180, 190]
 
 FOGUETES = [
     # (rótulo, .ork, carga de vinagre usada, ângulo de projeto, lastro conhecido)
     ("bit04 (otimizado, 416 g de lastro)",
-     r"D:\OBAFOG\bit04 2L script\bit04_MODELO_FINAL.ork", "1_80", 52.0),
+     r"D:\1-Competicoes\OBAFOG\foguetes\bit04 2L script\bit04_MODELO_FINAL.ork", "1_80", 52.0),
     ("bit05 (humano, 115 g de lastro)",
-     r"D:\OBAFOG\bit05 2L humano\bit05_MODELO_FINAL.ork", "1_55", 46.0),
+     r"D:\1-Competicoes\OBAFOG\foguetes\bit05 2L humano\bit05_MODELO_FINAL.ork", "1_55", 46.0),
 ]
 
 

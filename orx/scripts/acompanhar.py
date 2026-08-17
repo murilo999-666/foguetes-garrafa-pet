@@ -19,7 +19,7 @@ if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 RAIZ = Path(__file__).parent.parent
-OBAFOG = Path(r"D:\OBAFOG")
+OBAFOG = Path(r"D:\1-Competicoes\OBAFOG")
 
 # preset -> (título, log, banco, meta_total, fases_ou_None)
 PRESETS = {
