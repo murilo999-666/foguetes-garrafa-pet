@@ -1,0 +1,38 @@
+SUBMODELO do bit09 com a coifa ANTIGA (bit02/ogiva-internet.stl)
+================================================================
+
+Feito a pedido, so para ter ideia. NAO e um projeto para voar.
+
+CONTA DE MASSA (foguete inteiro 285 g)
+  garrafa PET 2L retornavel ............ 105,0 g  (voce disse ~100)
+  3 aletas do bit09, poliestireno 1 mm .. 34,1 g
+  sobra para coifa + lastro ............ 145,9 g
+
+LASTRO - informado por voce: 3 porcas M8 + um pouco de durepoxi.
+  porca M8 DIN 934 pesa 4,9 a 5,5 g  ->  3 delas dao 15 a 17 g
+  com o durepoxi de preenchimento    ->  18 a 27 g no total
+
+AS DUAS ROTAS BATEM, e por isso o numero e confiavel:
+  pela subtracao de massa:  coifa + lastro = 145,9 g
+  pelo hardware real:       lastro ~20 g  ->  coifa ~126 g
+  126 g e exatamente 2 perimetros com pouco preenchimento numa
+  parede de 4,2 mm. Fecha.
+
+A coifa antiga NAO foi impressa macica: o casco tem 212,9 cm3 e em
+PLA macico daria 266 g, mais que o foguete inteiro de 285 g. Nem com
+3 perimetros + 20% de preenchimento fecha (175 g, estoura por 29 g).
+
+OS TRES ARQUIVOS (a faixa de incerteza do durepoxi)
+  _central  lastro 20.0 g | coifa 125.9 g | seca 1.28 | min -0.02
+  _min      lastro 17.7 g | coifa 128.2 g | seca 1.27 | min -0.03
+  _max      lastro 27.6 g | coifa 118.3 g | seca 1.31 | min -0.01
+
+Os tres dao praticamente a mesma coisa: a incerteza do durepoxi quase
+nao muda a estabilidade, porque o que sai de lastro entra de coifa, e
+as duas massas estao na frente do foguete.
+
+AVISO - as aletas do bit09 em poliestireno 1 mm REPROVAM:
+  flutter 37 m/s (exigido 90) | divergencia 24 m/s
+  flecha na ponta 147 mm = 105% da envergadura
+A aleta deita em voo. Para voar de verdade ela precisa do sanduiche
+de depron, como no bit09_MODELO_FINAL.ork.

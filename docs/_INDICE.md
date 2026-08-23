@@ -26,7 +26,8 @@ Henry) e calibrado em dois dados reais do Murilo — **170 psi com 1,55 L** e o
 | **`bit05 2L humano/`** | **5º — projeto por pesquisa humana, garrafa 2L** | **`bit05_MODELO_FINAL.ork`** | **276 m** (motor 1,55 L/170 psi) |
 | **`bit06 1,8L script/`** | **6º — garrafa retornável REDUZIDA (~1,8 L, Ø9,585 cm)** | `bit06_MODELO_FINAL.ork` | **363 m** (1,35 L/170 psi) · 377 m (1,5 L) |
 | **`bit07 robusto 2L/`** | **7º — projetado por NOTA multicritério (alcance + robustez a pressão + leveza + margem), garrafa 2L** | `bit07_MODELO_FINAL.ork` | **284 m** a 140 psi · 308 m a 170 psi (0,9 L, 1,34 kg, estab. mín. 1,25 cal) |
-| `bit08 reservado/` | reservado | — | — |
+| **`bit08 45 graus/`** | **8º — aletas a 45°, 6 aletas** | `bit08_MODELO_FINAL.ork` | ver o `.ork` |
+| **`bit09 otimizada/`** | **9º — otimizada, 3 aletas** | `bit09_MODELO_FINAL.ork` | ver o `.ork` |
 
 > **Lançamentos reais de 04/08/2026 — bit04 e bit05 falharam.** A bancada só deu
 > 140–150 psi (projeto: 170) e os dois saíram rasos, batendo numa cerca à frente.
