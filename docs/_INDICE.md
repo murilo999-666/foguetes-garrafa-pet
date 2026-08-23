@@ -8,13 +8,20 @@ Motor: vinagre 4% + bicarbonato em excesso, modelado pela física do CO₂ (lei 
 Henry) e calibrado em dois dados reais do Murilo — **170 psi com 1,55 L** e o
 **voo real de 275 m** (fator k = 2,17). Cada pasta traz seus `.eng` em `motores/`.
 
+> ⚠ **O voo de 275 m foi do bit02, não do bit03** (corrigido em 20/08/2026 pelo
+> próprio Murilo). O bit03 voou ~100 m. Isso importa porque o fator k = 2,17
+> saiu de ajustar um voo de 275 m à geometria do bit03 — que não é a geometria
+> que voou. **Não existe `.ork` do bit02**: a pasta só tem os STL das ogivas.
+> Enquanto não houver modelo do bit02, o k = 2,17 fica sob suspeita e o único
+> voo bom do projeto continua sem âncora geométrica.
+
 ## Os foguetes
 
 | Pasta | O que é | Projeto vigente | Alcance previsto |
 |---|---|---|---|
 | `bit01 ogivas/` | 1º foguete | ogivas STL | — |
-| `bit02 ogivas/` | 2º foguete | ogivas STL | — |
-| `bit03 2L real/` | 3º foguete | `foguete_novo.ork` (voou **275 m** real) | 275 m medido |
+| `bit02 ogivas/` | 2º foguete | ogivas STL (**sem `.ork`**) | **275 m medido** |
+| `bit03 2L real/` | 3º foguete | `foguete_novo.ork` | ~100 m real |
 | **`bit04 2L script/`** | **4º — otimizado, garrafa 2L** | **`bit04_MODELO_FINAL.ork`** | **369 m** (motor 1,55 L/170 psi) · 388 m (1,8 L) |
 | **`bit05 2L humano/`** | **5º — projeto por pesquisa humana, garrafa 2L** | **`bit05_MODELO_FINAL.ork`** | **276 m** (motor 1,55 L/170 psi) |
 | **`bit06 1,8L script/`** | **6º — garrafa retornável REDUZIDA (~1,8 L, Ø9,585 cm)** | `bit06_MODELO_FINAL.ork` | **363 m** (1,35 L/170 psi) · 377 m (1,5 L) |
@@ -47,9 +54,23 @@ Todos os projetos vigentes usam os **materiais reais de construção**:
 | Pasta | O que é |
 |---|---|
 | `base de lançamento/` | CAD da base (F3D/STEP/STL) |
-| `geral/` | Regulamento 20ª OBAFOG 2026, instalador do OpenRocket, gabaritos |
+| `geral/` | Regulamento 20ª OBAFOG 2026, edital, gabaritos, planejamento e o **protocolo do dia de campo** |
 | `playlist/` | Vídeos de referência (recorde MOBFOG nível 4 = 488,5 m, Red Bears) |
 | `_TODOS_OS_TESTES.xlsx` | Resumo de TODOS os experimentos e simulações |
+
+## Documentos do dia de campo
+
+| Arquivo em `geral/` | O que é |
+|---|---|
+| `Protocolo_de_Testes_OBAFOG.pdf` | Roteiro do dia: ordem dos testes, ruptura hidrostática, vedação, gatilho, curva pressão × tempo, 5 fichas de registro, kit e segurança |
+| `PROTOCOLO-DE-TESTES-LEIA-ANTES.md` | **Leia antes do PDF.** Uma seção dele (o teste do barbante, §2.2) ficou desatualizada e contradiz o diagnóstico do bit07 |
+| `Ficha_de_Campo_OBAFOG.pdf` | Ficha de campo |
+| `Planejamento_Foguete_OBAFOG_Modelo4.pdf` | Planejamento do foguete + base (v3, a vigente) |
+| `EDITAL-TURMA-04.pdf` | Edital da turma |
+
+O protocolo traz três regras que não são negociáveis: **ruptura sempre com água,
+nunca com ar**; **teto de pressão = o menor valor de ruptura medido**, não a
+média; e **peça esbranquiçada não voa** (cristalização térmica do PET).
 
 ## Para abrir os .ork com o motor visível
 

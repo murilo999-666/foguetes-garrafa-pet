@@ -6,6 +6,8 @@ a plataforma de otimização usada para projetar os foguetes.
 Motor: **vinagre 4 % + bicarbonato em excesso**, modelado pela física do CO₂ (lei de
 Henry + blowdown bifásico) e calibrado em dois dados reais medidos pelo Murilo —
 **170 psi com 1,55 L** (bancada) e o **voo real de 275 m** (fator de escoamento k = 2,17).
+Atenção: esse voo de 275 m foi do **bit02**, não do bit03, e não existe `.ork` do
+bit02 — ver o aviso em `docs/_INDICE.md`.
 
 ---
 
@@ -30,7 +32,8 @@ no LEIA-ME da pasta) é **o projeto vigente**; o resto é histórico e estudo.
 |---|---|---|---|
 | `foguetes/bit01` | 1º foguete | ogivas em STL | histórico |
 | `foguetes/bit02` | 2º foguete | ogivas em STL | histórico |
-| `foguetes/bit03` | 3º — garrafa 2 L | `foguete_novo.ork` | **voou 275 m reais** (base de toda a calibração) |
+| `foguetes/bit02` | 2º — garrafa 2 L | só STL de ogiva | **voou 275 m reais** (o único voo bom, sem modelo) |
+| `foguetes/bit03` | 3º — garrafa 2 L | `foguete_novo.ork` | voou ~100 m |
 | `foguetes/bit04-2L` | 4º — otimizado, 2 L | `bit04_MODELO_FINAL.ork` | ❌ **falhou no lançamento** |
 | `foguetes/bit05-2L` | 5º — projeto humano, 2 L | `bit05_MODELO_FINAL.ork` | ❌ **falhou no lançamento** |
 | `foguetes/bit06-1.8L` | 6º — garrafa **reduzida** ~1,8 L | `bit06_B_CONSTRUTIVEL.ork` | ✅ **reprojetado** (2026-08-11) |
